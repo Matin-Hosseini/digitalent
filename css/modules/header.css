@@ -9,6 +9,11 @@
   border-radius: 10rem;
   position: sticky;
   top: 2rem;
+  position: fixed;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .hamburger-menu {
@@ -87,7 +92,7 @@
   width: 100%;
   display: block;
   font-size: 1.3rem;
-  padding: 1.5rem 0.5rem 1.5rem 2.5rem;
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
 }
 
 .nav-menu__arrow-down {
@@ -144,12 +149,6 @@
 /* nav ends */
 
 /* responsive starts */
-
-@media (max-width: 576px) {
-  .nav__icon {
-    width: 2rem;
-  }
-}
 
 @media (min-width: 992px) {
   .nav {
