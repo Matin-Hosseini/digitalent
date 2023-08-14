@@ -2,3 +2,77 @@
 @import "./reset.css";
 @import "./modules/primary-styles.css";
 @import "./modules/header.css";
+@import "./modules/course.css";
+
+
+.home{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('./../assets/images/home-page/bg-test2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home__title{
+    font-size: 3.6rem;
+}
+
+/* .hexagon-icon{
+    
+    width: 100%;
+    height: 100%;
+}
+.test-texts{
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+}
+.test-texts h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+} */
+
+.section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header__title{
+    font-family: "Persian Titraj";
+    font-size: 2.5rem;
+}
+.section-header__dashed-line{
+    flex: 1;
+    border: .2px dashed var(--gray);
+    margin: 0 .5rem;
+}
+.section-header__link{
+    padding: .5rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    transition: all var(--transition);
+}
+.section-header__link:hover{
+    background-color: var(--gray);
+}
+.section-header__icon-container{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-left: .5rem;
+    color: #fff;
+}
+.section-header__icon{
+    width: 1.2rem;
+}

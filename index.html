@@ -6,6 +6,10 @@
     <title>دیجی تلنت</title>
 
     <!--Css Links-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/app-logo/app-favicon.png"
+      type="image/x-icon" />
     <link rel="stylesheet" href="vendor/Bootstrap/bootstrap-5.2.3.min.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
@@ -36,8 +40,12 @@
       <symbol id="search" xmlns="http://www.w3.org/2000/svg" class="nav__icon nav__search-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
       </symbol>
-      <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg" class="nav__icon nav__shopping-cart-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+     
+      </symbol>
+      <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
       </symbol>
       <symbol id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
@@ -51,6 +59,14 @@
       <symbol id="close" xmlns="http://www.w3.org/2000/svg" class="nav-menu__close-btn" fill="" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </symbol>
+      <symbol id="clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </symbol>
+      <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </symbol>
+      
+      
     </svg>
 
     <header>
@@ -158,6 +174,154 @@
         <!--nav options ends-->
       </nav>
     </header>
+
+    <main>
+      <section class="home d-flex align-items-center justify-content-center">
+        <h1 class="home__title">هرچی که میخوای رو سه سوته یاد بگیر</h1>
+      </section>
+      <section class="newest-courses my-5">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-header__title">جدیدترین دوره ها</h2>
+            <div class="section-header__dashed-line"></div>
+            <a href="#" class="section-header__link">
+              <div class="section-header__icon-container">
+                <svg class="section-header__icon">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+              مشاهده همه
+            </a>
+          </div>
+          <div class="row" id="newest-courses__container">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+              <div class="course">
+                <a href="#" class="course__image">
+                  <img
+                    src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+                    alt="" />
+                </a>
+                <div class="course__info">
+                  <h2 class="course__name">
+                    <a href="#">
+                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
+                      خط سوم</a
+                    >
+                  </h2>
+                  <div class="course__price">
+                    <button class="course__shopping-cart-icon">
+                      <svg>
+                        <use xlink:href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+
+                    <div class="d-flex align-items-center">
+                      <span class="course__old-price">220,000 تومان</span>
+                      <span class="course__current-price">175,000 تومان</span>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center my-3">
+                    <div class="course__teacher d-flex align-items-center">
+                      <i class="fa-solid fa-chalkboard-user"></i>
+                      <h3 class="course__teacher-name">متین حسینی</h3>
+                    </div>
+
+                    <div class="course__students">
+                      <i class="fa-solid fa-people-group"></i>
+                      <span>11,578</span>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center">
+                    <div class="course__time">
+                      <svg>
+                        <use xlink:href="#clock"></use>
+                        <span>20:50:34</span>
+                      </svg>
+                    </div>
+                    <div class="course__ratings">
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="d-flex">
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+      <div class="test-texts">
+        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
+          <h2>فضای ابری</h2>
+        </svg>
+      </div>
+    </div> -->
 
     <!--Javascript Links-->
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>

@@ -2,3 +2,7 @@
   font-family: "Vasir";
   src: url("../assets/fonts/vasir/Vazir-Regular-FD.woff2");
 }
+@font-face {
+  font-family: "Persian Titraj";
+  src: url('./../assets/fonts/Persian-Titraj/persian-titraj.ttf');
+}
