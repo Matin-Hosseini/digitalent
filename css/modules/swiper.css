@@ -1,0 +1,14 @@
+/* for all the swiper buttons*/
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--red);
+  font-size: 1.5rem;
+}

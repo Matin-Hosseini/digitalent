@@ -5,6 +5,7 @@ const hamburgerMenuBtn = $.querySelector("#hamburger-menu-btn");
 const navMenu = $.querySelector("#nav-menu");
 const closeSidebarBtn = $.querySelector("#close-sidebar-btn");
 const newestCoursesContainer = $.querySelector("#newest-courses__container");
+const articleBoxContainer = $.querySelector("#article-box__container");
 
 //dark mode feature starts
 darkModeBtn.addEventListener("click", () => {
@@ -58,6 +59,8 @@ closeSidebarBtn.addEventListener("click", () => {
   navMenu.classList.remove("nav-menu--open");
 });
 // opening and closing nav menu in mobile ends
+
+//courses
 const newestCourses = [
   { id: 1 },
   { id: 1 },
@@ -127,6 +130,57 @@ newestCourses.forEach((course) => {
           </div>
         </div>
       </div>
+    </div>
+  `
+  );
+});
+
+//articles
+const articles = [{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},];
+articles.length = 8;
+
+articleBoxContainer.innerHTML = "";
+articles.forEach((article) => {
+  articleBoxContainer.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div class="swiper-slide ">
+      <article class="article-box" >
+        <a href="#" class="article-box__img">
+          <img
+            src="assets/images/6a1e69a6-6922-43ab-bc85-5d8548a32e20_cover_thumb.webp"
+            alt="" />
+        </a>
+        <div class="article-box__content">
+          <h2 class="article-box__title">
+            <a href="#"
+              >اهمیت یادگیری پایتون در برنامه نویسی مخصوصا برنامه
+              نویسی سمت سرور
+            </a>
+          </h2>
+          <div class="article-box__info d-sm-flex justify-content-between align-items-end">
+            <div>
+              <div class="article-box__views">
+                <svg>
+                  <use xlink:href="#eye"></use>
+                </svg>
+                <span>1,257</span>
+              </div>
+              <div class="article-box__comments">
+                <svg>
+                  <use xlink:href="#comment"></use>
+                </svg>
+                <span>1,120 دیدگاه</span>
+              </div>
+            </div>
+            <div class="article-box__date">
+              <span>7</span>
+              <span>مرداد</span>
+              <span>1382</span>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   `
   );

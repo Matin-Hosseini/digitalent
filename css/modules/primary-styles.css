@@ -1,5 +1,6 @@
 :root {
   --app-bg: #f9f9f9;
+  --section-bg: #f9f9f9;
 
   /* colors */
   --title-color: #3f3f46;
@@ -17,11 +18,12 @@
   --transition: 250ms ease-in-out;
 
   /* box shadow */
-  --box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3)
+  --box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 :root.dark {
-  --app-bg: #3f3f46;
+  --app-bg: #27272a;
+  --section-bg: #3f3f46;
 
   /* colors */
   --title-color: #fff;
@@ -67,10 +69,10 @@ a:hover {
   color: inherit;
 }
 
-.row{
+.row {
   margin: 0;
 }
-img{
+img {
   width: 100%;
   height: 100%;
 }
