@@ -121,11 +121,14 @@ newestCourses.forEach((course) => {
               </svg>
             </div>
             <div class="course__ratings">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>4</span>
               <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+            </div>
+            <div>
+              <span>55</span>
+              <span>14</span>
+              <span>17</span>
+              <span>3</span>
             </div>
           </div>
         </div>

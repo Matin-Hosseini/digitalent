@@ -14,9 +14,36 @@
   height: 100vh;
 }
 
+/* home starts */
+
 .home__title {
   font-size: 3.6rem;
 }
+.shape {
+  
+  width: 15rem;
+  filter: url(#round);
+  rotate: 90deg;
+  position: relative;
+}
+.shape::before {
+  content: "";
+  display: block;
+  padding-top: 86.6%;
+  background: #fff;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.shape__content {
+  position: absolute;
+  color: red;
+  background-color: green;
+  rotate: -90deg;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* home ends */
 
 /* .hexagon-icon{
     
@@ -81,7 +108,7 @@
 }
 
 .articles {
-  background-color: var(--gray);
+  background-color: var(--bg-gray);
   padding: 1rem;
   border-radius: 1rem;
 }

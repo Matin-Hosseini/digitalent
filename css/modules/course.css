@@ -3,14 +3,31 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
   color: var(--gray);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  position: relative;
+}
+.course svg{
+  width: 1.5rem;
+}
+
+.course__discount-percentage{
+  position: absolute;
+  display: grid;
+  place-content: center;
+  background-color: var(--dark-green);
+  color: #fff;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  top: 1rem;
+  right: 1rem;
+  box-shadow: var(--box-shadow);
 }
 .course__info {
   padding: 1rem 1rem;
 }
 .course__name {
-  
   height: 3.5rem;
   display: -webkit-box;
   width: auto;
@@ -43,6 +60,9 @@
 .course__shopping-cart-icon:hover {
   border-radius: 50%;
 }
+.course__shopping-cart-icon svg{
+  width: 2rem;
+}
 .course__current-price {
   color: var(--green);
   font-size: 1.5rem;
@@ -63,16 +83,24 @@
   transform: translateY(-50%) rotate(-5deg);
 }
 
-.course__time{
+.course__time,
+.course__teacher-name{
   margin-right: .3rem;
 }
-.course__teacher-name {
-  margin-right: .3rem;
-}
-
-.course__ratings {
+.course__ratings .fa-star {
+  width: 1.5rem;
   color: var(--yellow);
 }
-.course__ratings svg{
-  width: 1.5rem;
+
+.course__discount-time{
+  font-size: 1.4rem;
+}
+
+.course__discount-seconds{
+  color: var(--red);
+}
+.course__discount-minutes,
+.course__discount-hours,
+.course__discount-days{
+  color: var(--blue);
 }

@@ -11,8 +11,11 @@
   --yellow: #fed7aa;
   --yellow-stars: #facc15;
   --light-gray: #d1d5db;
-  --gray: #EEF0F5;
+  --gray: #9ca3af;
+  --bg-gray: #EEF0F5;
   --red: #f87171;
+  --dark-green: #35A29F;
+  --blue: #19A7CE;
   
 
   /* transitions */
@@ -30,7 +33,7 @@
   --title-color: #fff;
   --text-color: #f9f9f9;
 
-  --gray: #9ca3af;
+  --bg-gray: #9ca3af;
 }
 
 *,
