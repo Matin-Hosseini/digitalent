@@ -10,10 +10,14 @@
   padding: 1rem 1rem;
 }
 .course__name {
-  font-size: 1.5rem;
+  
   height: 3.5rem;
+  display: -webkit-box;
+  width: auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--title-color);
 }

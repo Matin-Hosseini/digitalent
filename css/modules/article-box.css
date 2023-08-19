@@ -23,8 +23,10 @@
 .article-box__title {
   font-size: 1.4rem;
   line-height: 1.3;
-  height: 3.5rem;
   margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .article-box__info {
@@ -44,6 +46,10 @@
   font-size: 2rem;
 }
 
+.article-box svg{
+  width: 1.5rem;
+}
+
 @media (max-width: 330px) {
   .article-box {
     flex-direction: column;
@@ -60,4 +66,3 @@
     margin-top: 0.5rem;
   }
 }
-

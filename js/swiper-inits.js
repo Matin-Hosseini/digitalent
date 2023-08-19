@@ -7,16 +7,25 @@ const articlesSwiper = new Swiper(".articles-swiper", {
   },
   breakpoints: {
     576: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.2,
+    },
+    640: {
+      slidesPerView: 1.4,
     },
     768: {
-      slidesPerView: 1.8,
+      slidesPerView: 1.6,
+    },
+    900: {
+      slidesPerView: 2.2,
     },
     992: {
       slidesPerView: 2.7,
     },
-    1024: {
-      slidesPerView: 3.8,
+    1200: {
+      slidesPerView: 3.2,
+    },
+    1400: {
+      slidesPerView: 3.5,
     },
   },
 });

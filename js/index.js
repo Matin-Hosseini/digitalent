@@ -136,7 +136,19 @@ newestCourses.forEach((course) => {
 });
 
 //articles
-const articles = [{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},{id: 1},];
+const articles = [
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+  { id: 1 },
+];
 articles.length = 8;
 
 articleBoxContainer.innerHTML = "";
@@ -154,8 +166,8 @@ articles.forEach((article) => {
         <div class="article-box__content">
           <h2 class="article-box__title">
             <a href="#"
-              >اهمیت یادگیری پایتون در برنامه نویسی مخصوصا برنامه
-              نویسی سمت سرور
+              >
+              اهمیت یادگیری پایتون در برنامه نویسی مخصوصا برنامه که دارم میرم خط سوم دیگه نویسی سمت سرور
             </a>
           </h2>
           <div class="article-box__info d-sm-flex justify-content-between align-items-end">

@@ -11,8 +11,9 @@
   --yellow: #fed7aa;
   --yellow-stars: #facc15;
   --light-gray: #d1d5db;
-  --gray: #9ca3af;
+  --gray: #EEF0F5;
   --red: #f87171;
+  
 
   /* transitions */
   --transition: 250ms ease-in-out;
@@ -28,6 +29,8 @@
   /* colors */
   --title-color: #fff;
   --text-color: #f9f9f9;
+
+  --gray: #9ca3af;
 }
 
 *,
