@@ -1,3 +1,5 @@
+import { homeCategories } from "./datas.js";
+
 const $ = document;
 
 const darkModeBtn = $.querySelector("#dark-mode-btn");
@@ -6,6 +8,7 @@ const navMenu = $.querySelector("#nav-menu");
 const closeSidebarBtn = $.querySelector("#close-sidebar-btn");
 const newestCoursesContainer = $.querySelector("#newest-courses__container");
 const articleBoxContainer = $.querySelector("#article-box__container");
+const homeCategorySwiper = $.querySelector("#home__category-swiper-wrapper");
 
 //dark mode feature starts
 darkModeBtn.addEventListener("click", () => {
@@ -152,7 +155,6 @@ const articles = [
   { id: 1 },
   { id: 1 },
 ];
-articles.length = 8;
 
 articleBoxContainer.innerHTML = "";
 articles.forEach((article) => {
@@ -200,6 +202,72 @@ articles.forEach((article) => {
   `
   );
 });
+
+//home categories swiper
+//for mobile
+homeCategorySwiper.innerHTML = "";
+homeCategories.forEach((category) => {
+  homeCategorySwiper.insertAdjacentHTML(
+    "beforeend",
+    `
+      <div class="swiper-slide">
+        <a href="${category.link}" class="home__category">
+          <svg class="home__category-hexagon ${
+            category.fill && `home__category-hexagon--${category.fill}`
+          }">
+            <use xlink:href="#hexagon"></use>
+          </svg>
+          <div class="home__category-content">
+            <i class="${category.icon} home__category-icon"></i>
+            <h2 class="home__category-title">${category.name}</h2>
+          </div>
+        </a>
+      </div>
+    `
+  );
+});
+
+// home categories for desktop
+
+// n means number of categories in each row
+let n = (homeCategories.length + 1) / 3;
+const firstRow = homeCategories.slice(0, n);
+const secondRow = homeCategories.slice(n, 2 * n - 1);
+const thirdRow = homeCategories.slice(2 * n - 1, homeCategories.length);
+
+//html category rows elements
+const firstRowElem = $.querySelector("#first-row");
+const secondRowElem = $.querySelector("#second-row");
+const thirdRowElem = $.querySelector("#third-row");
+
+firstRowElem.innerHTML = "";
+secondRowElem.innerHTML = "";
+thirdRowElem.innerHTML = "";
+
+// puts array values into appropiate element
+function insertCategories(array, element) {
+  array.forEach((item) => {
+    element.insertAdjacentHTML(
+      "beforeend",
+      `
+        <a href="${item.link}" class="home__category">
+          <svg class="home__category-hexagon ${
+            item.fill && `home__category-hexagon--${item.fill}`
+          }">
+            <use xlink:href="#hexagon"></use>
+          </svg>
+          <div class="home__category-content">
+            <i class="${item.icon} home__category-icon"></i>
+            <h2 class="home__category-title">${item.name}</h2>
+          </div>
+        </a>
+      `
+    );
+  });
+}
+insertCategories(firstRow, firstRowElem);
+insertCategories(secondRow, secondRowElem);
+insertCategories(thirdRow, thirdRowElem);
 
 window.addEventListener("load", () => {
   setTheme();

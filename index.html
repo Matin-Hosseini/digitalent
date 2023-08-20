@@ -73,7 +73,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </symbol>
-      
+      <symbol id="hexagon" viewBox="0 0 110.74 123.18"><path d="M307.58,232.84l-40.2-23.21a14.17,14.17,0,0,1-7.09-12.27V150.94a14.17,14.17,0,0,1,7.09-12.27l40.2-23.21a14.17,14.17,0,0,1,14.17,0L362,138.67A14.17,14.17,0,0,1,369,150.94v46.42A14.17,14.17,0,0,1,362,209.63l-40.2,23.21A14.17,14.17,0,0,1,307.58,232.84Z" transform="translate(-259.29 -112.56)"></path></symbol>
       
     </svg>
 
@@ -184,13 +184,23 @@
     </header>
 
     <main>
-      <section
-        class="home d-flex flex-column align-items-center justify-content-center">
+      <section class="home">
+        <div class="container-fluid"></div>
         <h1 class="home__title">هرچی که میخوای رو سه سوته یاد بگیر</h1>
-        <div class="shpaes">
-          <!-- <div class="shape">
-            <div class="shape__content">content</div>
-          </div> -->
+        <!-- mobile -->
+        <div class="home__swiper-container d-md-none">
+          <div class="swiper home__category-swiper">
+            <div class="swiper-wrapper" id="home__category-swiper-wrapper">
+              <!-- Slides will be shown by javascript-->
+            </div>
+          </div>
+        </div>
+
+        <!-- desktop -->
+        <div class="d-none d-md-block">
+          <div class="first-row d-flex home__category-container" id="first-row"></div>
+          <div class="second-row d-flex home__category-container" id="second-row"></div>
+          <div class="third-row d-flex home__category-container" id="third-row"></div>
         </div>
       </section>
       <section class="special-discount my-5">
@@ -218,16 +228,18 @@
                 </a>
                 <div class="course__info">
                   <h2 class="course__name">
-                    <a href="#"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
+                    <a href="#">
+                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
+                      خط سوم</a
+                    >
                   </h2>
-                  <div
-                    class="course__price">
+                  <div class="course__price">
                     <button class="course__shopping-cart-icon">
                       <svg>
                         <use xlink:href="#shopping-cart"></use>
                       </svg>
                     </button>
-                  
+
                     <div class="d-flex align-items-center">
                       <span class="course__old-price">220,000 تومان</span>
                       <span class="course__current-price">175,000 تومان</span>
@@ -239,13 +251,14 @@
                       <i class="fa-solid fa-chalkboard-user"></i>
                       <h3 class="course__teacher-name">متین حسینی</h3>
                     </div>
-                    
+
                     <div class="course__students">
                       <i class="fa-solid fa-people-group"></i>
                       <span>11,578</span>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div
+                    class="d-flex justify-content-between align-items-center">
                     <div>
                       <svg>
                         <use xlink:href="#clock"></use>
@@ -279,16 +292,18 @@
                 </a>
                 <div class="course__info">
                   <h2 class="course__name">
-                    <a href="#"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
+                    <a href="#">
+                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
+                      خط سوم</a
+                    >
                   </h2>
-                  <div
-                    class="course__price">
+                  <div class="course__price">
                     <button class="course__shopping-cart-icon">
                       <svg>
                         <use xlink:href="#shopping-cart"></use>
                       </svg>
                     </button>
-                  
+
                     <div class="d-flex align-items-center">
                       <span class="course__old-price">220,000 تومان</span>
                       <span class="course__current-price">175,000 تومان</span>
@@ -300,13 +315,14 @@
                       <i class="fa-solid fa-chalkboard-user"></i>
                       <h3 class="course__teacher-name">متین حسینی</h3>
                     </div>
-                    
+
                     <div class="course__students">
                       <i class="fa-solid fa-people-group"></i>
                       <span>11,578</span>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div
+                    class="d-flex justify-content-between align-items-center">
                     <div>
                       <svg>
                         <use xlink:href="#clock"></use>
@@ -340,16 +356,18 @@
                 </a>
                 <div class="course__info">
                   <h2 class="course__name">
-                    <a href="#"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
+                    <a href="#">
+                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
+                      خط سوم</a
+                    >
                   </h2>
-                  <div
-                    class="course__price">
+                  <div class="course__price">
                     <button class="course__shopping-cart-icon">
                       <svg>
                         <use xlink:href="#shopping-cart"></use>
                       </svg>
                     </button>
-                  
+
                     <div class="d-flex align-items-center">
                       <span class="course__old-price">220,000 تومان</span>
                       <span class="course__current-price">175,000 تومان</span>
@@ -361,13 +379,14 @@
                       <i class="fa-solid fa-chalkboard-user"></i>
                       <h3 class="course__teacher-name">متین حسینی</h3>
                     </div>
-                    
+
                     <div class="course__students">
                       <i class="fa-solid fa-people-group"></i>
                       <span>11,578</span>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div
+                    class="d-flex justify-content-between align-items-center">
                     <div>
                       <svg>
                         <use xlink:href="#clock"></use>
@@ -401,16 +420,18 @@
                 </a>
                 <div class="course__info">
                   <h2 class="course__name">
-                    <a href="#"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
+                    <a href="#">
+                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
+                      خط سوم</a
+                    >
                   </h2>
-                  <div
-                    class="course__price">
+                  <div class="course__price">
                     <button class="course__shopping-cart-icon">
                       <svg>
                         <use xlink:href="#shopping-cart"></use>
                       </svg>
                     </button>
-                  
+
                     <div class="d-flex align-items-center">
                       <span class="course__old-price">220,000 تومان</span>
                       <span class="course__current-price">175,000 تومان</span>
@@ -422,13 +443,14 @@
                       <i class="fa-solid fa-chalkboard-user"></i>
                       <h3 class="course__teacher-name">متین حسینی</h3>
                     </div>
-                    
+
                     <div class="course__students">
                       <i class="fa-solid fa-people-group"></i>
                       <span>11,578</span>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div
+                    class="d-flex justify-content-between align-items-center">
                     <div>
                       <svg>
                         <use xlink:href="#clock"></use>
@@ -451,7 +473,6 @@
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -567,79 +588,13 @@
       </section>
     </main>
 
-    <!-- <div class="d-flex">
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-    </div>
-    <div class="d-flex">
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-    </div>
-    <div class="d-flex">
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-      <div class="test-texts">
-        <svg fill="#fff" class="hexagon-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="20rem" viewBox="-48.57 -48.57 582.83 582.83" xml:space="preserve" transform="rotate(90)matrix(-1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="0.00485688"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.971376"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878 l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"></path> </g> </g> </g>
-          <h2>فضای ابری</h2>
-        </svg>
-      </div>
-    </div> -->
 
     <!--Javascript Links-->
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
     <script src="vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
     <script src="vendor/Swiper/swiper-bundle.min.js"></script>
     <script src="vendor/Swiper/swiper-bundle.min.css"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
     <script src="js/swiper-inits.js"></script>
   </body>
 </html>

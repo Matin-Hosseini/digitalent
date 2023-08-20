@@ -7,15 +7,16 @@
   transition: all var(--transition);
   margin: 1rem 0.5rem;
 }
-.article-box:hover .article-box__img img{
-    border-radius: 1rem;
-}
+
 .article-box__img {
   padding: 0.5rem;
 }
 .article-box__img img {
   border-radius: 1rem 1rem 1rem 3rem;
   transition: var(--transition);
+}
+.article-box:hover .article-box__img img{
+  border-radius: 1rem;
 }
 .article-box__content {
   padding: 1rem;
