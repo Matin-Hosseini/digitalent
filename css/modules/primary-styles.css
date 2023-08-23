@@ -12,11 +12,12 @@
   --yellow-stars: #facc15;
   --light-gray: #d1d5db;
   --gray: #9ca3af;
-  --bg-gray: #EEF0F5;
+  --bg-gray: #eef0f5;
   --red: #f87171;
-  --dark-green: #35A29F;
-  --blue: #19A7CE;
-  
+  --dark-green: #35a29f;
+  --blue: #19a7ce;
+  --orange: #ff6951;
+  --footer-bg: #453e79;
 
   /* transitions */
   --transition: 250ms ease-in-out;
@@ -34,6 +35,8 @@
   --text-color: #f9f9f9;
 
   --bg-gray: #9ca3af;
+
+  --footer-bg: var(--app-bg);
 }
 
 *,
@@ -81,4 +84,40 @@ a:hover {
 img {
   width: 100%;
   height: 100%;
+}
+
+/* components */
+.section-header__title {
+  font-family: "Persian Titraj";
+  font-size: 2.5rem;
+}
+.section-header__dashed-line {
+  flex: 1;
+  border: 0.2px dashed var(--gray);
+  margin: 0 0.5rem;
+}
+.section-header__link {
+  padding: 0.5rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  transition: all var(--transition);
+  color: var(--title-color);
+}
+.section-header__link:hover {
+  background-color: var(--light-gray);
+}
+.section-header__icon-container {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin-left: 0.5rem;
+  color: #fff;
+}
+.section-header__icon {
+  width: 1.2rem;
 }

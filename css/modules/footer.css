@@ -1,0 +1,122 @@
+.footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  padding: 5rem 0;
+  transition: var(--transition);
+}
+.footer-newsletter {
+  text-align: center;
+}
+.footer-newsletter__title {
+  font-size: 3rem;
+}
+.footer-newsletter__caption {
+  margin: 2rem 0;
+}
+.footer-newsletter__form {
+  border-radius: 10rem;
+  overflow: hidden;
+  font-size: 1.3rem;
+  max-width: 35rem;
+  margin: 0 auto;
+  display: flex;
+  background-color: #fff;
+}
+
+.footer-newsletter__form input {
+  border: 0;
+  outline: 0;
+  flex: 1;
+  padding-right: 2rem;
+}
+.footer-newsletter__form button {
+  background-color: var(--orange);
+  padding: 1.3rem 4rem;
+  border-radius: 10rem;
+  color: #fff;
+  border: 1px solid var(--orange);
+  transition: all var(--transition);
+}
+.footer-newsletter__form button:hover {
+  background-color: #fff;
+  color: var(--orange);
+}
+/* actual footer */
+.footer__content {
+  font-size: 1.4rem;
+  padding: 5rem 0;
+  margin: 5rem 0;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+.footer__company-description {
+  max-width: 31rem;
+  line-height: 1.4;
+}
+.footer__company-caption {
+  margin: 1.2rem 0;
+}
+.footer__socials {
+  display: flex;
+}
+.footer-socials__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-left: 0.5rem;
+  color: var(--orange);
+  transition: var(--transition);
+}
+.footer-socials__icon:hover {
+  background-color: var(--orange);
+  color: #fff;
+  transform: translateY(-0.5rem);
+}
+
+/* footer menus */
+.footer-menu {
+}
+.footer__contact-info header,
+.footer-menu header {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--orange);
+}
+.footer-menu__item {
+  padding-bottom: 1rem;
+}
+.footer-menu__link {
+  transition: all var(--transition);
+  display: block;
+}
+.footer-menu__item:hover .footer-menu__link {
+  padding-right: 1rem;
+  color: var(--orange);
+}
+
+/* footer contact info */
+.footer__location,
+.footer__phone,
+.footer__email {
+  display: flex;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+.footer__location svg {
+  color: var(--red);
+}
+.footer__phone svg {
+  color: var(--blue);
+}
+.footer__email svg {
+  color: var(--yellow);
+}
+.footer__location span {
+  max-width: 22rem;
+  line-height: 1.5;
+}

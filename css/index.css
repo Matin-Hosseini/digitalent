@@ -5,6 +5,7 @@
 @import "./modules/course.css";
 @import "./modules/article-box.css";
 @import "./modules/swiper.css";
+@import "./modules/footer.css";
 
 /* home starts */
 .home {
@@ -112,41 +113,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-}
-
-.section-header__title {
-  font-family: "Persian Titraj";
-  font-size: 2.5rem;
-}
-.section-header__dashed-line {
-  flex: 1;
-  border: 0.2px dashed var(--gray);
-  margin: 0 0.5rem;
-}
-.section-header__link {
-  padding: 0.5rem;
-  border-radius: 10rem;
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-  transition: all var(--transition);
-  color: var(--title-color);
-}
-.section-header__link:hover {
-  background-color: var(--light-gray);
-}
-.section-header__icon-container {
-  width: 1.8rem;
-  height: 1.8rem;
-  background-color: var(--red);
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  margin-left: 0.5rem;
-  color: #fff;
-}
-.section-header__icon {
-  width: 1.2rem;
 }
 
 .articles {
