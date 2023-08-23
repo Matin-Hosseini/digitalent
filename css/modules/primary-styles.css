@@ -90,6 +90,7 @@ img {
 .section-header__title {
   font-family: "Persian Titraj";
   font-size: 2.5rem;
+  margin-left: .5rem;
 }
 .section-header__dashed-line {
   flex: 1;
@@ -107,6 +108,7 @@ img {
 }
 .section-header__link:hover {
   background-color: var(--light-gray);
+  color: #3f3f46;
 }
 .section-header__icon-container {
   width: 1.8rem;

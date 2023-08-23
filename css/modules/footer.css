@@ -17,7 +17,7 @@
   border-radius: 10rem;
   overflow: hidden;
   font-size: 1.3rem;
-  max-width: 35rem;
+  max-width: 50rem;
   margin: 0 auto;
   display: flex;
   background-color: #fff;
@@ -78,8 +78,6 @@
 }
 
 /* footer menus */
-.footer-menu {
-}
 .footer__contact-info header,
 .footer-menu header {
   font-size: 1.8rem;

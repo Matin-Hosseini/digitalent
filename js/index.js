@@ -81,37 +81,37 @@ newestCourses.forEach((course) => {
     "beforeend",
     `
     <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-      <div class="course">
-        <a href="#" class="course__image">
+      <div class="course-box">
+        <a href="#" class="course-box__image">
           <img
             src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
             alt="" />
         </a>
-        <div class="course__info">
-          <h2 class="course__name">
+        <div class="course-box__info">
+          <h2 class="course-box__name">
             <a href="#"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
           </h2>
           <div
-            class="course__price">
-            <button class="course__shopping-cart-icon">
+            class="course-box__price">
+            <button class="course-box__shopping-cart-icon">
               <svg>
                 <use xlink:href="#shopping-cart"></use>
               </svg>
             </button>
           
             <div class="d-flex align-items-center">
-              <span class="course__old-price">220,000 تومان</span>
-              <span class="course__current-price">175,000 تومان</span>
+              <span class="course-box__old-price">220,000 تومان</span>
+              <span class="course-box__current-price">175,000 تومان</span>
             </div>
           </div>
           <div
             class="d-flex justify-content-between align-items-center my-3">
-            <div class="course__teacher d-flex align-items-center">
+            <div class="course-box__teacher d-flex align-items-center">
               <i class="fa-solid fa-chalkboard-user"></i>
-              <h3 class="course__teacher-name">متین حسینی</h3>
+              <h3 class="course-box__teacher-name">متین حسینی</h3>
             </div>
             
-            <div class="course__students">
+            <div class="course-box__students">
               <i class="fa-solid fa-people-group"></i>
               <span>11,578</span>
             </div>
@@ -120,10 +120,10 @@ newestCourses.forEach((course) => {
             <div>
               <svg>
                 <use xlink:href="#clock"></use>
-                <span class="course__time">20:50:34</span>
+                <span class="course-box__time">20:50:34</span>
               </svg>
             </div>
-            <div class="course__ratings">
+            <div class="course-box__ratings">
               <span>4</span>
               <i class="fa-solid fa-star"></i>
             </div>

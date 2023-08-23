@@ -1,4 +1,4 @@
-.course {
+.course-box {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: var(--box-shadow);
@@ -9,11 +9,11 @@
   background-color: var(--section-bg);
   transition: var(--transition);
 }
-.course svg {
+.course-box svg {
   width: 1.5rem;
 }
 
-.course__discount-percentage {
+.course-box__discount-percentage {
   position: absolute;
   display: grid;
   place-content: center;
@@ -26,21 +26,22 @@
   right: 1rem;
   box-shadow: var(--box-shadow);
 }
-.course__info {
+.course-box__info {
   padding: 1rem 1rem;
 }
-.course__name {
+.course-box__name {
   height: 3.5rem;
   display: -webkit-box;
   width: auto;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.3;
   margin-bottom: 1rem;
   color: var(--title-color);
 }
-.course__price {
+.course-box__price {
   padding: 1rem;
   border: 1px dashed var(--gray);
   border-radius: 1rem;
@@ -48,7 +49,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.course__shopping-cart-icon {
+.course-box__shopping-cart-icon {
   display: grid;
   place-content: center;
   width: 3.2rem;
@@ -59,23 +60,23 @@
   color: #fff;
   transition: all var(--transition);
 }
-.course__shopping-cart-icon:hover {
+.course-box__shopping-cart-icon:hover {
   border-radius: 50%;
 }
-.course__shopping-cart-icon svg {
+.course-box__shopping-cart-icon svg {
   width: 2rem;
 }
-.course__current-price {
+.course-box__current-price {
   color: var(--green);
   font-size: 1.5rem;
 }
-.course__old-price {
+.course-box__old-price {
   color: var(--gray);
   font-size: 1.3rem;
   margin-left: 1rem;
   position: relative;
 }
-.course__old-price::before {
+.course-box__old-price::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -85,24 +86,24 @@
   transform: translateY(-50%) rotate(-5deg);
 }
 
-.course__time,
-.course__teacher-name {
+.course-box__time,
+.course-box__teacher-name {
   margin-right: 0.3rem;
 }
-.course__ratings .fa-star {
+.course-box__ratings .fa-star {
   width: 1.5rem;
   color: var(--yellow);
 }
 
-.course__discount-time {
+.course-box__discount-time {
   font-size: 1.4rem;
 }
 
-.course__discount-seconds {
+.course-box__discount-seconds {
   color: var(--red);
 }
-.course__discount-minutes,
-.course__discount-hours,
-.course__discount-days {
+.course-box__discount-minutes,
+.course-box__discount-hours,
+.course-box__discount-days {
   color: var(--blue);
 }
