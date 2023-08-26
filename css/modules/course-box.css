@@ -26,8 +26,28 @@
   right: 1rem;
   box-shadow: var(--box-shadow);
 }
+.course-box__image{
+  /* margin-bottom: 1rem; */
+}
 .course-box__info {
   padding: 1rem 1rem;
+  padding-top: 2rem;
+  position: relative;
+}
+.course-box__category {
+  position: absolute;
+  color: red;
+  background-color: var(--section-bg);
+  top: -2rem;
+  right: 0;
+  left: 0;
+  width: 15rem;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1rem solid var(--section-bg);
 }
 .course-box__name {
   height: 3.5rem;
@@ -52,8 +72,8 @@
 .course-box__shopping-cart-icon {
   display: grid;
   place-content: center;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   background-color: var(--red);
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -68,12 +88,12 @@
 }
 .course-box__current-price {
   color: var(--green);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .course-box__old-price {
   color: var(--gray);
-  font-size: 1.3rem;
-  margin-left: 1rem;
+  font-size: 1.1rem;
+  margin-left: .5rem;
   position: relative;
 }
 .course-box__old-price::before {
@@ -83,7 +103,7 @@
   height: 0.1rem;
   background-color: var(--red);
   top: 50%;
-  transform: translateY(-50%) rotate(-5deg);
+  transform: translateY(-50%) rotate(-10deg);
 }
 
 .course-box__time,

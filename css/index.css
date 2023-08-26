@@ -6,6 +6,7 @@
 @import "./modules/article-box.css";
 @import "./modules/swiper.css";
 @import "./modules/footer.css";
+@import "./modules/event-box.css";
 
 /* home starts */
 .home {
@@ -34,14 +35,14 @@
   line-height: 1.5;
 }
 /* categories */
-.home__swiper-container{
+.home__swiper-container {
   width: 90%;
   height: 10rem;
 }
-.home__swiper-container .swiper-slide{
- height: 10rem;
+.home__swiper-container .swiper-slide {
+  height: 10rem;
   display: grid;
-  place-items: center ;
+  place-items: center;
 }
 .home__category-container {
   margin: -1rem;
@@ -168,4 +169,38 @@
   gap: 0.5rem;
   width: 15rem;
   margin: 0 auto;
+  background-color: var(--light-gray);
+  color: #3f3f46;
 }
+/*latest events starts*/
+.latest-events {
+  font-size: 1.2rem;
+}
+.latest-events__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.latest-events__subtitle::before{
+  content: '';
+  position: absolute;
+  width: 10rem;
+  height: 2rem;
+  background-color: var(--purple);
+  opacity: 0.4;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  border-radius: 1rem 0 0 1rem;
+}
+.latest-events__title {
+  font-size: 2.5rem;
+  font-family: "Persian Titraj";
+}
+.latest-events__menu button{
+  background-color: var(--gray);
+  padding: .3rem .8rem;
+  border-radius: .4rem;
+  color: #fff;
+}
+/*latest events ends*/

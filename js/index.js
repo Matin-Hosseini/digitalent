@@ -80,7 +80,7 @@ newestCourses.forEach((course) => {
   newestCoursesContainer.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+    <div class="col-sm-6 col-md-4 col-lg-3">
       <div class="course-box">
         <a href="#" class="course-box__image">
           <img
