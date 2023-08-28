@@ -1,0 +1,66 @@
+@import "./fonts.css";
+@import "./reset.css";
+@import "./modules/primary-styles.css";
+@import "./modules/footer.css";
+
+.sign-up {
+  margin-bottom: 5rem;
+}
+
+.sign-up__title {
+  font-family: "Persian Titraj";
+  font-size: 4.5rem;
+  text-align: center;
+  color: var(--green);
+  margin-bottom: 6rem;
+}
+
+.sign-up-form {
+  max-width: 60rem;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.sign-up-form .custom-input__input {
+  border: 0;
+  border-bottom: 1px solid var(--blue);
+  border-radius: 0.5rem;
+}
+
+.sign-up-form .custom-input__label {
+  color: var(--blue);
+}
+
+.sign-up-form__btn {
+  width: 100%;
+  background-color: var(--green);
+  height: 4.5rem;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+.sign-up-form__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.footer {
+  direction: rtl;
+}
+
+@media (min-width: 360px) {
+  .sign-up-form__options {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-up {
+    margin-bottom: 0;
+  }
+  .sign-up__img {
+    height: 100vh;
+  }
+}

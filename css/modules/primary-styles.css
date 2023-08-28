@@ -127,6 +127,44 @@ img {
   width: 1.2rem;
 }
 
+/*custom inputs starts */
+.custom-input {
+  position: relative;
+  margin-bottom: 2rem;
+  transition: all var(--transition);
+}
+.custom-input__input {
+  direction: rtl;
+  width: 100%;
+  border: 0;
+  border: 2px solid var(--purple);
+  outline: 0;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  color: var(--gray);
+  background-color: var(--app-bg);
+}
+.custom-input__label {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  color: var(--purple);
+  font-size: 1.4rem;
+  pointer-events: none;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--app-bg);
+  transition: all var(--transition);
+}
+
+.custom-input__input:focus ~ .custom-input__label,
+.custom-input__input:valid ~ .custom-input__label {
+  top: 0;
+  font-size: 1.2rem;
+}
+/*custom inputs ends */
+
 /* custom checkbox starts */
 .checkbox {
   display: inline-block;
