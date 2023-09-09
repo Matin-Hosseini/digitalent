@@ -31,7 +31,8 @@
 
 :root.dark {
   --app-bg: #27272a;
-  --section-bg: #3f3f46;
+  /* --section-bg: #3f3f46; */
+  --section-bg: #293146;
 
   /* colors */
   --title-color: #fff;
@@ -126,6 +127,17 @@ img {
 .section-header__icon {
   width: 1.2rem;
 }
+
+.section-name {
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+.section-title {
+  color: var(--gray);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 
 /*custom inputs starts */
 .custom-input {

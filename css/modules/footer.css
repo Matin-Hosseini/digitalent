@@ -28,6 +28,7 @@
   outline: 0;
   flex: 1;
   padding-right: 2rem;
+  direction: rtl;
 }
 .footer-newsletter__form button {
   background-color: var(--orange);
