@@ -27,6 +27,10 @@
   --box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
 
   --border-radius: 1rem;
+
+  /*fonts*/
+  --title-font: "Persian Titraj";
+  --text-font: "Vasir";
 }
 
 :root.dark {
@@ -52,14 +56,16 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  direction: rtl;
 }
 
 body {
-  font-family: "Vasir";
+  font-family: var(--text-font);
   font-size: 1.6rem;
   color: var(--title-color);
   background-color: var(--app-bg);
   transition: background-color var(--transition);
+  line-height: 1.5;
 }
 
 svg {
@@ -137,7 +143,6 @@ img {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 
 /*custom inputs starts */
 .custom-input {

@@ -1,0 +1,134 @@
+@import "./fonts.css";
+@import "./reset.css";
+@import "./modules/primary-styles.css";
+@import "./modules/header.css";
+@import "./modules/footer.css";
+
+/* course info starts */
+.course-info {
+  padding: 8rem 0 3rem;
+  font-size: 1.3rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("./../assets/images/course-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.course-info__title {
+  font-family: var(--title-font);
+  font-size: 4rem;
+  color: var(--light-gray);
+}
+.course-info__description {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: var(--gray);
+}
+.course-teacher {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.course-teacher__profile {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.course-teacher__name {
+}
+.course-category {
+}
+.course-category__title {
+}
+.course-category__name {
+}
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.course-stars {
+}
+.course-stars .fa-star,
+.course-stars .fa-star-half-stroke {
+  color: var(--yellow);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* .course-stars .fa-star-half-stroke{
+    scale: -1;
+} */
+.course-comments-count {
+}
+/* course info ends */
+
+.course-sidebar {
+  transform: translateY(-5rem);
+}
+/* tabs starts */
+.tabs {
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid var(--gray);
+  background-color: var(--app-bg);
+  z-index: 99999;
+}
+.tabs__item {
+  padding: 2rem 1rem;
+  cursor: pointer;
+  transition: color 150ms;
+  font-size: 1.4rem;
+}
+.tabs__item:hover {
+  color: var(--orange);
+}
+.tabs__item--active {
+  color: var(--orange);
+}
+.tabs__line {
+  width: 8rem;
+  height: 2px;
+  background-color: var(--orange);
+  position: absolute;
+  bottom: -2px;
+  transition: all var(--transition);
+}
+/* tabs ends */
+
+/* course overview starts */
+.course-overview {
+  font-size: 1.4rem;
+  color: var(--gray);
+}
+.course-overview__title {
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: var(--blue);
+}
+.course-overview__description p {
+  margin-bottom: 2rem;
+}
+.course-overview__video {
+  width: 100%;
+  border-radius: 1rem;
+}
+.course-overview__menu {
+  padding-right: 3rem;
+  margin-bottom: 5rem;
+}
+.course-overview__menu li {
+  position: relative;
+}
+.course-overview__menu li::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 1px;
+  background-color: var(--gray);
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1rem;
+}
+/* course overview ends */
