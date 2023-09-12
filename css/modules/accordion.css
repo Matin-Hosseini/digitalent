@@ -1,0 +1,43 @@
+.accordion-item {
+  background-color: var(--section-bg);
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  border: 0;
+  box-shadow: 1px 1px 10px var(--purple);
+  border-radius: 2rem !important;
+}
+.accordion-header {
+  padding: 2rem;
+}
+.accordion-button {
+  font-size: 2rem;
+  font-family: "Persian Titraj";
+  padding: 0;
+  border: 0 !important;
+  color: var(--title-color) !important;
+  box-shadow: none  !important;
+  border-radius: 2rem;
+  background-color: var(--section-bg) !important;
+}
+.accordion-button::after {
+  background-image: url("./../../assets/svg/plus-icon.svg");
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("./../../assets/svg/minus-icon.svg");
+}
+.accordion-button:focus {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none;
+}
+.accordion-button:focus::after {
+}
+.accordion-body {
+  color: var(--gray);
+  line-height: 1.5;
+  font-size: 1.3rem;
+  padding: 2rem;
+}

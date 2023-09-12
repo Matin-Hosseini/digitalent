@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <!-- prettier-ignore -->
-    <svg class="d-none">
+    <div id="content">
+      <!-- prettier-ignore -->
+      <svg class="d-none">
       <symbol id="shop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round"d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
       </symbol>
@@ -82,681 +83,692 @@
       
     </svg>
 
-    <header>
-      <!--nav menu starts-->
-      <nav class="nav">
-        <div class="hamburger-menu" id="hamburger-menu-btn">
-          <span class="hamburger-menu__line"></span>
-        </div>
-        <div class="nav__logo">logo</div>
-        <ul class="nav-menu" id="nav-menu">
-          <div
-            class="d-flex d-lg-none justify-content-between align-items-center px-3 mb-3">
-            <div class="logl">logo</div>
-            <svg id="close-sidebar-btn">
-              <use xlink:href="#close"></use>
-            </svg>
+      <header>
+        <!--nav menu starts-->
+        <nav class="nav">
+          <div class="hamburger-menu" id="hamburger-menu-btn">
+            <span class="hamburger-menu__line"></span>
           </div>
-          <li class="nav-menu__item nav-menu__item--active">
-            <svg class="nav-menu__icon">
-              <use xlink:href="#home"></use>
-            </svg>
-            <a href="#" class="nav-menu__link">صفحه اصلی</a>
-          </li>
-          <li class="nav-menu__item h-6">
-            <svg class="nav-menu__icon">
-              <use xlink:href="#shop"></use>
-            </svg>
-            <a href="#" class="nav-menu__link">فروشگاه</a>
-          </li>
-          <li class="nav-menu__item">
-            <svg>
-              <use xlink:href="#code"></use>
-            </svg>
-            <a href="#" class="nav-menu__link">برنامه نویسی</a>
-            <svg class="nav-menu__arrow-down d-none d-lg-block">
-              <use xlink:href="#arrow-down"></use>
-            </svg>
-            <ul class="nav-sub-menu">
-              <li class="nav-sub-menu__item">
-                <a href="#" class="nav-sub-menu__link">فرانت اند</a>
-              </li>
-              <li class="nav-sub-menu__item">
-                <a href="#" class="nav-sub-menu__link">بک اند</a>
-              </li>
-              <li class="nav-sub-menu__item">
-                <a href="#" class="nav-sub-menu__link">امنیت</a>
-              </li>
-              <li class="nav-sub-menu__item">
-                <a href="#" class="nav-sub-menu__link">اندروید</a>
-              </li>
-              <li class="nav-sub-menu__item">
-                <a href="#" class="nav-sub-menu__link">ios</a>
-              </li>
-              <li class="nav-sub-menu__item">
-                <a href="#" class="nav-sub-menu__link">هوش مصنوعی</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-menu__item">
-            <svg>
-              <use xlink:href="#blog"></use>
-            </svg>
-            <a href="#" class="nav-menu__link">بلاگ</a>
-          </li>
-          <li class="nav-menu__item">
-            <svg>
-              <use xlink:href="#person-circle"></use>
-            </svg>
-            <a href="#" class="nav-menu__link">درباره ما</a>
-          </li>
-          <li class="nav-menu__item">
-            <svg>
-              <use xlink:href="#phone"></use>
-            </svg>
-            <a href="#" class="nav-menu__link">تماس با ما</a>
-          </li>
-        </ul>
-        <!--nav menu ends-->
-
-        <!--nav options starts-->
-        <div
-          class="nav__options d-flex justify-content-center align-items-center">
-          <button>
-            <svg class="nav__icon">
-              <use xlink:href="#search"></use>
-            </svg>
-          </button>
-          <div class="nav__shopping-cart">
-            <svg class="nav__icon">
-              <use xlink:href="#shopping-cart"></use>
-            </svg>
-          </div>
-          <button class="nav__dark-mode-btn" id="dark-mode-btn">
-            <svg class="nav__icon">
-              <use xlink:href="#moon"></use>
-            </svg>
-          </button>
-          <a class="login-signup-btn">
-            <svg class="nav__icon">
-              <use xlink:href="#sign-in"></use>
-            </svg>
-            <span class="d-none d-md-block">ورود | ثبت نام</span>
-          </a>
-        </div>
-        <!--nav options ends-->
-      </nav>
-    </header>
-
-    <main>
-      <section class="home">
-        <div class="container-fluid"></div>
-        <h1 class="home__title">هرچی که میخوای رو سه سوته یاد بگیر</h1>
-        <!-- mobile -->
-        <div class="home__swiper-container d-md-none">
-          <div class="swiper home__category-swiper">
-            <div class="swiper-wrapper" id="home__category-swiper-wrapper">
-              <!-- Slides will be shown by javascript-->
-            </div>
-          </div>
-        </div>
-
-        <!-- desktop -->
-        <div class="d-none d-md-block">
-          <div
-            class="first-row d-flex home__category-container"
-            id="first-row"></div>
-          <div
-            class="second-row d-flex home__category-container"
-            id="second-row"></div>
-          <div
-            class="third-row d-flex home__category-container"
-            id="third-row"></div>
-        </div>
-      </section>
-      <section class="special-discount my-5">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-header__title">تخفیفات ویژه</h2>
-            <div class="section-header__dashed-line"></div>
-            <a href="#" class="section-header__link">
-              <div class="section-header__icon-container">
-                <svg class="section-header__icon">
-                  <use xlink:href="#arrow-left"></use>
-                </svg>
-              </div>
-              مشاهده همه
-            </a>
-          </div>
-          <div class="row">
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="course-box">
-                <div class="course-box__discount-percentage">25%</div>
-                <a href="#" class="course-box__image">
-                  <img
-                    src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
-                    alt="" />
-                </a>
-                <div class="course-box__info">
-                  <h2 class="course-box__name">
-                    <a href="#">
-                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
-                      خط سوم</a
-                    >
-                  </h2>
-                  <div class="course-box__price">
-                    <button class="course-box__shopping-cart-icon">
-                      <svg>
-                        <use xlink:href="#shopping-cart"></use>
-                      </svg>
-                    </button>
-
-                    <div class="d-flex align-items-center">
-                      <span class="course-box__old-price">220,000 تومان</span>
-                      <span class="course-box__current-price"
-                        >175,000 تومان</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center my-3">
-                    <div class="course-box__teacher d-flex align-items-center">
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                      <h3 class="course-box__teacher-name">متین حسینی</h3>
-                    </div>
-
-                    <div class="course-box__students">
-                      <i class="fa-solid fa-people-group"></i>
-                      <span>11,578</span>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <svg>
-                        <use xlink:href="#clock"></use>
-                        <span class="course-box__time">20:50:34</span>
-                      </svg>
-                    </div>
-                    <div class="course-box__ratings">
-                      <span>4</span>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="course-box__discount-time">
-                      <span class="course-box__discount-seconds">55</span>
-                      <span>:</span>
-                      <span class="course-box__discount-minutes">14</span>
-                      <span>:</span>
-                      <span class="course-box__discount-hours">17</span>
-                      <span>:</span>
-                      <span class="course-box__discount-days">3</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="course-box">
-                <div class="course-box__discount-percentage">25%</div>
-                <a href="#" class="course-box__image">
-                  <img
-                    src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
-                    alt="" />
-                </a>
-                <div class="course-box__info">
-                  <h2 class="course-box__name">
-                    <a href="#">
-                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
-                      خط سوم</a
-                    >
-                  </h2>
-                  <div class="course-box__price">
-                    <button class="course-box__shopping-cart-icon">
-                      <svg>
-                        <use xlink:href="#shopping-cart"></use>
-                      </svg>
-                    </button>
-
-                    <div class="d-flex align-items-center">
-                      <span class="course-box__old-price">220,000 تومان</span>
-                      <span class="course-box__current-price"
-                        >175,000 تومان</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center my-3">
-                    <div class="course-box__teacher d-flex align-items-center">
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                      <h3 class="course-box__teacher-name">متین حسینی</h3>
-                    </div>
-
-                    <div class="course-box__students">
-                      <i class="fa-solid fa-people-group"></i>
-                      <span>11,578</span>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <svg>
-                        <use xlink:href="#clock"></use>
-                        <span class="course-box__time">20:50:34</span>
-                      </svg>
-                    </div>
-                    <div class="course-box__ratings">
-                      <span>4</span>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="course-box__discount-time">
-                      <span class="course-box__discount-seconds">55</span>
-                      <span>:</span>
-                      <span class="course-box__discount-minutes">14</span>
-                      <span>:</span>
-                      <span class="course-box__discount-hours">17</span>
-                      <span>:</span>
-                      <span class="course-box__discount-days">3</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="course-box">
-                <div class="course-box__discount-percentage">25%</div>
-                <a href="#" class="course-box__image">
-                  <img
-                    src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
-                    alt="" />
-                </a>
-                <div class="course-box__info">
-                  <h2 class="course-box__name">
-                    <a href="#">
-                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
-                      خط سوم</a
-                    >
-                  </h2>
-                  <div class="course-box__price">
-                    <button class="course-box__shopping-cart-icon">
-                      <svg>
-                        <use xlink:href="#shopping-cart"></use>
-                      </svg>
-                    </button>
-
-                    <div class="d-flex align-items-center">
-                      <span class="course-box__old-price">220,000 تومان</span>
-                      <span class="course-box__current-price"
-                        >175,000 تومان</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center my-3">
-                    <div class="course-box__teacher d-flex align-items-center">
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                      <h3 class="course-box__teacher-name">متین حسینی</h3>
-                    </div>
-
-                    <div class="course-box__students">
-                      <i class="fa-solid fa-people-group"></i>
-                      <span>11,578</span>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <svg>
-                        <use xlink:href="#clock"></use>
-                        <span class="course-box__time">20:50:34</span>
-                      </svg>
-                    </div>
-                    <div class="course-box__ratings">
-                      <span>4</span>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="course-box__discount-time">
-                      <span class="course-box__discount-seconds">55</span>
-                      <span>:</span>
-                      <span class="course-box__discount-minutes">14</span>
-                      <span>:</span>
-                      <span class="course-box__discount-hours">17</span>
-                      <span>:</span>
-                      <span class="course-box__discount-days">3</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="course-box">
-                <div class="course-box__discount-percentage">25%</div>
-                <a href="#" class="course-box__image">
-                  <img
-                    src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
-                    alt="" />
-                </a>
-                <div class="course-box__info">
-                  <h2 class="course-box__name">
-                    <a href="#">
-                      آموزش html و css برای مبتدی ها که در واقع منجر به این هست
-                      خط سوم</a
-                    >
-                  </h2>
-                  <div class="course-box__price">
-                    <button class="course-box__shopping-cart-icon">
-                      <svg>
-                        <use xlink:href="#shopping-cart"></use>
-                      </svg>
-                    </button>
-
-                    <div class="d-flex align-items-center">
-                      <span class="course-box__old-price">220,000 تومان</span>
-                      <span class="course-box__current-price"
-                        >175,000 تومان</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center my-3">
-                    <div class="course-box__teacher d-flex align-items-center">
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                      <h3 class="course-box__teacher-name">متین حسینی</h3>
-                    </div>
-
-                    <div class="course-box__students">
-                      <i class="fa-solid fa-people-group"></i>
-                      <span>11,578</span>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <svg>
-                        <use xlink:href="#clock"></use>
-                        <span class="course-box__time">20:50:34</span>
-                      </svg>
-                    </div>
-                    <div class="course-box__ratings">
-                      <span>4</span>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="course-box__discount-time">
-                      <span class="course-box__discount-seconds">55</span>
-                      <span>:</span>
-                      <span class="course-box__discount-minutes">14</span>
-                      <span>:</span>
-                      <span class="course-box__discount-hours">17</span>
-                      <span>:</span>
-                      <span class="course-box__discount-days">3</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="newest-courses my-5">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-header__title">جدیدترین دوره ها</h2>
-            <div class="section-header__dashed-line"></div>
-            <a href="#" class="section-header__link">
-              <div class="section-header__icon-container">
-                <svg class="section-header__icon">
-                  <use xlink:href="#arrow-left"></use>
-                </svg>
-              </div>
-              مشاهده همه
-            </a>
-          </div>
-          <div class="row" id="newest-courses__container"></div>
-        </div>
-      </section>
-
-      <section class="weblog">
-        <div class="container-fluid">
-          <div class="articles my-5">
-            <div class="row">
-              <div class="col-12 col-sm-5 col-lg-4 col-xl-3 align-self-center">
-                <h2 class="articles__title">خواندنی ها</h2>
-                <p class="articles__caption">
-                  جدیدترین مقاله های روز در حوضه مورد نظرتان را بخوانید و لذت
-                  ببرید
-                </p>
-                <a href="#" class="section-header__link articles__link">
-                  <div class="section-header__icon-container m-0">
-                    <svg class="section-header__icon">
-                      <use xlink:href="#arrow-left"></use>
-                    </svg>
-                  </div>
-                  مشاهده همه
-                </a>
-              </div>
-              <div class="col-12 col-sm-7 col-lg-8 col-xl-9">
-                <div class="swiper articles-swiper">
-                  <div class="swiper-wrapper" id="article-box__container">
-                    <!-- slides will be created by javascript here -->
-                  </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="latest-events my-5">
-        <div class="container">
-          <h3 class="latest-events__subtitle">وقتشه یه جا با هم یاد بگیریم</h3>
-          <h2 class="latest-events__title">جدیدترین رویداد های دیجی تلنت</h2>
-
-          <div class="latest-events__menu text-center my-5">
-            <button data-category="all">همه</button>
-            <button data-category="all">داغ</button>
-            <button data-category="all">ویژه</button>
-          </div>
-
-          <div class="events-cotainer row ">
-            <div class="col-lg-6">
-              <div class="event-box">
-                <a href="#" class="event-box__image">
-                  <img
-                    src="assets/images/6a1e69a6-6922-43ab-bc85-5d8548a32e20_cover_thumb.webp"
-                    alt="" />
-                </a>
-                <div class="event-box__info">
-                  <div class="event-box__date">17 دی</div>
-                  <h2>
-                    <a href="#" class="event-box__title"
-                      >چکونه شبکه سازی بهینه ای داشته باشیم که بتوانیم در همه
-                      شرایط بهترین کار هارا انجام دهیم</a
-                    >
-                  </h2>
-                  <div class="d-flex align-items-center">
-                    <div class="d-flex align-items-center event-box__time">
-                      <i class="fa-regular fa-clock event-box__icon"></i>
-                      <div>
-                        <span>00</span>
-                        <span>:</span>
-                        <span>08</span>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-center event-box__location">
-                      <i class="fa-solid fa-location-dot event-box__icon"></i>
-                      <span>تهران - ستارخان -بعد از پل اول</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" class="">
-                  <i class="fa-solid fa-arrow-left-long event-box__link"></i>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="event-box active">
-                <a href="#" class="event-box__image">
-                  <img
-                    src="assets/images/6a1e69a6-6922-43ab-bc85-5d8548a32e20_cover_thumb.webp"
-                    alt="" />
-                </a>
-                <div class="event-box__info">
-                  <div class="event-box__date">17 دی</div>
-                  <h2>
-                    <a href="#" class="event-box__title"
-                      >چکونه شبکه سازی بهینه ای داشته باشیم که بتوانیم در همه
-                      شرایط بهترین کار هارا انجام دهیم</a
-                    >
-                  </h2>
-                  <div class="d-flex align-items-center">
-                    <div class="d-flex align-items-center event-box__time">
-                      <i class="fa-regular fa-clock event-box__icon"></i>
-                      <div>
-                        <span>00</span>
-                        <span>:</span>
-                        <span>08</span>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-center event-box__location">
-                      <i class="fa-solid fa-location-dot event-box__icon"></i>
-                      <span>تهران - ستارخان -بعد از پل اول</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" class="">
-                  <i class="fa-solid fa-arrow-left-long event-box__link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="section-header__link articles__link">
-            <div class="section-header__icon-container m-0">
-              <svg class="section-header__icon">
-                <use xlink:href="#arrow-left"></use>
+          <div class="nav__logo">logo</div>
+          <ul class="nav-menu" id="nav-menu">
+            <div
+              class="d-flex d-lg-none justify-content-between align-items-center px-3 mb-3">
+              <div class="logl">logo</div>
+              <svg id="close-sidebar-btn">
+                <use xlink:href="#close"></use>
               </svg>
             </div>
-            مشاهده همه
-          </a>
-        </div>
-      </section>
-    </main>
+            <li class="nav-menu__item nav-menu__item--active">
+              <svg class="nav-menu__icon">
+                <use xlink:href="#home"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">صفحه اصلی</a>
+            </li>
+            <li class="nav-menu__item h-6">
+              <svg class="nav-menu__icon">
+                <use xlink:href="#shop"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">فروشگاه</a>
+            </li>
+            <li class="nav-menu__item">
+              <svg>
+                <use xlink:href="#code"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">برنامه نویسی</a>
+              <svg class="nav-menu__arrow-down d-none d-lg-block">
+                <use xlink:href="#arrow-down"></use>
+              </svg>
+              <ul class="nav-sub-menu">
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">فرانت اند</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">بک اند</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">امنیت</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">اندروید</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">ios</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">هوش مصنوعی</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-menu__item">
+              <svg>
+                <use xlink:href="#blog"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">بلاگ</a>
+            </li>
+            <li class="nav-menu__item">
+              <svg>
+                <use xlink:href="#person-circle"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">درباره ما</a>
+            </li>
+            <li class="nav-menu__item">
+              <svg>
+                <use xlink:href="#phone"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">تماس با ما</a>
+            </li>
+          </ul>
+          <!--nav menu ends-->
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-newsletter">
-          <h2 class="footer-newsletter__title">عضو خبرنامه شوید</h2>
-          <p class="footer-newsletter__caption">
-            برای آگاهی از آخرین دوره ها، تخفیف ها، رویداد ها و ... در خبرنامه
-            عضو شوید
-          </p>
-          <form action="" class="footer-newsletter__form">
-            <input type="email" placeholder="ایمیل خود را وارد کنید." />
-            <button>عضویت</button>
-          </form>
-        </div>
-        <div class="footer__content">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="footer__company-description">
-                <h2 class="footer__logo text-danger">DigiTalent</h2>
-                <p class="footer__company-caption">
-                  شرکت دیجی تلنت، با افتخار و تعهد به ارائه خدمات برتر و محصولات
-                  با کیفیت به عنوان یک رهنمود در زمینه آموزش آنلاین به مشتریان
-                  خود خدمت می کند. از شما برای انتخاب تیم ما سپاس گذاریم.
-                </p>
-                <div class="footer__socials">
-                  <a href="#" class="footer-socials__icon">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="#" class="footer-socials__icon">
-                    <i class="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="#" class="footer-socials__icon">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                  <a href="#" class="footer-socials__icon">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="#" class="footer-socials__icon">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                </div>
+          <!--nav options starts-->
+          <div
+            class="nav__options d-flex justify-content-center align-items-center">
+            <button>
+              <svg class="nav__icon">
+                <use xlink:href="#search"></use>
+              </svg>
+            </button>
+            <div class="nav__shopping-cart">
+              <svg class="nav__icon">
+                <use xlink:href="#shopping-cart"></use>
+              </svg>
+            </div>
+            <button class="nav__dark-mode-btn" id="dark-mode-btn">
+              <svg class="nav__icon">
+                <use xlink:href="#moon"></use>
+              </svg>
+            </button>
+            <a class="login-signup-btn">
+              <svg class="nav__icon">
+                <use xlink:href="#sign-in"></use>
+              </svg>
+              <span class="d-none d-md-block">ورود | ثبت نام</span>
+            </a>
+          </div>
+          <!--nav options ends-->
+        </nav>
+      </header>
+
+      <main>
+        <section class="home">
+          <div class="container-fluid"></div>
+          <h1 class="home__title">هرچی که میخوای رو سه سوته یاد بگیر</h1>
+          <!-- mobile -->
+          <div class="home__swiper-container d-md-none">
+            <div class="swiper home__category-swiper">
+              <div class="swiper-wrapper" id="home__category-swiper-wrapper">
+                <!-- Slides will be shown by javascript-->
               </div>
             </div>
-            <div class="col-lg-2">
-              <ul class="footer-menu">
-                <header>دسترسی سریع</header>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">درباره ما</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">رویداد های پیش رو</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">وبلاگ</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">سوالات متداول</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">حریم خصوصی</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-2">
-              <ul class="footer-menu">
-                <header>لینک های مفید</header>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">ارتباط با ما</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">دوره های محبوب</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">مدرسین</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">نظرات کاربران</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a href="#" class="footer-menu__link">ضمانت بازگشت</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-4">
-              <div class="footer__contact-info">
-                <header>اطلاعات تماس</header>
-                <div class="footer__location">
-                  <svg>
-                    <use xlink:href="#location"></use>
+          </div>
+
+          <!-- desktop -->
+          <div class="d-none d-md-block">
+            <div
+              class="first-row d-flex home__category-container"
+              id="first-row"></div>
+            <div
+              class="second-row d-flex home__category-container"
+              id="second-row"></div>
+            <div
+              class="third-row d-flex home__category-container"
+              id="third-row"></div>
+          </div>
+        </section>
+        <section class="special-discount my-5">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-header__title">تخفیفات ویژه</h2>
+              <div class="section-header__dashed-line"></div>
+              <a href="#" class="section-header__link">
+                <div class="section-header__icon-container">
+                  <svg class="section-header__icon">
+                    <use xlink:href="#arrow-left"></use>
                   </svg>
-                  <span>تهران، ستارخان، خیابان یکم، کوچه دوم، پلاک 200</span>
                 </div>
-                <div class="footer__phone">
-                  <svg>
-                    <use xlink:href="#phone"></use>
-                  </svg>
-                  <div class="d-flex flex-column gap-2">
-                    <span>021-33849622</span>
-                    <span>0919-7892478</span>
+                مشاهده همه
+              </a>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="course-box">
+                  <div class="course-box__discount-percentage">25%</div>
+                  <a href="#" class="course-box__image">
+                    <img
+                      src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+                      alt="" />
+                  </a>
+                  <div class="course-box__info">
+                    <h2 class="course-box__name">
+                      <a href="#">
+                        آموزش html و css برای مبتدی ها که در واقع منجر به این
+                        هست خط سوم</a
+                      >
+                    </h2>
+                    <div class="course-box__price">
+                      <button class="course-box__shopping-cart-icon">
+                        <svg>
+                          <use xlink:href="#shopping-cart"></use>
+                        </svg>
+                      </button>
+
+                      <div class="d-flex align-items-center">
+                        <span class="course-box__old-price">220,000 تومان</span>
+                        <span class="course-box__current-price"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center my-3">
+                      <div
+                        class="course-box__teacher d-flex align-items-center">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3 class="course-box__teacher-name">متین حسینی</h3>
+                      </div>
+
+                      <div class="course-box__students">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>11,578</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <svg>
+                          <use xlink:href="#clock"></use>
+                          <span class="course-box__time">20:50:34</span>
+                        </svg>
+                      </div>
+                      <div class="course-box__ratings">
+                        <span>4</span>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="course-box__discount-time">
+                        <span class="course-box__discount-seconds">55</span>
+                        <span>:</span>
+                        <span class="course-box__discount-minutes">14</span>
+                        <span>:</span>
+                        <span class="course-box__discount-hours">17</span>
+                        <span>:</span>
+                        <span class="course-box__discount-days">3</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="footer__email">
-                  <i class="fa-regular fa-envelope"></i>
-                  <span>matinhosseiniofficial@gmail.com</span>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="course-box">
+                  <div class="course-box__discount-percentage">25%</div>
+                  <a href="#" class="course-box__image">
+                    <img
+                      src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+                      alt="" />
+                  </a>
+                  <div class="course-box__info">
+                    <h2 class="course-box__name">
+                      <a href="#">
+                        آموزش html و css برای مبتدی ها که در واقع منجر به این
+                        هست خط سوم</a
+                      >
+                    </h2>
+                    <div class="course-box__price">
+                      <button class="course-box__shopping-cart-icon">
+                        <svg>
+                          <use xlink:href="#shopping-cart"></use>
+                        </svg>
+                      </button>
+
+                      <div class="d-flex align-items-center">
+                        <span class="course-box__old-price">220,000 تومان</span>
+                        <span class="course-box__current-price"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center my-3">
+                      <div
+                        class="course-box__teacher d-flex align-items-center">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3 class="course-box__teacher-name">متین حسینی</h3>
+                      </div>
+
+                      <div class="course-box__students">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>11,578</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <svg>
+                          <use xlink:href="#clock"></use>
+                          <span class="course-box__time">20:50:34</span>
+                        </svg>
+                      </div>
+                      <div class="course-box__ratings">
+                        <span>4</span>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="course-box__discount-time">
+                        <span class="course-box__discount-seconds">55</span>
+                        <span>:</span>
+                        <span class="course-box__discount-minutes">14</span>
+                        <span>:</span>
+                        <span class="course-box__discount-hours">17</span>
+                        <span>:</span>
+                        <span class="course-box__discount-days">3</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="course-box">
+                  <div class="course-box__discount-percentage">25%</div>
+                  <a href="#" class="course-box__image">
+                    <img
+                      src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+                      alt="" />
+                  </a>
+                  <div class="course-box__info">
+                    <h2 class="course-box__name">
+                      <a href="#">
+                        آموزش html و css برای مبتدی ها که در واقع منجر به این
+                        هست خط سوم</a
+                      >
+                    </h2>
+                    <div class="course-box__price">
+                      <button class="course-box__shopping-cart-icon">
+                        <svg>
+                          <use xlink:href="#shopping-cart"></use>
+                        </svg>
+                      </button>
+
+                      <div class="d-flex align-items-center">
+                        <span class="course-box__old-price">220,000 تومان</span>
+                        <span class="course-box__current-price"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center my-3">
+                      <div
+                        class="course-box__teacher d-flex align-items-center">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3 class="course-box__teacher-name">متین حسینی</h3>
+                      </div>
+
+                      <div class="course-box__students">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>11,578</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <svg>
+                          <use xlink:href="#clock"></use>
+                          <span class="course-box__time">20:50:34</span>
+                        </svg>
+                      </div>
+                      <div class="course-box__ratings">
+                        <span>4</span>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="course-box__discount-time">
+                        <span class="course-box__discount-seconds">55</span>
+                        <span>:</span>
+                        <span class="course-box__discount-minutes">14</span>
+                        <span>:</span>
+                        <span class="course-box__discount-hours">17</span>
+                        <span>:</span>
+                        <span class="course-box__discount-days">3</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="course-box">
+                  <div class="course-box__discount-percentage">25%</div>
+                  <a href="#" class="course-box__image">
+                    <img
+                      src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+                      alt="" />
+                  </a>
+                  <div class="course-box__info">
+                    <h2 class="course-box__name">
+                      <a href="#">
+                        آموزش html و css برای مبتدی ها که در واقع منجر به این
+                        هست خط سوم</a
+                      >
+                    </h2>
+                    <div class="course-box__price">
+                      <button class="course-box__shopping-cart-icon">
+                        <svg>
+                          <use xlink:href="#shopping-cart"></use>
+                        </svg>
+                      </button>
+
+                      <div class="d-flex align-items-center">
+                        <span class="course-box__old-price">220,000 تومان</span>
+                        <span class="course-box__current-price"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center my-3">
+                      <div
+                        class="course-box__teacher d-flex align-items-center">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3 class="course-box__teacher-name">متین حسینی</h3>
+                      </div>
+
+                      <div class="course-box__students">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>11,578</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <svg>
+                          <use xlink:href="#clock"></use>
+                          <span class="course-box__time">20:50:34</span>
+                        </svg>
+                      </div>
+                      <div class="course-box__ratings">
+                        <span>4</span>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <div class="course-box__discount-time">
+                        <span class="course-box__discount-seconds">55</span>
+                        <span>:</span>
+                        <span class="course-box__discount-minutes">14</span>
+                        <span>:</span>
+                        <span class="course-box__discount-hours">17</span>
+                        <span>:</span>
+                        <span class="course-box__discount-days">3</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <section class="newest-courses my-5">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-header__title">جدیدترین دوره ها</h2>
+              <div class="section-header__dashed-line"></div>
+              <a href="#" class="section-header__link">
+                <div class="section-header__icon-container">
+                  <svg class="section-header__icon">
+                    <use xlink:href="#arrow-left"></use>
+                  </svg>
+                </div>
+                مشاهده همه
+              </a>
+            </div>
+            <div class="row" id="newest-courses__container"></div>
+          </div>
+        </section>
+
+        <section class="weblog">
+          <div class="container-fluid">
+            <div class="articles my-5">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-5 col-lg-4 col-xl-3 align-self-center">
+                  <h2 class="articles__title">خواندنی ها</h2>
+                  <p class="articles__caption">
+                    جدیدترین مقاله های روز در حوضه مورد نظرتان را بخوانید و لذت
+                    ببرید
+                  </p>
+                  <a href="#" class="section-header__link articles__link">
+                    <div class="section-header__icon-container m-0">
+                      <svg class="section-header__icon">
+                        <use xlink:href="#arrow-left"></use>
+                      </svg>
+                    </div>
+                    مشاهده همه
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 col-lg-8 col-xl-9">
+                  <div class="swiper articles-swiper">
+                    <div class="swiper-wrapper" id="article-box__container">
+                      <!-- slides will be created by javascript here -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="latest-events my-5">
+          <div class="container">
+            <h3 class="latest-events__subtitle">
+              وقتشه یه جا با هم یاد بگیریم
+            </h3>
+            <h2 class="latest-events__title">جدیدترین رویداد های دیجی تلنت</h2>
+
+            <div class="latest-events__menu text-center my-5">
+              <button data-category="all">همه</button>
+              <button data-category="all">داغ</button>
+              <button data-category="all">ویژه</button>
+            </div>
+
+            <div class="events-cotainer row">
+              <div class="col-lg-6">
+                <div class="event-box">
+                  <a href="#" class="event-box__image">
+                    <img
+                      src="assets/images/6a1e69a6-6922-43ab-bc85-5d8548a32e20_cover_thumb.webp"
+                      alt="" />
+                  </a>
+                  <div class="event-box__info">
+                    <div class="event-box__date">17 دی</div>
+                    <h2>
+                      <a href="#" class="event-box__title"
+                        >چکونه شبکه سازی بهینه ای داشته باشیم که بتوانیم در همه
+                        شرایط بهترین کار هارا انجام دهیم</a
+                      >
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <div class="d-flex align-items-center event-box__time">
+                        <i class="fa-regular fa-clock event-box__icon"></i>
+                        <div>
+                          <span>00</span>
+                          <span>:</span>
+                          <span>08</span>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex align-items-center event-box__location">
+                        <i class="fa-solid fa-location-dot event-box__icon"></i>
+                        <span>تهران - ستارخان -بعد از پل اول</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="">
+                    <i class="fa-solid fa-arrow-left-long event-box__link"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="event-box active">
+                  <a href="#" class="event-box__image">
+                    <img
+                      src="assets/images/6a1e69a6-6922-43ab-bc85-5d8548a32e20_cover_thumb.webp"
+                      alt="" />
+                  </a>
+                  <div class="event-box__info">
+                    <div class="event-box__date">17 دی</div>
+                    <h2>
+                      <a href="#" class="event-box__title"
+                        >چکونه شبکه سازی بهینه ای داشته باشیم که بتوانیم در همه
+                        شرایط بهترین کار هارا انجام دهیم</a
+                      >
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <div class="d-flex align-items-center event-box__time">
+                        <i class="fa-regular fa-clock event-box__icon"></i>
+                        <div>
+                          <span>00</span>
+                          <span>:</span>
+                          <span>08</span>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex align-items-center event-box__location">
+                        <i class="fa-solid fa-location-dot event-box__icon"></i>
+                        <span>تهران - ستارخان -بعد از پل اول</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="">
+                    <i class="fa-solid fa-arrow-left-long event-box__link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="section-header__link articles__link">
+              <div class="section-header__icon-container m-0">
+                <svg class="section-header__icon">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+              مشاهده همه
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-newsletter">
+            <h2 class="footer-newsletter__title">عضو خبرنامه شوید</h2>
+            <p class="footer-newsletter__caption">
+              برای آگاهی از آخرین دوره ها، تخفیف ها، رویداد ها و ... در خبرنامه
+              عضو شوید
+            </p>
+            <form action="" class="footer-newsletter__form">
+              <input type="email" placeholder="ایمیل خود را وارد کنید." />
+              <button>عضویت</button>
+            </form>
+          </div>
+          <div class="footer__content">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="footer__company-description">
+                  <h2 class="footer__logo text-danger">DigiTalent</h2>
+                  <p class="footer__company-caption">
+                    شرکت دیجی تلنت، با افتخار و تعهد به ارائه خدمات برتر و
+                    محصولات با کیفیت به عنوان یک رهنمود در زمینه آموزش آنلاین به
+                    مشتریان خود خدمت می کند. از شما برای انتخاب تیم ما سپاس
+                    گذاریم.
+                  </p>
+                  <div class="footer__socials">
+                    <a href="#" class="footer-socials__icon">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer-socials__icon">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer-socials__icon">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="footer-socials__icon">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-socials__icon">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <ul class="footer-menu">
+                  <header>دسترسی سریع</header>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">درباره ما</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">رویداد های پیش رو</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">وبلاگ</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">سوالات متداول</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">حریم خصوصی</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-2">
+                <ul class="footer-menu">
+                  <header>لینک های مفید</header>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">ارتباط با ما</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">دوره های محبوب</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">مدرسین</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">نظرات کاربران</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">ضمانت بازگشت</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <div class="footer__contact-info">
+                  <header>اطلاعات تماس</header>
+                  <div class="footer__location">
+                    <svg>
+                      <use xlink:href="#location"></use>
+                    </svg>
+                    <span>تهران، ستارخان، خیابان یکم، کوچه دوم، پلاک 200</span>
+                  </div>
+                  <div class="footer__phone">
+                    <svg>
+                      <use xlink:href="#phone"></use>
+                    </svg>
+                    <div class="d-flex flex-column gap-2">
+                      <span>021-33849622</span>
+                      <span>0919-7892478</span>
+                    </div>
+                  </div>
+                  <div class="footer__email">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>matinhosseiniofficial@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-regular fa-copyright"></i>
+            <span>تمامی حقوق محفوظ می باشد.</span>
+          </div>
         </div>
-        <div class="d-flex align-items-center justify-content-center gap-2">
-          <i class="fa-regular fa-copyright"></i>
-          <span>تمامی حقوق محفوظ می باشد.</span>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <!--Javascript Links-->
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
@@ -764,5 +776,7 @@
     <script src="vendor/Swiper/swiper-bundle.min.js"></script>
     <script src="js/index.js" type="module"></script>
     <script src="js/swiper-inits.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/spa.js" type="module"></script>
   </body>
 </html>
