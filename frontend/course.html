@@ -9,10 +9,78 @@
       href="assets/images/app-logo/app-favicon.png"
       type="image/x-icon" />
     <link rel="stylesheet" href="vendor/Bootstrap/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="vendor/Swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/course.css" />
   </head>
   <body>
     <div id="content">
+      <!-- prettier-ignore -->
+      <svg class="d-none">
+        <symbol id="shop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+        </symbol>
+        <symbol id="home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </symbol>
+        <symbol id="code" xmlns="http://www.w3.org/2000/svg" class="nav-menu__icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+        </symbol>
+        <symbol id="arrow-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </symbol>
+        <symbol id="blog" xmlns="http://www.w3.org/2000/svg" class="nav-menu__icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        </symbol>
+        <symbol id="person-circle" xmlns="http://www.w3.org/2000/svg" class="nav-menu__icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+        </symbol>
+        <symbol id="phone" xmlns="http://www.w3.org/2000/svg" class="nav-menu__icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </symbol>
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" class="nav__icon nav__search-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+        </symbol>
+        <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+       
+        </symbol>
+        <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        </symbol>
+        <symbol id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+        </symbol>
+        <symbol id="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+        </symbol>
+        <symbol id="sign-in" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+        </symbol>
+        <symbol id="close" xmlns="http://www.w3.org/2000/svg" class="nav-menu__close-btn" fill="" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </symbol>
+        <symbol id="clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </symbol>
+        <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </symbol>
+        <symbol id="comment" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+        </symbol>
+        <symbol id="eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </symbol>
+        <symbol id="hexagon" viewBox="0 0 110.74 123.18"><path d="M307.58,232.84l-40.2-23.21a14.17,14.17,0,0,1-7.09-12.27V150.94a14.17,14.17,0,0,1,7.09-12.27l40.2-23.21a14.17,14.17,0,0,1,14.17,0L362,138.67A14.17,14.17,0,0,1,369,150.94v46.42A14.17,14.17,0,0,1,362,209.63l-40.2,23.21A14.17,14.17,0,0,1,307.58,232.84Z" transform="translate(-259.29 -112.56)"></path>
+        </symbol>
+        <symbol id="location" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+        </symbol>
+        
+      </svg>
+
       <main>
         <section class="course-info">
           <div class="container">
@@ -26,7 +94,7 @@
                   های کسشری که میبینی رو پیاده سازی کنی
                 </h2>
 
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="course-info__content">
                   <div class="course-teacher">
                     <img
                       src="assets/images/profile.jpg"
@@ -37,8 +105,8 @@
                     </h3>
                   </div>
                   <div class="course-category">
-                    <span class="course-category__title">دسته بندی:</span>
-                    <span class="course-category__name">
+                    <span>دسته بندی:</span>
+                    <span>
                       <a href="/about-us" class="spa-link">طراحی</a>
                     </span>
                   </div>
@@ -66,7 +134,7 @@
               <div class="col-md-8 col-lg-9 order-1 order-md-0">
                 <div class="course-details__content">
                   <ul
-                    class="tabs d-flex justify-content-evenly align-items-center">
+                    class="tabs d-flex justify-content-evenly align-items-center" id="tabs">
                     <li class="tabs__item tabs__item--active">توضیحات</li>
                     <li class="tabs__item">جلسات</li>
                     <li class="tabs__item">مدرس</li>
@@ -74,7 +142,8 @@
                     <div class="tabs__line"></div>
                   </ul>
 
-                  <section class="course-overview tab-content tab-content--active">
+                  <section
+                    class="course-overview tab-content tab-content--active">
                     <h4 class="course-overview__title">
                       با دوره بیشتر آشنا بشید.
                     </h4>
@@ -441,15 +510,6 @@
                               <span class="comment__name">علیرضا محمودی</span>
                               <span class="comment__date">7 آذر 1401</span>
                             </div>
-                            <div class="stars">
-                              <i class="fa-solid fa-star"></i>
-                              <i class="fa-solid fa-star"></i>
-                              <i class="fa-solid fa-star"></i>
-                              <i
-                                class="fa-solid fa-star-half-stroke"
-                                data-fa-transform="flip-h"></i>
-                              <i class="fa-regular fa-star"></i>
-                            </div>
                           </div>
                           <p class="comment__text">
                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
@@ -480,15 +540,6 @@
                               <span class="comment__name">علیرضا محمودی</span>
                               <span class="comment__date">7 آذر 1401</span>
                             </div>
-                            <div class="stars">
-                              <i class="fa-solid fa-star"></i>
-                              <i class="fa-solid fa-star"></i>
-                              <i class="fa-solid fa-star"></i>
-                              <i
-                                class="fa-solid fa-star-half-stroke"
-                                data-fa-transform="flip-h"></i>
-                              <i class="fa-regular fa-star"></i>
-                            </div>
                           </div>
                           <p class="comment__text">
                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
@@ -515,7 +566,7 @@
                         <h5 class="add-comment__title">
                           شما هم نظر خود را درباره دوره ثبت کنید.
                         </h5>
-                        <h6 class="add-comment__subtitle"></h6>
+                        <h6 class="add-comment__subtitle">
                           چقدر از این دوره رضایت دارید؟
                         </h6>
                         <div class="stars">
@@ -582,7 +633,7 @@
                 </div>
               </div>
               <div class="col-md-4 col-lg-3">
-                <div class=" course-sidebar">
+                <div class="course-sidebar">
                   <video class="course-overview__video" controls>
                     <source
                       src="assets/videos/course/video (720p).mp4"
@@ -597,34 +648,66 @@
 
                   <ul class="course__details-menu">
                     <li class="course__details-menu-item">
-                      <i class="fa-regular fa-clock course__details-menu-icon"></i>
+                      <i
+                        class="fa-regular fa-clock course__details-menu-icon"></i>
                       <span class="course__details-menu-title">زمان</span>
                       <span class="course__details-menu-info">5:40:35</span>
                     </li>
                     <li class="course__details-menu-item">
-                      <i class="fa-solid fa-users course__details-menu-icon"></i>
+                      <i
+                        class="fa-solid fa-users course__details-menu-icon"></i>
                       <span class="course__details-menu-title">دانشجویان</span>
                       <span class="course__details-menu-info">1,745</span>
                     </li>
                     <li class="course__details-menu-item">
-                      <i class="fa-solid fa-layer-group course__details-menu-icon"></i>
+                      <i
+                        class="fa-solid fa-layer-group course__details-menu-icon"></i>
                       <span class="course__details-menu-title">سطح دوره</span>
                       <span class="course__details-menu-info">متوسط</span>
                     </li>
                     <li class="course__details-menu-item">
-                      <i class="fa-solid fa-file-lines course__details-menu-icon"></i>
+                      <i
+                        class="fa-solid fa-file-lines course__details-menu-icon"></i>
                       <span class="course__details-menu-title">کوییز</span>
                       <span class="course__details-menu-info">14</span>
                     </li>
                     <li class="course__details-menu-item">
-                      <i class="fa-solid fa-stamp course__details-menu-icon"></i>
+                      <i
+                        class="fa-solid fa-stamp course__details-menu-icon"></i>
                       <span class="course__details-menu-title">مدرک</span>
                       <span class="course__details-menu-info">دارد</span>
                     </li>
-                    
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="related-courses">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-header__title">دوره ها مشابه</h2>
+              <div class="section-header__dashed-line"></div>
+              <a href="#" class="section-header__link">
+                <div class="section-header__icon-container">
+                  <svg class="section-header__icon">
+                    <use xlink:href="#arrow-left"></use>
+                  </svg>
+                </div>
+                مشاهده همه
+              </a>
+            </div>
+
+            <div class="swiper related-courses__swiper">
+              <div
+                class="swiper-wrapper"
+                id="related-courses__swiper-container">
+                <!-- Slides will be created by javascript -->
+              </div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </section>
@@ -746,6 +829,7 @@
       </footer>
     </div>
 
+    <!--JAVASCRIPT Links-->
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
     <script src="vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
     <script src="vendor/Swiper/swiper-bundle.min.js"></script>

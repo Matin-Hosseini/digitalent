@@ -1,6 +1,8 @@
 @import "./fonts.css";
 @import "./reset.css";
 @import "./modules/primary-styles.css";
+@import "./modules/course-box.css";
+@import "./modules/swiper.css";
 @import "./modules/header.css";
 @import "./modules/footer.css";
 @import "./modules/accordion.css";
@@ -36,13 +38,16 @@
   height: 5rem;
   border-radius: 50%;
 }
-.course-teacher__name {
+.course-info__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.course-category {
-}
-.course-category__title {
-}
-.course-category__name {
+@media(max-width: 490px){
+  .course-info__content{
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 .course-rating {
   display: flex;
