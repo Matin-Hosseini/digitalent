@@ -3,6 +3,10 @@
 @import "./modules/primary-styles.css";
 @import "./modules/footer.css";
 
+body{
+  direction: ltr;
+}
+
 .login-img {
   position: relative;
 }

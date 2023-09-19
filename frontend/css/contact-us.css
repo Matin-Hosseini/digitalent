@@ -1,0 +1,121 @@
+@import "./fonts.css";
+@import "./reset.css";
+@import "./modules/primary-styles.css";
+@import "./modules/header.css";
+@import "./modules/footer.css";
+@import "./modules/custom-input.css";
+
+/* contacts starts*/
+.contacts {
+  margin: 5rem 0;
+}
+.contact {
+    background-color: var(--section-bg);
+  box-shadow: var(--box-shadow);
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  height: 19.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact__icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--green);
+}
+.cotact__title {
+  margin: 2rem 0;
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+}
+.contact__content {
+  color: var(--gray);
+  font-size: 1.3rem;
+  height: 3.9rem;
+}
+.contact__content-link {
+  color: #fff;
+  background-color: var(--gray);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: color var(--transition);
+}
+.contact__content-link svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.contact__content-link:hover {
+  color: var(--yellow);
+}
+
+/* contacts ends*/
+
+/* contact map starts */
+.contact-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+}
+.cotact-map__map {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+}
+.contact-map__form {
+  background-color: var(--section-bg);
+  width: 90%;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 3rem;
+  box-shadow: var(--box-shadow);
+}
+.custom-input__input,
+.custom-text-area {
+  border-color: var(--gray);
+  background-color: var(--section-bg);
+}
+.custom-input__label,
+.custom-text-area__label {
+  color: var(--gray);
+  background-color: var(--section-bg);
+}
+.contact-form__submit-btn {
+  background-color: var(--green);
+  color: #fff;
+  padding: 1rem 4rem;
+  border-radius: 10rem;
+}
+
+@media (min-width: 640px) {
+  .contact-map__form {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .contact-map__form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1040px) {
+  .contact-map__form {
+    position: absolute;
+    z-index: 99999;
+    top: 4rem;
+    right: 2rem;
+    width: 50rem;
+  }
+}
+
+/* contact map ends */

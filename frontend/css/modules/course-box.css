@@ -72,6 +72,8 @@
 .course-box__shopping-cart-icon {
   display: grid;
   place-content: center;
+  padding: 0;
+  width: 3rem;
   height: 3rem;
   background-color: var(--red);
   border-top-left-radius: 1rem;

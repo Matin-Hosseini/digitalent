@@ -6,6 +6,7 @@
 @import "./modules/header.css";
 @import "./modules/footer.css";
 @import "./modules/accordion.css";
+@import "./modules/custom-input.css";
 
 /* course info starts */
 .course-info {
@@ -449,39 +450,6 @@
   margin-top: 2rem;
   max-width: 40rem;
 }
-
-.custom-text-area-wrapper {
-  position: relative;
-}
-.custom-text-area__label {
-  position: absolute;
-  top: 2rem;
-  right: 2.5rem;
-  color: var(--purple);
-  font-size: 1.4rem;
-  background-color: var(--app-bg);
-  padding: 0 0.5rem;
-  pointer-events: none;
-  transition: var(--transition);
-}
-
-.custom-text-area {
-  border: 2px solid var(--purple);
-  background-color: transparent;
-  color: var(--gray);
-  outline: 0;
-  border-radius: 2rem;
-  width: 100%;
-  padding: 2rem;
-
-  height: 30rem;
-}
-.custom-text-area:focus ~ .custom-text-area__label,
-.custom-text-area:valid ~ .custom-text-area__label {
-  top: -1rem;
-  font-size: 1.2rem;
-}
-
 .add-comment__submit-btn {
   background-color: var(--purple);
   color: #fff;

@@ -1,0 +1,69 @@
+/*custom inputs starts */
+.custom-input {
+  position: relative;
+  margin-bottom: 2rem;
+  transition: all var(--transition);
+}
+.custom-input__input {
+  direction: rtl;
+  width: 100%;
+  border: 0;
+  border: 2px solid var(--purple);
+  outline: 0;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  color: var(--gray);
+  background-color: var(--app-bg);
+}
+.custom-input__label {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  color: var(--purple);
+  font-size: 1.4rem;
+  pointer-events: none;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--app-bg);
+  transition: all var(--transition);
+}
+
+.custom-input__input:focus ~ .custom-input__label,
+.custom-input__input:valid ~ .custom-input__label {
+  top: 0;
+  font-size: 1.2rem;
+}
+.custom-text-area-wrapper {
+  position: relative;
+}
+.custom-text-area__label {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  color: var(--purple);
+  font-size: 1.4rem;
+  background-color: var(--app-bg);
+  padding: 0 0.5rem;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.custom-text-area {
+  border: 2px solid var(--purple);
+  background-color: transparent;
+  color: var(--gray);
+  outline: 0;
+  border-radius: 2rem;
+  width: 100%;
+  padding: 2rem;
+
+  height: 30rem;
+}
+.custom-text-area:focus ~ .custom-text-area__label,
+.custom-text-area:valid ~ .custom-text-area__label {
+  top: -1rem;
+  font-size: 1.2rem;
+}
+
+/*custom inputs ends */

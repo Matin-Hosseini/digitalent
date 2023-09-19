@@ -3,6 +3,10 @@
 @import "./modules/primary-styles.css";
 @import "./modules/footer.css";
 
+body{
+  direction: ltr;
+}
+
 .sign-up {
   margin-bottom: 5rem;
 }
