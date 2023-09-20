@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+:root {
+  --checkbox-size: 100px;
+  --bg-color: #ffa69e;
+  --checkbox-color: #ffffff;
+  --hover-color: #ff686b;
+  --tick-color: #84dcc6;
+}
+
+label {
+  display: inline-block;
+  margin: 0 calc(var(--checkbox-size) * 0.25);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: calc(var(--checkbox-size) * 0.125) solid var(--checkbox-color);
+  border-radius: 12.5%;
+  -webkit-transition: 400ms 100ms ease-out;
+  -o-transition: 400ms 100ms ease-out;
+  transition: 400ms 100ms ease-out;
+}
+
+label:hover {
+  border-color: var(--hover-color);
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -1000px;
+}
+
+.tick {
+  position: relative;
+  right: calc(var(--checkbox-size) * -0.5);
+  top: calc(var(--checkbox-size) * -0.25);
+  width: calc(var(--checkbox-size) * 0.25);
+  height: calc(var(--checkbox-size) * 0.75);
+  border-right: calc(var(--checkbox-size) * 0.25) solid var(--tick-color);
+  border-bottom: calc(var(--checkbox-size) * 0.25) solid var(--tick-color);
+  -webkit-transform: rotate(45deg) scale(0);
+  -ms-transform: rotate(45deg) scale(0);
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -o-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+.tick:before {
+  content: "";
+  position: absolute;
+  left: calc(var(--checkbox-size) * -0.125);
+  bottom: calc(var(--checkbox-size) * -0.25);
+  border: calc(var(--checkbox-size) * 0.125) solid var(--tick-color);
+  border-radius: 50%;
+}
+
+.tick:after {
+  content: "";
+  position: absolute;
+  right: calc(var(--checkbox-size) * -0.25);
+  top: calc(var(--checkbox-size) * -0.125);
+  border: calc(var(--checkbox-size) * 0.125) solid var(--tick-color);
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + label .tick {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+}
+
+input[type="checkbox"]:focus + label {
+  -webkit-animation-name: cb-pop;
+  animation-name: cb-pop;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes cb-pop {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  33% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  66% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    tranform: scale(1);
+  }
+}
+
+@keyframes cb-pop {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  33% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  66% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    tranform: scale(1);
+  }
+}

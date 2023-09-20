@@ -1,0 +1,82 @@
+@import "./fonts.css";
+@import "./reset.css";
+@import "./modules/primary-styles.css";
+@import "./modules/header.css";
+@import "./modules/course-box.css";
+@import "./modules/custom-input.css";
+@import "./modules/footer.css";
+
+/* restyling modules starts */
+.custom-input__label,
+.custom-input__input {
+  background-color: var(--section-bg);
+}
+.custom-input__input {
+  padding-left: 4rem;
+}
+.custom-input .search-button {
+  position: absolute;
+  color: var(--purple);
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* restyling modules ends */
+
+/* category starts */
+.category-container {
+  position: sticky;
+  top: 3rem;
+}
+.category-courses__header,
+.category {
+  background-color: var(--section-bg);
+  padding: 2.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 1px 1px 1rem var(--purple);
+  margin-bottom: 2rem;
+}
+.category__title {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.category__options {
+  max-height: 15rem;
+  overflow: auto;
+  direction: ltr;
+  text-align: right;
+  padding-right: 1rem;
+}
+.category__options::-webkit-scrollbar {
+  width: 0.7rem;
+  background-color: transparent;
+  border: 1px solid var(--red);
+  border-radius: 10rem;
+}
+.category__options::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 10rem;
+}
+.category__option {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+/* category ends */
+
+/* category courses starts */
+.category-courses__header{
+  padding: 1rem 2rem;
+}
+.category-courses__title {
+  font-family: var(--title-font);
+  font-size: 4rem;
+}
+
+/* category courses ends */
