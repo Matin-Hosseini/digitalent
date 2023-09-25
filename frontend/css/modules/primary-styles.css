@@ -8,7 +8,9 @@
 
   --green: #0d9488;
   --light-yellow: #fed7aa93;
-  --yellow: #fed7aa;
+  /* --yellow: #fed7aa; */
+  
+  --yellow: #fcc741;
   --yellow-stars: #facc15;
   --light-gray: #d1d5db;
   --gray: #9ca3af;

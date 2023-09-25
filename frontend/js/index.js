@@ -1,67 +1,10 @@
 import { homeCategories } from "./datas.js";
 
-const $ = document;
+const D = document;
 
-const darkModeBtn = $.querySelector("#dark-mode-btn");
-const hamburgerMenuBtn = $.querySelector("#hamburger-menu-btn");
-const navMenu = $.querySelector("#nav-menu");
-const closeSidebarBtn = $.querySelector("#close-sidebar-btn");
-const newestCoursesContainer = $.querySelector("#newest-courses__container");
-const articleBoxContainer = $.querySelector("#article-box__container");
-const homeCategorySwiper = $.querySelector("#home__category-swiper-wrapper");
-
-//dark mode feature starts
-darkModeBtn.addEventListener("click", () => {
-  const html = document.documentElement;
-  if (html.classList.contains("dark")) {
-    html.className = "light";
-    localStorage.setItem("theme", "light");
-    darkModeBtn.innerHTML = `
-    <svg class="nav__icon">
-      <use xlink:href="#moon"></use>
-    </svg>
-    `;
-  } else {
-    html.className = "dark";
-    localStorage.setItem("theme", "dark");
-
-    darkModeBtn.innerHTML = `
-    <svg class="nav__icon">
-      <use xlink:href="#sun"></use>
-    </svg>
-    `;
-  }
-});
-
-const setTheme = () => {
-  const html = document.documentElement;
-  const theme = localStorage.getItem("theme");
-  if (theme === "dark") {
-    html.className = "dark";
-    darkModeBtn.innerHTML = `
-    <svg class="nav__icon">
-      <use xlink:href="#sun"></use>
-    </svg>
-    `;
-  } else {
-    html.className = "light";
-    darkModeBtn.innerHTML = `
-    <svg class="nav__icon">
-      <use xlink:href="#moon"></use>
-    </svg>
-    `;
-  }
-};
-//dark mode feature ends
-
-// opening and closing nav menu in mobile starts
-hamburgerMenuBtn.addEventListener("click", () => {
-  navMenu.classList.add("nav-menu--open");
-});
-closeSidebarBtn.addEventListener("click", () => {
-  navMenu.classList.remove("nav-menu--open");
-});
-// opening and closing nav menu in mobile ends
+const newestCoursesContainer = D.querySelector("#newest-courses__container");
+const articleBoxContainer = D.querySelector("#article-box__container");
+const homeCategorySwiper = D.querySelector("#home__category-swiper-wrapper");
 
 //courses
 const newestCourses = [
@@ -236,9 +179,9 @@ const secondRow = homeCategories.slice(n, 2 * n - 1);
 const thirdRow = homeCategories.slice(2 * n - 1, homeCategories.length);
 
 //html category rows elements
-const firstRowElem = $.querySelector("#first-row");
-const secondRowElem = $.querySelector("#second-row");
-const thirdRowElem = $.querySelector("#third-row");
+const firstRowElem = D.querySelector("#first-row");
+const secondRowElem = D.querySelector("#second-row");
+const thirdRowElem = D.querySelector("#third-row");
 
 firstRowElem.innerHTML = "";
 secondRowElem.innerHTML = "";

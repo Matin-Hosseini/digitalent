@@ -1,5 +1,30 @@
 const categoryCoureses = document.querySelector(".category-courses");
 
+const advancedFilteringBtn = document.querySelector(
+  ".advanced-filtering__button"
+);
+
+const categoryFiltering = document.querySelector(".category__filtering");
+const closeCategoryFilteringBtn = document.querySelector(
+  ".category__filtering-close-btn"
+);
+const categoryContentHeader = document.querySelector(
+  ".category-content__header"
+);
+
+advancedFilteringBtn.addEventListener("click", () => {
+  categoryFiltering.classList.toggle("open");
+  if (categoryFiltering.classList.contains("open")) {
+    console.log("hellow")
+    categoryContentHeader.cssText.zIndex = "-1"
+  }else{
+    categoryContentHeader.style.zIndex = "0"
+  }
+});
+closeCategoryFilteringBtn.addEventListener("click", () => {
+  categoryFiltering.classList.remove("open");
+});
+
 const couressArray = [1, 2, 3, 5, 6, 8, 7, 4, 8, 1, 1, 1];
 
 categoryCoureses.innerHTML = "";

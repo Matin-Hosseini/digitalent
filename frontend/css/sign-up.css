@@ -2,6 +2,7 @@
 @import "./reset.css";
 @import "./modules/primary-styles.css";
 @import "./modules/footer.css";
+@import "./modules/custom-input.css";
 
 body{
   direction: ltr;

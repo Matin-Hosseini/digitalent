@@ -88,29 +88,41 @@
             <p class="sign-up__title">خوشحالیم که قراره به خانوادمون بپیوندی</p>
             <!--prettier-ignore-->
             <form action="" class="sign-up-form" novalidate>
-          <div class="row">
+          <div class="row flex-row-reverse">
+            <div class="col-md-6">
+              <div class="custom-input">
+                 <input type="text" placeholder="" class="custom-input__input" id="name" required />
+                 <label class="custom-input__label">نام و نام خانوادگی</label>
+             </div>
+            </div>
              <div class="col-md-6">
                <div class="custom-input">
-                  <input type="text" placeholder="" class="custom-input__input" id="login-name-input" required />
+                  <input type="text" placeholder="" class="custom-input__input" id="userName" required />
                   <label class="custom-input__label">نام کاربری</label>
               </div>
              </div>
               <div class="col-md-6">
                   <div class="custom-input">
-                  <input type="text" placeholder="" class="custom-input__input" id="login-name-input" required />
+                  <input type="text" placeholder="" class="custom-input__input" id="email" required />
                   <label class="custom-input__label">ایمیل</label>
               </div>
               </div>
                 <div class="col-md-6">
                   <div class="custom-input">
-                  <input type="text" placeholder="" class="custom-input__input" id="login-name-input" required />
+                  <input type="text" placeholder="" class="custom-input__input" id="phoneNumber" required />
                   <label class="custom-input__label">شماره موبایل</label>
               </div>
                 </div>
                 <div class="col-md-6">
                   <div class="custom-input">
-                  <input type="password" class="custom-input__input" id="login-name-input" required />
+                  <input type="password" class="custom-input__input" id="password" required />
                   <label class="custom-input__label">رمز عبور</label>
+              </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-input">
+                  <input type="password" class="custom-input__input" id="confirmPassword" required />
+                  <label class="custom-input__label">تکرار رمز عبور</label>
               </div>
                 </div>
     

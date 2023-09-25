@@ -1,7 +1,7 @@
 .article-box {
   display: flex;
   font-size: 1.3rem;
-  /* box-shadow: var(--box-shadow); */
+  box-shadow: var(--box-shadow);
   border-radius: 1rem;
   background-color: var(--section-bg);
   transition: all var(--transition);

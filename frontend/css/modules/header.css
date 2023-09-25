@@ -1,20 +1,20 @@
+@import "./custom-input.css";
 /* nav starts */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #00000099;
-  color: var(--text-color);
-  border-radius: 10rem;
-  position: sticky;
-  top: 2rem;
   position: fixed;
-  width: 90%;
+  right: 0 ;
   left: 0;
-  right: 0;
+  top: 0;
+  padding: 1rem 2rem;
+  color: var(--text-color);
+  background-color: var(--app-bg);
   margin: 0 auto;
   z-index: 9999;
+  transition: all var(--transition);
+  box-shadow: var(--box-shadow);
 }
 
 .hamburger-menu {
@@ -64,6 +64,7 @@
   padding: 1rem 0;
   transition: right var(--transition);
   z-index: 9999999;
+  color: var(--gray);
 }
 
 .nav-menu--open {
@@ -82,19 +83,20 @@
   padding: 0 1rem;
 }
 .nav-menu__item--active {
-  color: var(--yellow);
+  color: var(--purple);
 }
 .nav-menu__item:hover {
-  color: var(--yellow);
+  color: var(--purple);
 }
 .nav-menu__icon {
-  width: 2rem;
+ font-size: 2rem;
 }
 .nav-menu__link {
-  width: 100%;
-  display: block;
-  font-size: 1.3rem;
-  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .nav-menu__arrow-down {
@@ -111,8 +113,29 @@
 }
 
 .nav__icon {
-  color: var(--yellow);
+  color: var(--purple);
+  font-size: 2rem;
 }
+
+/* search modal starts */
+.search-modal {
+}
+.search-modal .modal-content {
+  background-color: var(--app-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.search-modal__search-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--purple);
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* search modal ends */
 
 .login-signup-btn {
   cursor: pointer;
@@ -121,14 +144,9 @@
   margin-right: 2rem;
   border-radius: 0.4rem;
   position: relative;
-  color: var(--yellow);
+  color: var(--purple);
   font-size: 1.4rem;
   transition: all var(--transition);
-}
-
-.login-signup-btn:hover {
-  color: var(--yellow);
-  background-color: #fed7aa1a;
 }
 
 .login-signup-btn::before {
@@ -149,14 +167,25 @@
 
 /* responsive starts */
 
-@media (min-width: 992px) {
-  .nav {
-    padding: 0.5rem 2rem;
+@media (min-width: 768px) {
+  .nav{
+    padding-right: 3.5rem;
   }
+  .login-signup-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10rem;
+  }
+  .login-signup-btn:hover {
+    color: var(--purple);
+    background-color: #b46afa1a;
+  }
+}
+
+@media (min-width: 992px) {
+  
   .nav-menu {
     position: static;
     background: transparent;
-    color: var(--light-gray);
   }
   .hamburger-menu {
     display: none;
@@ -210,9 +239,6 @@
   }
   .nav-sub-menu__link:hover {
     color: var(--gray);
-  }
-  .login-signup-btn{
-    padding: .2rem .5rem;
   }
 }
 /* responsive ends */
