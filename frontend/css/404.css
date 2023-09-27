@@ -1,0 +1,41 @@
+@import "./fonts.css";
+@import "./reset.css";
+@import "./modules/primary-styles.css";
+@import "./modules/header.css";
+@import "./modules/footer.css";
+
+body {
+  padding-top: 7rem;
+}
+
+
+.not-found-content {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--title-font);
+  font-size: 4rem;
+  margin: 2rem 0;
+  transition: var(--transition);
+}
+
+.caption {
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.not-found-link {
+  display: inline-block;
+  background-color: var(--purple);
+  color: #fff;
+  padding: 1rem 4rem;
+  margin: 3rem 0;
+  transition: var(--transition);
+}
+
+.not-found-link:hover {
+  color: #fff;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
