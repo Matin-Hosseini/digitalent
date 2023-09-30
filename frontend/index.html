@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,16 +7,14 @@
 
     <!--Css Links-->
     <link
-      rel="shortcut icon"
+      rel="icon"
       href="assets/images/app-logo/app-favicon.png"
       type="image/x-icon" />
     <link rel="stylesheet" href="vendor/Bootstrap/bootstrap-5.2.3.min.css" />
     <link rel="stylesheet" href="vendor/Swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="vendor/BoxIcons/boxicons.min.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
-
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
@@ -98,9 +96,10 @@
       
       
     </svg>
+      <div class="mouse-follower"></div>
+      <div class="mouse-follower-2"></div>
 
       <header>
-
         <!--nav menu starts-->
         <nav class="nav">
           <div class="hamburger-menu" id="hamburger-menu-btn">
@@ -117,13 +116,13 @@
             </div>
             <li class="nav-menu__item nav-menu__item--active">
               <a href="index.html" class="nav-menu__link">
-                <i class='bx bx-home-smile nav-menu__icon'></i>
+                <i class="bx bx-home-smile nav-menu__icon"></i>
                 <span>خانه</span>
               </a>
             </li>
             <li class="nav-menu__item h-6">
               <a href="course-category.html" class="nav-menu__link">
-                <i class='bx bx-category-alt nav-menu__icon'></i>
+                <i class="bx bx-category-alt nav-menu__icon"></i>
                 <span>دسته بندی</span>
               </a>
             </li>
@@ -158,19 +157,19 @@
             </li>
             <li class="nav-menu__item">
               <a href="blog-category.html" class="nav-menu__link">
-                <i class='bx bx-book-reader nav-menu__icon'></i>
+                <i class="bx bx-book-reader nav-menu__icon"></i>
                 <span>بلاگ</span>
               </a>
             </li>
             <li class="nav-menu__item">
               <a href="#" class="nav-menu__link">
-                <i class='bx bx-briefcase nav-menu__icon'></i>
+                <i class="bx bx-briefcase nav-menu__icon"></i>
                 <span>همکاری با دیجی تلنت</span>
               </a>
             </li>
             <li class="nav-menu__item">
               <a href="contact-us.html" class="nav-menu__link">
-                <i class='bx bx-phone-call nav-menu__icon'></i>
+                <i class="bx bx-phone-call nav-menu__icon"></i>
                 <span>تماس با ما</span>
               </a>
             </li>
@@ -181,7 +180,10 @@
           <div
             class="nav__options d-flex justify-content-center align-items-center">
             <div class="search-modal">
-              <button class="d-flex" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <button
+                class="d-flex"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal">
                 <i class="bx bx-search-alt nav__icon"></i>
               </button>
               <div
@@ -195,9 +197,16 @@
                     <div class="modal-body">
                       <form action="">
                         <div class="custom-input position-relative m-0">
-                          <input type="text" class="custom-input__input" id="login-name-input" required/>
-                          <label class="custom-input__label">چی دلت میخواد؟</label>
-                          <i class="bx bx-search-alt search-modal__search-icon"></i>
+                          <input
+                            type="text"
+                            class="custom-input__input"
+                            id="login-name-input"
+                            required />
+                          <label class="custom-input__label"
+                            >چی دلت میخواد؟</label
+                          >
+                          <i
+                            class="bx bx-search-alt search-modal__search-icon"></i>
                         </div>
                       </form>
                     </div>
@@ -213,7 +222,7 @@
               <i class="bx bx-moon nav__icon"></i>
             </button>
             <a href="login.html" class="login-signup-btn">
-              <i class='bx bx-log-in nav__icon'></i>
+              <i class="bx bx-log-in nav__icon"></i>
               <span class="d-none d-md-block">ورود | ثبت نام</span>
             </a>
           </div>
@@ -222,6 +231,42 @@
       </header>
 
       <main>
+        <section class="hero">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 mb-5 mb-lg-0 d-flex align-items-center">
+                <div class="hero-content">
+                  <h1 class="hero__title">
+                    دنبال پیشرفتی؟
+                    <br />
+                    میتونی اینجا آیندت تغیرر بدی!
+                  </h1>
+                  <p class="hero__caption">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                    با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
+                    و مجله در سد.
+                  </p>
+                  <a href="#" class="custom-btn ms-3">بزن بریم</a>
+                  <a href="#" class="custom-btn--outline">دوره میخوام!</a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="hero__image-wrapper">
+                  <div class="hero__image">
+                    <img src="assets/images/banner-2-1.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-absolute-image__cap d-none d-lg-block">
+              <img src="assets/detail-images/graduation-cap.png" alt="" />
+            </div>
+            <div class="hero-absolute-image__arrow d-none d-lg-block">
+              <img src="assets/detail-images/curved-arrow-2.png" alt="" />
+            </div>
+          </div>
+        </section>
+
         <section class="home">
           <div class="container-fluid"></div>
           <h1 class="home__title">هرچی که میخوای رو سه سوته یاد بگیر</h1>
@@ -552,6 +597,41 @@
           </div>
         </section>
 
+        <section class="funfacts">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="funfact mb-5 mb-md-0t">
+                  <i class='bx bxs-graduation funfact__icon'></i>
+                  <span class="funfact__count">69هزار</span>
+                  <h2 class="funfact__title">دانشجو</h2>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="funfact mb-5 mb-md-0">
+                  <i class='bx bx-timer funfact__icon'></i>
+                  <span class="funfact__count">85,858</span>
+                  <h2 class="funfact__title">دقیقه دوره</h2>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="funfact mb-5 mb-md-0">
+                  <i class='bx bx-wink-smile funfact__icon'></i>
+                  <span class="funfact__count">85%</span>
+                  <h2  class="funfact__title">رضایت از دوره ها</h2>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="funfact mb-5 mb-md-0">
+                  <i class='bx bx-group funfact__icon'></i>
+                  <span class="funfact__count">69</span>
+                  <h2 class="funfact__title">مدرس محبوب</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="weblog">
           <div class="container-fluid">
             <div class="articles my-5">
@@ -693,8 +773,11 @@
               برای آگاهی از آخرین دوره ها، تخفیف ها، رویداد ها و ... در خبرنامه
               عضو شوید
             </p>
-            <form action="" class="footer-newsletter__form">
-              <input type="email" placeholder="ایمیل خود را وارد کنید." />
+            <form action="" class="footer-newsletter__form" novalidate>
+              <input
+                type="email"
+                name="email"
+                placeholder="ایمیل خود را وارد کنید." />
               <button>عضویت</button>
             </form>
           </div>
@@ -808,7 +891,8 @@
     <script src="vendor/Swiper/swiper-bundle.min.js"></script>
     <script src="js/index.js" type="module"></script>
     <script src="js/swiper-inits.js"></script>
-    <script src="js/shared.js"></script>
+    <script src="vendor/SweetAlert/SweetAlert-2.js"></script>
+    <script src="js/shared.js" type="module"></script>
     <script src="js/spa.js" type="module"></script>
   </body>
 </html>

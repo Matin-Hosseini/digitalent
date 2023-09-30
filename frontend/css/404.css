@@ -3,6 +3,7 @@
 @import "./modules/primary-styles.css";
 @import "./modules/header.css";
 @import "./modules/footer.css";
+@import "./modules/mouse-follower.css";
 
 body {
   padding-top: 7rem;

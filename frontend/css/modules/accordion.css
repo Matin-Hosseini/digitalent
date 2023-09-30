@@ -7,12 +7,12 @@
   border-radius: 2rem !important;
 }
 .accordion-header {
-  padding: 2rem;
+  padding: 0 2rem;
 }
 .accordion-button {
   font-size: 2rem;
   font-family: "Persian Titraj";
-  padding: 0;
+  padding:  2rem 0;
   border: 0 !important;
   color: var(--title-color) !important;
   box-shadow: none  !important;
@@ -39,5 +39,5 @@
   color: var(--gray);
   line-height: 1.5;
   font-size: 1.3rem;
-  padding: 2rem;
+  padding: 2rem 0;
 }

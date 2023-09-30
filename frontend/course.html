@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -81,6 +81,9 @@
         
       </svg>
 
+      <div class="mouse-follower"></div>
+      <div class="mouse-follower-2"></div>
+
       <main>
         <section class="course-info">
           <div class="container">
@@ -134,7 +137,8 @@
               <div class="col-md-8 col-lg-9 order-1 order-md-0">
                 <div class="course-details__content">
                   <ul
-                    class="tabs d-flex justify-content-evenly align-items-center" id="tabs">
+                    class="tabs d-flex justify-content-evenly align-items-center"
+                    id="tabs">
                     <li class="tabs__item tabs__item--active">توضیحات</li>
                     <li class="tabs__item">جلسات</li>
                     <li class="tabs__item">مدرس</li>
@@ -231,7 +235,7 @@
                                 >
                                 <!-- <i class="fa-solid fa-lock session-item__locked"></i> -->
                               </li>
-                              <li class="session-item">
+                              <li class="session-item active">
                                 <i
                                   class="fa-regular fa-circle-play session-item__play-icon"></i>
                                 <a href="#" class="session-item__title"
@@ -834,7 +838,7 @@
     <script src="vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
     <script src="vendor/Swiper/swiper-bundle.min.js"></script>
     <script src="js/course.js"></script>
-    <script src="js/shared.js"></script>
+    <script src="js/shared.js" type="module"></script>
     <script src="js/spa.js" type="module"></script>
   </body>
 </html>

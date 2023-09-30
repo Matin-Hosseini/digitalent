@@ -77,11 +77,14 @@
       
     </svg>
 
+      <div class="mouse-follower"></div>
+      <div class="mouse-follower-2"></div>
+
       <div class="login">
         <div class="row flex-row-reverse">
-          <div class="col-md-6 login-img">
+          <div class="col-md-6 login-img order-1">
             <img
-              src="assets/images/login-page/login-page-illustration-removebg.png"
+              src="assets/images/login-page/attachment_102306474_prev_ui.png"
               alt="" />
           </div>
           <div class="col-md-6 align-self-center">
@@ -90,11 +93,11 @@
             <!--prettier-ignore-->
             <form action="" class="login-form" novalidate>
             <div class="custom-input">
-              <input type="text" placeholder="" class="custom-input__input" id="login-name-input" required />
+              <input type="text" placeholder="" class="custom-input__input" name="boilerplate" required />
               <label class="custom-input__label">ایمیل یا شماره موبایل</label>
             </div>
             <div class="custom-input">
-              <input type="password" class="custom-input__input" id="login-name-input" required />
+              <input type="password" class="custom-input__input" name="password" required />
               <label class="custom-input__label">رمز عبور</label>
             </div>
 
@@ -126,8 +129,11 @@
               برای آگاهی از آخرین دوره ها، تخفیف ها، رویداد ها و ... در خبرنامه
               عضو شوید
             </p>
-            <form action="" class="footer-newsletter__form">
-              <input type="email" placeholder="ایمیل خود را وارد کنید." />
+            <form action="" class="footer-newsletter__form" novalidate>
+              <input
+                type="email"
+                name="email"
+                placeholder="ایمیل خود را وارد کنید." />
               <button>عضویت</button>
             </form>
           </div>
@@ -236,7 +242,7 @@
     </div>
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
     <script src="js/login.js" type="module"></script>
-    <script src="js/shared.js"></script>
+    <script src="js/shared.js" type="module"></script>
     <script src="js/spa.js" type="module"></script>
   </body>
 </html>

@@ -6,6 +6,8 @@
 @import "./modules/footer.css";
 @import "./modules/comment.css";
 @import "./modules/swiper.css";
+@import "./modules/mouse-follower.css";
+
 
 /* article header starts */
 .article-header {

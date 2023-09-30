@@ -9,7 +9,7 @@
   --green: #0d9488;
   --light-yellow: #fed7aa93;
   /* --yellow: #fed7aa; */
-  
+
   --yellow: #fcc741;
   --yellow-stars: #facc15;
   --light-gray: #d1d5db;
@@ -36,7 +36,8 @@
 }
 
 :root.dark {
-  --app-bg: #27272a;
+  /* --app-bg: #27272a; */
+  --app-bg: #000324;
   /* --section-bg: #3f3f46; */
   --section-bg: #293146;
 
@@ -59,6 +60,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   direction: rtl;
+  cursor: pointer;
 }
 
 body {
@@ -68,6 +70,9 @@ body {
   background-color: var(--app-bg);
   transition: background-color var(--transition);
   line-height: 1.5;
+  padding-top: 6.5rem;
+  overflow-x: hidden;
+  cursor: default;
 }
 
 svg {
@@ -82,8 +87,8 @@ button {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 a:hover {
   color: inherit;
@@ -95,8 +100,65 @@ a:hover {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
+
+::-webkit-scrollbar {
+  background-color: var(--app-bg);
+  /* for the transition to work */
+  -webkit-background-clip: text;
+  width: 0.7rem;
+  transition: all var(--transition);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--purple);
+  border-radius: 10rem;
+}
+
+/* custom btn starts */
+.custom-btn,
+.custom-btn--outline {
+  background-color: var(--orange);
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.custom-btn:hover {
+  color: #fff;
+}
+.custom-btn--outline:hover {
+  color: var(--title-color);
+}
+
+.custom-btn::before,
+.custom-btn--outline::before {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 100%;
+  right: -2rem;
+  background-color: #ffffff2f;
+  transform: skew(-20deg);
+  transition: all var(--transition);
+}
+.custom-btn:hover::before,
+.custom-btn--outline:hover::before {
+  width: 140%;
+}
+.custom-btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--title-color);
+  color: var(--title-color);
+}
+/* custom btn ends */
 
 /* components */
 .section-header {

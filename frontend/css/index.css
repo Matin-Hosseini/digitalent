@@ -7,6 +7,62 @@
 @import "./modules/swiper.css";
 @import "./modules/footer.css";
 @import "./modules/event-box.css";
+@import "./modules/swal.css";
+@import "./modules/mouse-follower.css";
+@import "./modules/animations.css";
+
+/* hero starts */
+:root.dark .hero {
+  background-color: #000324;
+}
+.hero {
+  background-color: #f3f3f3;
+  min-height: 100dvh;
+  transition: var(--transition);
+  padding: 10rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero__title {
+  font-family: var(--title-font);
+  font-size: 5rem;
+  background-image: linear-gradient(to right, #1c93df, #860f83);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 45rem;
+}
+.hero__caption {
+  margin: 3rem 0;
+  font-size: 1.3rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+.hero__image {
+  position: relative;
+  border-radius: 0 25rem 25rem 0;
+  overflow: hidden;
+  border: 1rem solid #fff;
+  border-left: 0;
+  z-index: 1;
+}
+.hero-absolute-image__cap {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  top: 10rem;
+  left: 60%;
+  animation: movement-x 3s infinite forwards alternate;
+}
+.hero-absolute-image__arrow {
+  position: absolute;
+  /* rotate: 180deg; */
+  animation: movement-x 3s 1s infinite alternate;
+  top: 38rem;
+  right: 30%;
+}
+
+/* hero ends */
 
 /* home starts */
 .home {
@@ -109,6 +165,74 @@
 }
 /* home ends */
 
+/* funfacts starts */
+.funfacts {
+  padding: 10rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/about-us/story.jpg") center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.funfact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  transition: var(--transition);
+}
+@media (min-width: 768px) {
+  .funfact:hover {
+    transform: translateY(-1rem);
+  }
+  .funfact::before,
+  .funfact::after {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 25rem;
+    background-color: #fff;
+    border-radius: 10rem;
+    bottom: 110%;
+    transition: var(--transition);
+  }
+  .funfact::after {
+    bottom: 0;
+    top: 110%;
+  }
+  .funfact:hover::before {
+    bottom: 140%;
+  }
+  .funfact:hover::after {
+    top: 140%;
+  }
+}
+.funfact__icon {
+  font-size: 2.5rem;
+  border: 1px solid #fff;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+.funfact:hover .funfact__icon {
+  background-color: #fff;
+  color: #000;
+}
+.funfact__count {
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+.funfact__title {
+  font-family: var(--title-font);
+  font-size: 2rem;
+}
+/* funfacts ends */
 
 .articles {
   background-color: var(--bg-gray);
@@ -175,8 +299,8 @@
   margin-bottom: 1.5rem;
   position: relative;
 }
-.latest-events__subtitle::before{
-  content: '';
+.latest-events__subtitle::before {
+  content: "";
   position: absolute;
   width: 10rem;
   height: 2rem;
@@ -191,10 +315,10 @@
   font-size: 2.5rem;
   font-family: "Persian Titraj";
 }
-.latest-events__menu button{
+.latest-events__menu button {
   background-color: var(--gray);
-  padding: .3rem .8rem;
-  border-radius: .4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.4rem;
   color: #fff;
 }
 /*latest events ends*/

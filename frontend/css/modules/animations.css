@@ -1,0 +1,8 @@
+@keyframes movement-x {
+  from {
+    transform: translate(-1rem, -0.5rem);
+  }
+  to {
+    transform: translate(1rem, 0.5rem);
+  }
+}

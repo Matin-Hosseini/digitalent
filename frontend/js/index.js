@@ -2,9 +2,17 @@ import { homeCategories } from "./datas.js";
 
 const D = document;
 
+const heroImgWrapper = D.querySelector(".hero__image-wrapper");
 const newestCoursesContainer = D.querySelector("#newest-courses__container");
 const articleBoxContainer = D.querySelector("#article-box__container");
 const homeCategorySwiper = D.querySelector("#home__category-swiper-wrapper");
+
+// hero image starts
+
+heroImgWrapper.style.cssText = `margin-left: -${heroImgWrapper.offsetLeft}px; max-width: 80rem;
+`;
+
+// hero image ends
 
 //courses
 const newestCourses = [
@@ -25,14 +33,14 @@ newestCourses.forEach((course) => {
     `
     <div class="col-sm-6 col-md-4 col-lg-3">
       <div class="course-box">
-        <a href="#" class="course-box__image">
+        <a href="course.html" class="course-box__image">
           <img
             src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
             alt="" />
         </a>
         <div class="course-box__info">
           <h2 class="course-box__name">
-            <a href="#"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
+            <a href="course.html"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
           </h2>
           <div
             class="course-box__price">
@@ -104,16 +112,16 @@ articles.forEach((article) => {
   articleBoxContainer.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="swiper-slide ">
+    <div class="swiper-slide">
       <article class="article-box" >
-        <a href="#" class="article-box__img">
+        <a href="article.html" class="article-box__img">
           <img
             src="assets/images/6a1e69a6-6922-43ab-bc85-5d8548a32e20_cover_thumb.webp"
             alt="" />
         </a>
         <div class="article-box__content">
           <h2 class="article-box__title">
-            <a href="#"
+            <a href="article.html"
               >
               اهمیت یادگیری پایتون در برنامه نویسی مخصوصا برنامه که دارم میرم خط سوم دیگه نویسی سمت سرور
             </a>
@@ -211,7 +219,3 @@ function insertCategories(array, element) {
 insertCategories(firstRow, firstRowElem);
 insertCategories(secondRow, secondRowElem);
 insertCategories(thirdRow, thirdRowElem);
-
-window.addEventListener("load", () => {
-  setTheme();
-});

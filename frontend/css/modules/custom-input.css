@@ -15,6 +15,7 @@
   font-size: 1.3rem;
   color: var(--gray);
   background-color: var(--app-bg);
+  transition: all var(--transition);
 }
 .custom-input__label {
   position: absolute;

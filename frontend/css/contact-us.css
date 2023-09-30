@@ -4,6 +4,8 @@
 @import "./modules/header.css";
 @import "./modules/footer.css";
 @import "./modules/custom-input.css";
+@import "./modules/mouse-follower.css";
+
 
 /* contacts starts*/
 .contacts {

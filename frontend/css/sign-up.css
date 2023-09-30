@@ -2,14 +2,22 @@
 @import "./reset.css";
 @import "./modules/primary-styles.css";
 @import "./modules/footer.css";
+@import "./modules/header.css";
 @import "./modules/custom-input.css";
+@import "./modules/swal.css";
+@import "./modules/mouse-follower.css";
 
-body{
+
+body {
   direction: ltr;
+}
+header {
+  direction: rtl;
 }
 
 .sign-up {
-  margin-bottom: 5rem;
+  max-width: 60rem;
+  margin: 10rem auto;
 }
 
 .sign-up__title {
@@ -58,14 +66,5 @@ body{
   .sign-up-form__options {
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-}
-
-@media (min-width: 768px) {
-  .sign-up {
-    margin-bottom: 0;
-  }
-  .sign-up__img {
-    height: 100vh;
   }
 }

@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>صقحه ثبت نام</title>
+    
+    <!--Css Links-->
+    <link
+      rel="icon"
+      href="assets/images/app-logo/app-favicon.png"
+      type="image/x-icon" />
     <link rel="stylesheet" href="vendor/FontAwesome/font-awesome.min.css" />
     <link rel="stylesheet" href="vendor/Bootstrap/bootstrap-5.2.3.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/sign-up.css" />
   </head>
   <body>
@@ -76,75 +85,229 @@
       </symbol>
       
     </svg>
+      <div class="mouse-follower"></div>
+      <div class="mouse-follower-2"></div>
 
-      <div class="sign-up">
-        <div class="row">
-          <div class="col-md-5 sign-up__img">
-            <img
-              src="assets/images/sign-up-page/sign-up-illustration-removebg-preview.png"
-              alt="" />
+      <header>
+        <!--nav menu starts-->
+        <nav class="nav">
+          <div class="hamburger-menu" id="hamburger-menu-btn">
+            <span class="hamburger-menu__line"></span>
           </div>
-          <div class="col-md-7 align-self-center">
-            <p class="sign-up__title">خوشحالیم که قراره به خانوادمون بپیوندی</p>
-            <!--prettier-ignore-->
-            <form action="" class="sign-up-form" novalidate>
+          <div class="nav__logo">logo</div>
+          <ul class="nav-menu" id="nav-menu">
+            <div
+              class="d-flex d-lg-none justify-content-between align-items-center px-3 mb-3">
+              <div class="logl">logo</div>
+              <svg id="close-sidebar-btn">
+                <use xlink:href="#close"></use>
+              </svg>
+            </div>
+            <li class="nav-menu__item nav-menu__item--active">
+              <a href="index.html" class="nav-menu__link">
+                <i class="bx bx-home-smile nav-menu__icon"></i>
+                <span>خانه</span>
+              </a>
+            </li>
+            <li class="nav-menu__item h-6">
+              <a href="course-category.html" class="nav-menu__link">
+                <i class="bx bx-category-alt nav-menu__icon"></i>
+                <span>دسته بندی</span>
+              </a>
+            </li>
+            <li class="nav-menu__item d-none">
+              <svg>
+                <use xlink:href="#code"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">برنامه نویسی</a>
+              <svg class="nav-menu__arrow-down d-none d-lg-block">
+                <use xlink:href="#arrow-down"></use>
+              </svg>
+              <ul class="nav-sub-menu">
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">فرانت اند</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">بک اند</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">امنیت</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">اندروید</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">ios</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">هوش مصنوعی</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-menu__item">
+              <a href="blog-category.html" class="nav-menu__link">
+                <i class="bx bx-book-reader nav-menu__icon"></i>
+                <span>بلاگ</span>
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">
+                <i class="bx bx-briefcase nav-menu__icon"></i>
+                <span>همکاری با دیجی تلنت</span>
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="contact-us.html" class="nav-menu__link">
+                <i class="bx bx-phone-call nav-menu__icon"></i>
+                <span>تماس با ما</span>
+              </a>
+            </li>
+          </ul>
+          <!--nav menu ends-->
+
+          <!--nav options starts-->
+          <div
+            class="nav__options d-flex justify-content-center align-items-center">
+            <div class="search-modal">
+              <button
+                class="d-flex"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="bx bx-search-alt nav__icon"></i>
+              </button>
+              <div
+                class="search-modal modal fade"
+                id="searchModal"
+                tabindex="0"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <form action="">
+                        <div class="custom-input position-relative m-0">
+                          <input
+                            type="text"
+                            class="custom-input__input"
+                            id="login-name-input"
+                            required />
+                          <label class="custom-input__label"
+                            >چی دلت میخواد؟</label
+                          >
+                          <i
+                            class="bx bx-search-alt search-modal__search-icon"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__shopping-cart d-flex">
+              <i class="bx bx-cart-alt nav__icon"></i>
+            </div>
+            <button class="nav__dark-mode-btn d-flex" id="dark-mode-btn">
+              <i class="bx bx-moon nav__icon"></i>
+            </button>
+            <a href="login.html" class="login-signup-btn">
+              <i class="bx bx-log-in nav__icon"></i>
+              <span class="d-none d-md-block">ورود | ثبت نام</span>
+            </a>
+          </div>
+          <!--nav options ends-->
+        </nav>
+      </header>
+
+      <div class="sign-up container">
+        <p class="sign-up__title">خوشحالیم که قراره به خانوادمون بپیوندی</p>
+
+        <form action="" class="sign-up-form" novalidate>
           <div class="row flex-row-reverse">
             <div class="col-md-6">
               <div class="custom-input">
-                 <input type="text" placeholder="" class="custom-input__input" id="name" required />
-                 <label class="custom-input__label">نام و نام خانوادگی</label>
-             </div>
+                <input
+                  type="text"
+                  name="name"
+                  class="custom-input__input"
+                  required />
+                <label class="custom-input__label">نام و نام خانوادگی</label>
+              </div>
             </div>
-             <div class="col-md-6">
-               <div class="custom-input">
-                  <input type="text" placeholder="" class="custom-input__input" id="userName" required />
-                  <label class="custom-input__label">نام کاربری</label>
+            <div class="col-md-6">
+              <div class="custom-input">
+                <input
+                  type="text"
+                  name="userName"
+                  class="custom-input__input"
+                  required />
+                <label class="custom-input__label">نام کاربری</label>
               </div>
-             </div>
-              <div class="col-md-6">
-                  <div class="custom-input">
-                  <input type="text" placeholder="" class="custom-input__input" id="email" required />
-                  <label class="custom-input__label">ایمیل</label>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-input">
+                <input
+                  type="text"
+                  name="email"
+                  class="custom-input__input"
+                  required />
+                <label class="custom-input__label">ایمیل</label>
               </div>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-input">
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  class="custom-input__input"
+                  required />
+                <label class="custom-input__label">شماره موبایل</label>
               </div>
-                <div class="col-md-6">
-                  <div class="custom-input">
-                  <input type="text" placeholder="" class="custom-input__input" id="phoneNumber" required />
-                  <label class="custom-input__label">شماره موبایل</label>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-input">
+                <input
+                  type="password"
+                  name="password"
+                  class="custom-input__input"
+                  required />
+                <label class="custom-input__label">رمز عبور</label>
               </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom-input">
-                  <input type="password" class="custom-input__input" id="password" required />
-                  <label class="custom-input__label">رمز عبور</label>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-input">
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  class="custom-input__input"
+                  required />
+                <label class="custom-input__label">تکرار رمز عبور</label>
               </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom-input">
-                  <input type="password" class="custom-input__input" id="confirmPassword" required />
-                  <label class="custom-input__label">تکرار رمز عبور</label>
-              </div>
-                </div>
-    
+            </div>
           </div>
           <div class="sign-up-form__options">
             <div class="login-form__remember-me">
               <div class="checkbox">
                 <label>
-                   <span>
-                      <a href="#" class="text-decoration-underline">شرایط و قوانین</a>
-                      سایت را میپذیرم
-                   </span>  
-                  <input type="checkbox" /><span class="checkbox-material"><span class="check"></span></span>
+                  <span>
+                    <a href="#" class="text-decoration-underline"
+                      >شرایط و قوانین</a
+                    >
+                    سایت را میپذیرم
+                  </span>
+                  <input type="checkbox" name="checkbox" /><span
+                    class="checkbox-material"
+                    ><span class="check"></span
+                  ></span>
                 </label>
               </div>
             </div>
-            <a href="login.html" class="sign-up-form__login">حساب کاربری دارید؟</a>
+            <a href="login.html" class="sign-up-form__login"
+              >حساب کاربری دارید؟</a
+            >
           </div>
           <button class="sign-up-form__btn">ثبت نام</button>
         </form>
-          </div>
-        </div>
       </div>
 
       <footer class="footer">
@@ -155,8 +318,11 @@
               برای آگاهی از آخرین دوره ها، تخفیف ها، رویداد ها و ... در خبرنامه
               عضو شوید
             </p>
-            <form action="" class="footer-newsletter__form">
-              <input type="email" placeholder="ایمیل خود را وارد کنید." />
+            <form action="" class="footer-newsletter__form" novalidate>
+              <input
+                type="email"
+                name="email"
+                placeholder="ایمیل خود را وارد کنید." />
               <button>عضویت</button>
             </form>
           </div>
@@ -265,8 +431,10 @@
     </div>
 
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
+    <script src="vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
+    <script src="vendor/SweetAlert/SweetAlert-2.js"></script>
     <script src="js/sign-up.js" type="module"></script>
-    <script src="js/shared.js"></script>
+    <script src="js/shared.js" type="module"></script>
     <script src="js/spa.js" type="module"></script>
   </body>
 </html>

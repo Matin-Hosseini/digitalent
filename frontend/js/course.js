@@ -11,7 +11,8 @@ const relatedCoursesSwiperWrapper = document.querySelector(
 //tabs
 //sets tabsLine in its position
 const positionTabsLine = () => {
-  tabsLine.style.left = tabsItems[0].offsetLeft + "px";
+  tabsLine.style.left =
+    document.querySelector(".tabs__item--active").offsetLeft + "px";
 };
 
 tabsItems.forEach((tabItem, index) => {
@@ -136,5 +137,9 @@ const relatedCoursesSwiper = new Swiper(".swiper", {
 });
 
 window.addEventListener("load", () => {
+  positionTabsLine();
+});
+
+window.addEventListener("resize", () => {
   positionTabsLine();
 });

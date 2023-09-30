@@ -1,0 +1,17 @@
+.swal2-popup {
+  background-color: var(--app-bg);
+  transition: var(--transition);
+}
+.swal2-title {
+  color: var(--title-color);
+  transition: var(--transition);
+}
+.swal2-html-container {
+  font-size: 1.4rem !important;
+  color: var(--gray) !important;
+  transition: var(--transition) !important;
+}
+
+.swal2-confirm {
+  font-size: 1.5rem !important;
+}
