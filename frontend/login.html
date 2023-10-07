@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="">
+<html lang="en" dir="" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -91,13 +91,13 @@
             <p class="text-center mb-5 login-title">خوش برگشتی دوست خوبم</p>
 
             <!--prettier-ignore-->
-            <form action="" class="login-form" novalidate>
+            <form action="" class="login-form" id="login-form" novalidate>
             <div class="custom-input">
-              <input type="text" placeholder="" class="custom-input__input" name="boilerplate" required />
+              <input type="text" name="identifier" class="custom-input__input" required />
               <label class="custom-input__label">ایمیل یا شماره موبایل</label>
             </div>
             <div class="custom-input">
-              <input type="password" class="custom-input__input" name="password" required />
+              <input type="password" name="password" class="custom-input__input" required />
               <label class="custom-input__label">رمز عبور</label>
             </div>
 
@@ -106,7 +106,7 @@
                     <div class="checkbox">
                         <label>
                             مرا به خاطر بسپار
-                          <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span> 
+                          <input type="checkbox" name="rememberMe"><span class="checkbox-material"><span class="check"></span></span> 
                         </label>
                     </div>
                 </div>
@@ -241,6 +241,7 @@
       </footer>
     </div>
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
+    <script src="vendor/SweetAlert/SweetAlert-2.js"></script>
     <script src="js/login.js" type="module"></script>
     <script src="js/shared.js" type="module"></script>
     <script src="js/spa.js" type="module"></script>

@@ -1,13 +1,4 @@
-const followMouse = () => {
-  const mouseFollower = document.querySelector(".mouse-follower");
-  const mouseFollower2 = document.querySelector(".mouse-follower-2");
-  window.addEventListener("mousemove", (e) => {
-    mouseFollower.style.cssText =
-      mouseFollower2.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px`;
-  });
-};
-
-const showSwal = (message, icon, button, callback) => {
+const showSwal = (message, icon, button, callback = () => {}) => {
   Swal.fire({
     icon: icon,
     title: message,
@@ -15,4 +6,29 @@ const showSwal = (message, icon, button, callback) => {
   }).then((result) => callback(result));
 };
 
-export { followMouse, showSwal };
+const setCookie = (name, value, path, expireDays) => {
+  let now = new Date();
+  let expireDate = new Date(
+    now.setTime(now.getTime() + expireDays * 24 * 60 * 60 * 1000)
+  );
+
+  document.cookie = `${name}=${value};path:${path};expires=${expireDate}`;
+};
+
+const getCookie = (name) => {
+  const allCookies = document.cookie.split(";");
+
+  const cookie = allCookies.find((cookie) => cookie.includes(name));
+  if (!cookie) {
+    return undefined;
+  }
+  const cookieValue = cookie.substring(cookie.indexOf("=") + 1);
+
+  return cookieValue;
+};
+
+export {
+  showSwal,
+  setCookie,
+  getCookie,
+};

@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  right: 0 ;
+  right: 0;
   left: 0;
   top: 0;
   padding: 1rem;
@@ -16,6 +16,11 @@
   z-index: 9999;
   transition: all var(--transition);
   box-shadow: var(--box-shadow);
+}
+
+#close-sidebar-btn {
+  font-size: 3rem;
+  cursor: pointer;
 }
 
 .hamburger-menu {
@@ -85,12 +90,15 @@
 }
 .nav-menu__item--active {
   color: var(--purple);
+  background: #8696fe57;
+  margin: 0 1rem;
+  border-radius: var(--border-radius);
 }
 .nav-menu__item:hover {
   color: var(--purple);
 }
 .nav-menu__icon {
- font-size: 2rem;
+  font-size: 2rem;
 }
 .nav-menu__link {
   display: flex;
@@ -169,7 +177,7 @@
 /* responsive starts */
 
 @media (min-width: 768px) {
-  .nav{
+  .nav {
     padding-right: 3.5rem;
   }
   .login-signup-btn {
@@ -183,7 +191,6 @@
 }
 
 @media (min-width: 992px) {
-  
   .nav-menu {
     position: static;
     background: transparent;
@@ -225,6 +232,11 @@
   }
   .nav-menu__item {
     padding: 0;
+  }
+  .nav-menu__item--active {
+    margin: 0;
+    border-radius: 0;
+    background: none;
   }
 
   .nav-menu__item:hover .nav-sub-menu {

@@ -5,6 +5,7 @@ const articlesSwiper = new Swiper(".articles-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  
   breakpoints: {
     576: {
       slidesPerView: 1.2,
