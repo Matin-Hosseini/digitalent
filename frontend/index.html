@@ -15,6 +15,7 @@
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
@@ -234,12 +235,12 @@
             <div class="row">
               <div class="col-lg-6 mb-5 mb-lg-0 d-flex align-items-center">
                 <div class="hero-content">
-                  <h1 class="hero__title">
+                  <h1 class="hero__title" data-aos="fade-up">
                     دنبال پیشرفتی؟
                     <br />
                     میتونی اینجا آیندت تغیرر بدی!
                   </h1>
-                  <p class="hero__caption">
+                  <p class="hero__caption" data-aos="fade-left">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
                     با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
                     و مجله در سد.
@@ -267,7 +268,7 @@
 
         <section class="home">
           <div class="container-fluid"></div>
-          <h1 class="home__title">هرچی که میخوای رو سه سوته یاد بگیر</h1>
+          <h1 class="home__title" data-aos="fade-left">هرچی که میخوای رو سه سوته یاد بگیر</h1>
           <!-- mobile -->
           <div class="home__swiper-container d-md-none">
             <div class="swiper home__category-swiper">
@@ -599,30 +600,41 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-md-3">
-                <div class="funfact mb-5 mb-md-0t">
+                <div class="funfact mb-5 mb-md-0">
                   <i class="bx bxs-graduation funfact__icon"></i>
-                  <span class="funfact__count">69هزار</span>
+                  <div>
+                    <span class="funfact__count" data-count="95">0</span>
+                    هزار
+                  </div>
                   <h2 class="funfact__title">دانشجو</h2>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3">
                 <div class="funfact mb-5 mb-md-0">
                   <i class="bx bx-timer funfact__icon"></i>
-                  <span class="funfact__count">85,858</span>
+                  <div>
+                    <span class="funfact__count" data-count="278">0</span>
+                    هزار
+                  </div>
                   <h2 class="funfact__title">دقیقه دوره</h2>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3">
                 <div class="funfact mb-5 mb-md-0">
                   <i class="bx bx-wink-smile funfact__icon"></i>
-                  <span class="funfact__count">85%</span>
+                  <div>
+                    <span class="funfact__count" data-count="85">0</span>
+                    %
+                  </div>
                   <h2 class="funfact__title">رضایت از دوره ها</h2>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3">
                 <div class="funfact mb-5 mb-md-0">
                   <i class="bx bx-group funfact__icon"></i>
-                  <span class="funfact__count">69</span>
+                  <div>
+                    <span class="funfact__count" data-count="69">0</span>
+                  </div>
                   <h2 class="funfact__title">مدرس محبوب</h2>
                 </div>
               </div>
@@ -892,5 +904,9 @@
     <script src="vendor/SweetAlert/SweetAlert-2.js"></script>
     <script src="js/shared.js" type="module"></script>
     <script src="js/spa.js" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

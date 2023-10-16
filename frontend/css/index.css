@@ -182,6 +182,7 @@
   color: #fff;
   position: relative;
   transition: var(--transition);
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .funfact:hover {
@@ -195,12 +196,12 @@
     height: 25rem;
     background-color: #fff;
     border-radius: 10rem;
-    bottom: 110%;
+    bottom: 120%;
     transition: var(--transition);
   }
   .funfact::after {
     bottom: 0;
-    top: 110%;
+    top: 120%;
   }
   .funfact:hover::before {
     bottom: 140%;

@@ -11,6 +11,7 @@ const homeCategorySwiper = D.querySelector("#home__category-swiper-wrapper");
 
 heroImgWrapper.style.cssText = `margin-left: -${heroImgWrapper.offsetLeft}px; max-width: 80rem;
 `;
+console.log(heroImgWrapper.parentElement);
 
 // hero image ends
 
@@ -201,7 +202,7 @@ function insertCategories(array, element) {
     element.insertAdjacentHTML(
       "beforeend",
       `
-        <a href="${item.link}" class="home__category">
+        <a href="${item.link}" class="home__category" data-aos="zoom-in">
           <svg class="home__category-hexagon ${
             item.fill && `home__category-hexagon--${item.fill}`
           }">
@@ -219,3 +220,29 @@ function insertCategories(array, element) {
 insertCategories(firstRow, firstRowElem);
 insertCategories(secondRow, secondRowElem);
 insertCategories(thirdRow, thirdRowElem);
+
+const funFactCounts = document.querySelectorAll(".funfact__count");
+const speed = 400;
+
+const observer = new IntersectionObserver(
+  (entries) =>
+    entries.forEach((entry) => entry.isIntersecting && animate(entry.target)),
+    {
+      threshold: 0, //fires only once
+    }
+);
+
+const animate = (counter) => {
+  const value = +counter.dataset.count;
+  const data = +counter.innerText;
+  const time = value / speed;
+
+  if (data < value) {
+    counter.innerText = Math.ceil(data + time);
+    setTimeout(() => animate(counter), 1);
+  } else {
+    counter.innerText = value.toLocaleString();
+  }
+};
+
+funFactCounts.forEach((c) => observer.observe(c));
