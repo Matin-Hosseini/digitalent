@@ -1,0 +1,98 @@
+@import "./../../../css/modules/primary-styles.css";
+@import "./../../../css/modules/header.css";
+@import "./../../../css/modules/footer.css";
+
+/* menu starts */
+.menu {
+  background-color: var(--section-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition);
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  color: var(--purple);
+  border-radius: var(--border-radius);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: var(--bg-purple);
+}
+.menu-item--active {
+  background-color: var(--bg-purple);
+}
+.menu-icon {
+  font-size: 2rem;
+}
+.menu-item a {
+  font-size: 1.3rem;
+  flex-grow: 1;
+}
+/* menu ends */
+
+/* boxes starts */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.box {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  color: #fff;
+}
+.box:nth-child(1) {
+  background-color: var(--yellow);
+}
+.box:nth-child(2) {
+  background-color: var(--green);
+}
+.box:nth-child(3) {
+  background-color: var(--red);
+}
+.box:nth-child(4) {
+  background-color: var(--blue);
+}
+.box__content {
+  font-size: 1.4rem;
+}
+.box__content span {
+  font-size: 1.8rem;
+}
+.box__icon {
+  font-size: 4rem;
+}
+
+/* boxes ends */
+
+/* user info section starts */
+.user-info {
+}
+.user-info__title {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  margin: 2rem 0;
+  transition: color var(--transition);
+}
+.user-info__content {
+  background-color: var(--section-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: background-color var(--transition);
+  font-size: 1.4rem;
+}
+.user-info__content div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+/* user info section ends */

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>داشبورد</title>
+
+    <!--CSS Links-->
+    <link
+      rel="stylesheet"
+      href="./../../vendor/Bootstrap/bootstrap-5.2.3.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <!--nav menu starts-->
+      <nav class="nav">
+        <i class="ri-menu-3-line menu-btn d-lg-none" id="menu-btn"></i>
+        <div class="nav__logo">logo</div>
+        <ul class="nav-menu" id="nav-menu">
+          <div
+            class="d-flex d-lg-none justify-content-between align-items-center px-3 mt-3 mb-5">
+            <div class="logl">logo</div>
+            <i class="bx bx-x" id="close-sidebar-btn"></i>
+          </div>
+          <li class="nav-menu__item nav-menu__item--active">
+            <a href="index.html" class="nav-menu__link">
+              <i class="bx bx-home-smile nav-menu__icon"></i>
+              <span>خانه</span>
+            </a>
+          </li>
+          <li class="nav-menu__item h-6">
+            <a href="course-category.html" class="nav-menu__link">
+              <i class="bx bx-category-alt nav-menu__icon"></i>
+              <span>دسته بندی</span>
+            </a>
+          </li>
+          <li class="nav-menu__item d-none">
+            <svg>
+              <use xlink:href="#code"></use>
+            </svg>
+            <a href="#" class="nav-menu__link">برنامه نویسی</a>
+            <svg class="nav-menu__arrow-down d-none d-lg-block">
+              <use xlink:href="#arrow-down"></use>
+            </svg>
+            <ul class="nav-sub-menu">
+              <li class="nav-sub-menu__item">
+                <a href="#" class="nav-sub-menu__link">فرانت اند</a>
+              </li>
+              <li class="nav-sub-menu__item">
+                <a href="#" class="nav-sub-menu__link">بک اند</a>
+              </li>
+              <li class="nav-sub-menu__item">
+                <a href="#" class="nav-sub-menu__link">امنیت</a>
+              </li>
+              <li class="nav-sub-menu__item">
+                <a href="#" class="nav-sub-menu__link">اندروید</a>
+              </li>
+              <li class="nav-sub-menu__item">
+                <a href="#" class="nav-sub-menu__link">ios</a>
+              </li>
+              <li class="nav-sub-menu__item">
+                <a href="#" class="nav-sub-menu__link">هوش مصنوعی</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-menu__item">
+            <a href="blog-category.html" class="nav-menu__link">
+              <i class="bx bx-book-reader nav-menu__icon"></i>
+              <span>بلاگ</span>
+            </a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">
+              <i class="bx bx-briefcase nav-menu__icon"></i>
+              <span>همکاری با دیجی تلنت</span>
+            </a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="contact-us.html" class="nav-menu__link">
+              <i class="bx bx-phone-call nav-menu__icon"></i>
+              <span>تماس با ما</span>
+            </a>
+          </li>
+        </ul>
+        <!--nav menu ends-->
+
+        <!--nav options starts-->
+        <div
+          class="nav__options d-flex justify-content-center align-items-center">
+          <div class="search-modal">
+            <button
+              class="d-flex"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal">
+              <i class="bx bx-search-alt nav__icon"></i>
+            </button>
+            <div
+              class="search-modal modal fade"
+              id="searchModal"
+              tabindex="0"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form action="">
+                      <div class="custom-input position-relative m-0">
+                        <input
+                          type="text"
+                          class="custom-input__input"
+                          id="login-name-input"
+                          required />
+                        <label class="custom-input__label"
+                          >چی دلت میخواد؟</label
+                        >
+                        <i
+                          class="bx bx-search-alt search-modal__search-icon"></i>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__shopping-cart d-flex">
+            <i class="bx bx-cart-alt nav__icon"></i>
+          </div>
+          <button class="nav__dark-mode-btn d-flex" id="dark-mode-btn">
+            <i class="bx bx-moon nav__icon"></i>
+          </button>
+          <a href="login.html" class="login-signup-btn">
+            <i class="bx bx-log-in nav__icon"></i>
+            <span class="d-none d-md-block">ورود | ثبت نام</span>
+          </a>
+        </div>
+        <!--nav options ends-->
+      </nav>
+    </header>
+
+    <main>
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-lg-3">
+            <div>
+              <div class="profile"></div>
+
+              <ul class="menu">
+                <li class="menu-item menu-item--active">
+                  <i class="ri-dashboard-line menu-icon"></i>
+                  <a href="#">داشبورد</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-edit-line menu-icon"></i>
+                  <a href="#">ویرایش حساب کاربری</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-key-line menu-icon"></i>
+                  <a href="#">تغییر رمز عبور</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-database-2-line menu-icon"></i>
+                  <a href="#">همه دوره های من</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-money-dollar-circle-line menu-icon"></i>
+                  <a href="#">دوره های خریداری شده من</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-medal-2-line menu-icon"></i>
+                  <a href="#">دوره های رایگان من</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-coupon-2-line menu-icon"></i>
+                  <a href="#">تیکت ها</a>
+                </li>
+                <li class="menu-item">
+                  <i class="ri-logout-circle-r-line menu-icon"></i>
+                  <a href="#">خروج از حساب کاربری</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="">
+              <section class="boxes">
+                <div class="box">
+                  <div class="box__content">
+                    <p>12 دوره</p>
+                    <span>دوره ها</span>
+                  </div>
+                  <i class="ri-play-list-2-line box__icon"></i>
+                </div>
+                <div class="box">
+                  <div class="box__content">
+                    <p>3 تیکت</p>
+                    <span>تیکت ها</span>
+                  </div>
+                  <i class="ri-coupon-3-line box__icon"></i>
+                </div>
+                <div class="box">
+                  <div class="box__content">
+                    <p>12 نظر</p>
+                    <span>نظرات من</span>
+                  </div>
+                  <i class="ri-message-3-line box__icon"></i>
+                </div>
+                <div class="box">
+                  <div class="box__content">
+                    <p>12 سوال</p>
+                    <span>سوالات من</span>
+                  </div>
+                  <i class="ri-question-fill box__icon"></i>
+                </div>
+              </section>
+
+              <section class="user-info">
+                <h1 class="user-info__title">داشبورد</h1>
+                <div class="user-info__content">
+                    <div>
+                        <span>نام و نام خانوادگی: </span>
+                        <span>سید متین حسینی</span>
+                    </div>
+                    <div>
+                        <span>نام کاربری: </span>
+                        <span>matin-5500</span>
+                    </div>
+                    <div>
+                        <span>ایمیل: </span>
+                        <span>koenigsegg.matin@gmail.com</span>
+                    </div>
+                    <div>
+                        <span>شماره موبایل: </span>
+                        <span>0912932354</span>
+                    </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-newsletter">
+          <h2 class="footer-newsletter__title">عضو خبرنامه شوید</h2>
+          <p class="footer-newsletter__caption">
+            برای آگاهی از آخرین دوره ها، تخفیف ها، رویداد ها و ... در خبرنامه
+            عضو شوید
+          </p>
+          <form action="" class="footer-newsletter__form" novalidate>
+            <input
+              type="email"
+              name="email"
+              placeholder="ایمیل خود را وارد کنید." />
+            <button>عضویت</button>
+          </form>
+        </div>
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer__company-description">
+                <h2 class="footer__logo text-danger">DigiTalent</h2>
+                <p class="footer__company-caption">
+                  شرکت دیجی تلنت، با افتخار و تعهد به ارائه خدمات برتر و محصولات
+                  با کیفیت به عنوان یک رهنمود در زمینه آموزش آنلاین به مشتریان
+                  خود خدمت می کند. از شما برای انتخاب تیم ما سپاس گذاریم.
+                </p>
+                <div class="footer__socials">
+                  <a href="#" class="footer-socials__icon">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#" class="footer-socials__icon">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" class="footer-socials__icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a href="#" class="footer-socials__icon">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" class="footer-socials__icon">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <ul class="footer-menu">
+                <header>دسترسی سریع</header>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">درباره ما</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">رویداد های پیش رو</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">وبلاگ</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">سوالات متداول</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">حریم خصوصی</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul class="footer-menu">
+                <header>لینک های مفید</header>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">ارتباط با ما</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">دوره های محبوب</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">مدرسین</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">نظرات کاربران</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__link">ضمانت بازگشت</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div class="footer__contact-info">
+                <header>اطلاعات تماس</header>
+                <div class="footer__location">
+                  <svg>
+                    <use xlink:href="#location"></use>
+                  </svg>
+                  <span>تهران، ستارخان، خیابان یکم، کوچه دوم، پلاک 200</span>
+                </div>
+                <div class="footer__phone">
+                  <svg>
+                    <use xlink:href="#phone"></use>
+                  </svg>
+                  <div class="d-flex flex-column gap-2">
+                    <span>021-33849622</span>
+                    <span>0919-7892478</span>
+                  </div>
+                </div>
+                <div class="footer__email">
+                  <i class="fa-regular fa-envelope"></i>
+                  <span>matinhosseiniofficial@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center gap-2">
+          <i class="fa-regular fa-copyright"></i>
+          <span>تمامی حقوق محفوظ می باشد.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!--JS Links-->
+    <script src="./../../vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
+    <script src="./../../js/shared.js" type="module"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
