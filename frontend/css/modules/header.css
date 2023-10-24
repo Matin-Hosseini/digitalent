@@ -23,35 +23,12 @@
   cursor: pointer;
 }
 
-.hamburger-menu {
+.menu-btn{
+  font-size: 3rem;
   margin-left: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-content: center;
   cursor: pointer;
 }
-.hamburger-menu__line {
-  width: 2.5rem;
-  height: 0.2rem;
-  background-color: var(--light-gray);
-  position: relative;
-}
-.hamburger-menu__line::before,
-.hamburger-menu__line::after {
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-color: inherit;
-}
 
-.hamburger-menu__line::before {
-  top: -0.7rem;
-}
-.hamburger-menu__line::after {
-  bottom: -0.7rem;
-}
 
 .nav__logo {
   flex: 1;
@@ -194,9 +171,6 @@
   .nav-menu {
     position: static;
     background: transparent;
-  }
-  .hamburger-menu {
-    display: none;
   }
   .nav__logo {
     flex: 0;

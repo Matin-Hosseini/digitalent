@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>داشبورد</title>
+    <title>ویرایش حساب کاربری</title>
 
     <!--CSS Links-->
     <link
@@ -149,18 +149,18 @@
     <main>
       <div class="container my-5">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="account-side-bar">
               <div class="profile"></div>
 
               <ul class="menu">
-                <li class="menu-item menu-item--active">
-                  <i class="ri-dashboard-line menu-icon"></i>
-                  <a href="./">داشبورد</a>
-                </li>
                 <li class="menu-item">
+                  <i class="ri-dashboard-line menu-icon"></i>
+                  <a href="./../dashboard/">داشبورد</a>
+                </li>
+                <li class="menu-item menu-item--active">
                   <i class="ri-edit-line menu-icon"></i>
-                  <a href="./../edit">ویرایش حساب کاربری</a>
+                  <a href="./">ویرایش حساب کاربری</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-key-line menu-icon"></i>
@@ -189,61 +189,36 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-9">
-            <div class="">
-              <section class="boxes">
-                <div class="box">
-                  <div class="box__content">
-                    <p>12 دوره</p>
-                    <span>دوره ها</span>
-                  </div>
-                  <i class="ri-play-list-2-line box__icon"></i>
+          <div class="col-lg-9 px-5">
+            <section class="edit">
+              <form action="" class="edit-form">
+                <h1 class="title text-info mb-4">ویرایش حساب کاربری</h1>
+                <div>
+                  <label for="name">نام و نام خانوادگی</label>
+                  <input type="text" id="name" value="متین حسی" />
+                  <span class="error-message">این بخش را خالی نگذارید.</span>
                 </div>
-                <div class="box">
-                  <div class="box__content">
-                    <p>3 تیکت</p>
-                    <span>تیکت ها</span>
-                  </div>
-                  <i class="ri-coupon-3-line box__icon"></i>
+                <div>
+                  <label for="userName">نام کاربری</label>
+                  <input type="text" id="userName" placeholder="" />
+                  <span class="error-message">این بخش را خالی نگذارید.</span>
                 </div>
-                <div class="box">
-                  <div class="box__content">
-                    <p>12 نظر</p>
-                    <span>نظرات من</span>
-                  </div>
-                  <i class="ri-message-3-line box__icon"></i>
+                <div>
+                  <label for="phone">شماره موبایل</label>
+                  <input type="text" id="phone" placeholder="" />
+                  <span class="error-message">این بخش را خالی نگذارید.</span>
                 </div>
-                <div class="box">
-                  <div class="box__content">
-                    <p>12 سوال</p>
-                    <span>سوالات من</span>
-                  </div>
-                  <i class="ri-question-fill box__icon"></i>
+                <div>
+                  <label for="email">ایمیل</label>
+                  <input type="text" id="email" placeholder="" />
+                  <span class="error-message">این بخش را خالی نگذارید.</span>
                 </div>
-              </section>
 
-              <section class="user-info">
-                <h1 class="user-info__title">داشبورد</h1>
-                <div class="user-info__content">
-                  <div>
-                    <span>نام و نام خانوادگی: </span>
-                    <span>سید متین حسینی</span>
-                  </div>
-                  <div>
-                    <span>نام کاربری: </span>
-                    <span>matin-5500</span>
-                  </div>
-                  <div>
-                    <span>ایمیل: </span>
-                    <span>koenigsegg.matin@gmail.com</span>
-                  </div>
-                  <div>
-                    <span>شماره موبایل: </span>
-                    <span>0912932354</span>
-                  </div>
-                </div>
-              </section>
-            </div>
+                <button type="submit" class="edit-form__submit-btn custom-btn">
+                  ویرایش اطلاعات
+                </button>
+              </form>
+            </section>
           </div>
         </div>
       </div>

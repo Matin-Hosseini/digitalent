@@ -63,16 +63,16 @@ const relatedArticlesSwiper = new Swiper(".related-articles-swiper", {
   },
   breakpoints: {
     576: {
-      slidesPerView: 2.2,
+      slidesPerView: 1.8,
     },
     768: {
-      slidesPerView: 3.3,
+      slidesPerView: 2.5,
     },
     992: {
-      slidesPerView: 4.4,
+      slidesPerView: 3.5,
     },
     1200: {
-      slidesPerView: 5.5,
+      slidesPerView: 4.2,
     },
   },
 });

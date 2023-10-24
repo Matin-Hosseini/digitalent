@@ -1,0 +1,47 @@
+@import "./../../../css/modules/primary-styles.css";
+@import "./../../../css/modules/header.css";
+@import "./../../../css/modules/footer.css";
+@import './../../modules/css/side-menu.css';
+
+
+/* edit form starts */
+.edit-content {
+  height: 100%;
+}
+.edit-form {
+  margin-top: 2rem;
+  background-color: var(--section-bg);
+  padding: 2rem;
+  border: 2px dashed var(--gray);
+  border-radius: var(--border-radius);
+  font-size: 1.3rem;
+}
+.edit-form {
+  font-size: 1.5rem;
+}
+.edit-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.edit-form input {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--gray);
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+:root.dark .edit-form input {
+  background-color: var(--app-bg);
+  transition: var(--transition);
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 1.1rem;
+}
+/* edit form ends */

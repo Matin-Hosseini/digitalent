@@ -1,0 +1,19 @@
+@import "./../../../css/modules/primary-styles.css";
+@import "./../../../css/modules/header.css";
+@import "./../../../css/modules/footer.css";
+@import "./../../modules/css/side-menu.css";
+
+.change-password-form {
+  border: 2px dotted var(--green);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  max-width: 55rem;
+  margin: auto;
+}
+
+.change-password-form .custom-input__input {
+  border-color: var(--blue);
+}
+.change-password-form .custom-input__label {
+  color: var(--blue);
+}

@@ -42,6 +42,29 @@
   background-color: #fff;
   color: var(--orange);
 }
+
+@media (max-width: 350px) {
+  .footer-newsletter__form {
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  .footer-newsletter__form input{
+    margin-bottom: 1.5rem;
+    padding: 0;
+  }
+  .footer-newsletter__form button{
+    border-radius: 1rem;
+    border: 1px solid var(--orange);
+    background-color: transparent;
+    color: var(--orange);
+    transition: var(--transition);
+  }
+  .footer-newsletter__form button:hover{
+    background-color: var(--orange);
+    color: #fff;
+  }
+}
 /* actual footer */
 .footer__content {
   font-size: 1.4rem;

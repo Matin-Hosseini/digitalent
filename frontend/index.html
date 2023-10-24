@@ -15,7 +15,10 @@
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
@@ -103,9 +106,7 @@
       <header>
         <!--nav menu starts-->
         <nav class="nav">
-          <div class="hamburger-menu" id="hamburger-menu-btn">
-            <span class="hamburger-menu__line"></span>
-          </div>
+          <i class="ri-menu-3-line menu-btn d-lg-none" id="menu-btn"></i>
           <div class="nav__logo">logo</div>
           <ul class="nav-menu" id="nav-menu">
             <div
@@ -268,7 +269,9 @@
 
         <section class="home">
           <div class="container-fluid"></div>
-          <h1 class="home__title" data-aos="fade-left">هرچی که میخوای رو سه سوته یاد بگیر</h1>
+          <h1 class="home__title" data-aos="fade-left">
+            هرچی که میخوای رو سه سوته یاد بگیر
+          </h1>
           <!-- mobile -->
           <div class="home__swiper-container d-md-none">
             <div class="swiper home__category-swiper">
@@ -578,24 +581,6 @@
           </div>
         </section>
 
-        <section class="newest-courses my-5">
-          <div class="container">
-            <div class="section-header">
-              <h2 class="section-header__title">جدیدترین دوره ها</h2>
-              <div class="section-header__dashed-line"></div>
-              <a href="#" class="section-header__link">
-                <div class="section-header__icon-container">
-                  <svg class="section-header__icon">
-                    <use xlink:href="#arrow-left"></use>
-                  </svg>
-                </div>
-                مشاهده همه
-              </a>
-            </div>
-            <div class="row" id="newest-courses__container"></div>
-          </div>
-        </section>
-
         <section class="funfacts">
           <div class="container">
             <div class="row">
@@ -639,6 +624,24 @@
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="newest-courses my-5">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-header__title">جدیدترین دوره ها</h2>
+              <div class="section-header__dashed-line"></div>
+              <a href="#" class="section-header__link">
+                <div class="section-header__icon-container">
+                  <svg class="section-header__icon">
+                    <use xlink:href="#arrow-left"></use>
+                  </svg>
+                </div>
+                مشاهده همه
+              </a>
+            </div>
+            <div class="row" id="newest-courses__container"></div>
           </div>
         </section>
 

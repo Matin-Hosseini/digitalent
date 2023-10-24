@@ -1,7 +1,3 @@
-import { setTheme } from "./funcs/utils.js";
-
-setTheme()
-
 const aboutUsTeachers = [
   { id: 1, name: "سید متین حسینی", carrier: "فرانت اند" },
   { id: 2, name: "محمد رمضانی", carrier: "عکاسی" },

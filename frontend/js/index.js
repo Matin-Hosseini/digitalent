@@ -1,4 +1,5 @@
 import { homeCategories } from "./datas.js";
+import { funFactsCountUp } from "./funcs/utils.js";
 
 const D = document;
 
@@ -27,71 +28,82 @@ const newestCourses = [
   { id: 1 },
 ];
 
-newestCoursesContainer.innerHTML = ``;
-newestCourses.forEach((course) => {
-  newestCoursesContainer.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <div class="course-box">
-        <a href="course.html" class="course-box__image">
-          <img
-            src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
-            alt="" />
-        </a>
-        <div class="course-box__info">
-          <h2 class="course-box__name">
-            <a href="course.html"> آموزش html و css برای مبتدی ها که در واقع منجر به این هست خط سوم</a>
-          </h2>
-          <div
-            class="course-box__price">
-            <button class="course-box__shopping-cart-icon">
-              <svg>
-                <use xlink:href="#shopping-cart"></use>
-              </svg>
-            </button>
-          
-            <div class="d-flex align-items-center">
-              <span class="course-box__old-price">220,000 تومان</span>
-              <span class="course-box__current-price">175,000 تومان</span>
-            </div>
-          </div>
-          <div
-            class="d-flex justify-content-between align-items-center my-3">
-            <div class="course-box__teacher d-flex align-items-center">
-              <i class="fa-solid fa-chalkboard-user"></i>
-              <h3 class="course-box__teacher-name">متین حسینی</h3>
-            </div>
+const getAllCourses = async () => {
+  const res = await fetch("http://localhost:8000/v1/courses");
+  const courses = await res.json();
+
+  newestCoursesContainer.innerHTML = ``;
+
+  courses.forEach((course) => {
+    newestCoursesContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="course-box">
+          <a href="course.html" class="course-box__image">
+            <img
+              src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+              alt="" />
+          </a>
+          <div class="course-box__info">
+            <h2 class="course-box__name">
+              <a href="course.html" class="underline-animated-text">${course.title}</a>
+            </h2>
+            <div
+              class="course-box__price">
+              <button class="course-box__shopping-cart-icon">
+                <svg>
+                  <use xlink:href="#shopping-cart"></use>
+                </svg>
+              </button>
             
-            <div class="course-box__students">
-              <i class="fa-solid fa-people-group"></i>
-              <span>11,578</span>
+              <div class="d-flex align-items-center">
+                <span class="course-box__old-price">220,000 تومان</span>
+                <span class="course-box__current-price">${course.price.toLocaleString()} تومان</span>
+              </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <svg>
-                <use xlink:href="#clock"></use>
-                <span class="course-box__time">20:50:34</span>
-              </svg>
+            <div
+              class="d-flex justify-content-between align-items-center my-3">
+              <div class="course-box__teacher d-flex align-items-center">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h3 class="course-box__teacher-name">${course.teacher}</h3>
+              </div>
+              
+              <div class="course-box__students">
+                <i class="fa-solid fa-people-group"></i>
+                <span>${course.students.toLocaleString()}</span>
+              </div>
             </div>
-            <div class="course-box__ratings">
-              <span>4</span>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <div>
-              <span>55</span>
-              <span>14</span>
-              <span>17</span>
-              <span>3</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <svg>
+                  <use xlink:href="#clock"></use>
+                  <span class="course-box__time">20:50:34</span>
+                </svg>
+              </div>
+              <div class="course-box__ratings">
+                <span>${course.rate}</span>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="course-box__discount-time">
+                <span class="course-box__discount-seconds">55</span>
+                <span>:</span>
+                <span class="course-box__discount-minutes">14</span>
+                <span>:</span>
+                <span class="course-box__discount-hours">17</span>
+                <span>:</span>
+                <span class="course-box__discount-days">3</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  `
-  );
-});
+    `
+    );
+  });
+};
+
+getAllCourses();
 
 //articles
 const articles = [
@@ -122,7 +134,7 @@ articles.forEach((article) => {
         </a>
         <div class="article-box__content">
           <h2 class="article-box__title">
-            <a href="article.html"
+            <a href="article.html" class="underline-animated-text"
               >
               اهمیت یادگیری پایتون در برنامه نویسی مخصوصا برنامه که دارم میرم خط سوم دیگه نویسی سمت سرور
             </a>
@@ -206,7 +218,7 @@ function insertCategories(array, element) {
           <svg class="home__category-hexagon ${
             item.fill && `home__category-hexagon--${item.fill}`
           }">
-            <use xlink:href="#hexagon"></use>
+            <use href="#hexagon"></use>
           </svg>
           <div class="home__category-content">
             <i class="${item.icon} home__category-icon"></i>
@@ -221,28 +233,42 @@ insertCategories(firstRow, firstRowElem);
 insertCategories(secondRow, secondRowElem);
 insertCategories(thirdRow, thirdRowElem);
 
-const funFactCounts = document.querySelectorAll(".funfact__count");
-const speed = 400;
+const countDownTimer = (date) => {
+  const countDownDate = new Date(date).getTime();
 
-const observer = new IntersectionObserver(
-  (entries) =>
-    entries.forEach((entry) => entry.isIntersecting && animate(entry.target)),
-    {
-      threshold: 0, //fires only once
+  const countDownInterval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    if (distance < 0) {
+      clearInterval(countDownInterval);
+      return;
     }
-);
 
-const animate = (counter) => {
-  const value = +counter.dataset.count;
-  const data = +counter.innerText;
-  const time = value / speed;
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (data < value) {
-    counter.innerText = Math.ceil(data + time);
-    setTimeout(() => animate(counter), 1);
-  } else {
-    counter.innerText = value.toLocaleString();
-  }
+    if (days < 10) {
+      days = "0" + days;
+    }
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+
+    console.log(`${days}:${hours}:${minutes}:${seconds}`);
+  }, 1000);
 };
 
-funFactCounts.forEach((c) => observer.observe(c));
+window.addEventListener("load", () => {
+  funFactsCountUp();
+});

@@ -1,3 +1,5 @@
+@import "./../reset.css";
+@import "./../fonts.css";
 :root {
   --app-bg: #f9f9f9;
   --section-bg: #f9f9f9;
@@ -20,6 +22,7 @@
   --blue: #19a7ce;
   --orange: #ff6951;
   --purple: #8696fe;
+  --bg-purple: #8696fe57;
   --footer-bg: #453e79;
 
   /* transitions */
@@ -112,6 +115,17 @@ img {
 ::-webkit-scrollbar-thumb {
   background-color: var(--purple);
   border-radius: 10rem;
+}
+
+.title {
+  font-family: var(--title-font);
+  font-size: 4rem;
+  transition: all var(--transition);
+}
+.title-sm {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  transition: all var(--transition);
 }
 
 /* custom btn starts */
@@ -212,6 +226,25 @@ img {
   color: var(--gray);
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* underline animation effect on text*/
+.underline-animated-text {
+  background-image: linear-gradient(currentColor, currentColor);
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 1),
+    rgba(255, 0, 180, 1),
+    rgba(0, 100, 200, 1)
+  );
+
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size var(--transition);
+  display: inline;
+  line-height: 2;
+  padding-bottom: 3px;
 }
 
 /* custom checkbox starts */

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>داشبورد</title>
+    <title>همه دوره های من</title>
 
     <!--CSS Links-->
     <link
@@ -149,38 +149,38 @@
     <main>
       <div class="container my-5">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 order-1 order-lg-0">
             <div class="account-side-bar">
               <div class="profile"></div>
 
               <ul class="menu">
-                <li class="menu-item menu-item--active">
+                <li class="menu-item">
                   <i class="ri-dashboard-line menu-icon"></i>
-                  <a href="./">داشبورد</a>
+                  <a href="./../dashboard/">داشبورد</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-edit-line menu-icon"></i>
-                  <a href="./../edit">ویرایش حساب کاربری</a>
+                  <a href="../edit/">ویرایش حساب کاربری</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-key-line menu-icon"></i>
-                  <a href="./../change-password/">تغییر رمز عبور</a>
+                  <a href="../change-password/">تغییر رمز عبور</a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item menu-item--active">
                   <i class="ri-database-2-line menu-icon"></i>
-                  <a href="#">همه دوره های من</a>
+                  <a href="./">همه دوره های من</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-money-dollar-circle-line menu-icon"></i>
-                  <a href="#">دوره های خریداری شده من</a>
+                  <a href="../buyed-courses">دوره های خریداری شده من</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-medal-2-line menu-icon"></i>
-                  <a href="#">دوره های رایگان من</a>
+                  <a href="../free-courses">دوره های رایگان من</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-coupon-2-line menu-icon"></i>
-                  <a href="#">تیکت ها</a>
+                  <a href="../tickets">تیکت ها</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-logout-circle-r-line menu-icon"></i>
@@ -189,60 +189,9 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-9">
-            <div class="">
-              <section class="boxes">
-                <div class="box">
-                  <div class="box__content">
-                    <p>12 دوره</p>
-                    <span>دوره ها</span>
-                  </div>
-                  <i class="ri-play-list-2-line box__icon"></i>
-                </div>
-                <div class="box">
-                  <div class="box__content">
-                    <p>3 تیکت</p>
-                    <span>تیکت ها</span>
-                  </div>
-                  <i class="ri-coupon-3-line box__icon"></i>
-                </div>
-                <div class="box">
-                  <div class="box__content">
-                    <p>12 نظر</p>
-                    <span>نظرات من</span>
-                  </div>
-                  <i class="ri-message-3-line box__icon"></i>
-                </div>
-                <div class="box">
-                  <div class="box__content">
-                    <p>12 سوال</p>
-                    <span>سوالات من</span>
-                  </div>
-                  <i class="ri-question-fill box__icon"></i>
-                </div>
-              </section>
-
-              <section class="user-info">
-                <h1 class="user-info__title">داشبورد</h1>
-                <div class="user-info__content">
-                  <div>
-                    <span>نام و نام خانوادگی: </span>
-                    <span>سید متین حسینی</span>
-                  </div>
-                  <div>
-                    <span>نام کاربری: </span>
-                    <span>matin-5500</span>
-                  </div>
-                  <div>
-                    <span>ایمیل: </span>
-                    <span>koenigsegg.matin@gmail.com</span>
-                  </div>
-                  <div>
-                    <span>شماره موبایل: </span>
-                    <span>0912932354</span>
-                  </div>
-                </div>
-              </section>
+          <div class="col-lg-9 mb-5 mb-lg-0 px-5">
+            <div class="row" id="courses-container">
+              <!--will be created by js-->
             </div>
           </div>
         </div>

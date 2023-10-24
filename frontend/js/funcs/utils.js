@@ -27,8 +27,32 @@ const getCookie = (name) => {
   return cookieValue;
 };
 
-export {
-  showSwal,
-  setCookie,
-  getCookie,
+const funFactsCountUp = () => {
+  const funFactCounts = document.querySelectorAll(".funfact__count");
+  const speed = 400;
+
+  const observer = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((entry) => entry.isIntersecting && animate(entry.target)),
+    {
+      threshold: 0, //fires only once
+    }
+  );
+
+  const animate = (counter) => {
+    const value = +counter.dataset.count;
+    const data = +counter.innerText;
+    const time = value / speed;
+
+    if (data < value) {
+      counter.innerText = Math.ceil(data + time);
+      setTimeout(() => animate(counter), 1);
+    } else {
+      counter.innerText = value.toLocaleString();
+    }
+  };
+  
+  funFactCounts.forEach((c) => observer.observe(c));
 };
+
+export { showSwal, setCookie, getCookie, funFactsCountUp };
