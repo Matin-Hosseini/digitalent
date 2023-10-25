@@ -28,82 +28,225 @@ const newestCourses = [
   { id: 1 },
 ];
 
-const getAllCourses = async () => {
-  const res = await fetch("http://localhost:8000/v1/courses");
-  const courses = await res.json();
-
-  newestCoursesContainer.innerHTML = ``;
-
-  courses.forEach((course) => {
-    newestCoursesContainer.insertAdjacentHTML(
-      "beforeend",
-      `
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="course-box">
-          <a href="course.html" class="course-box__image">
-            <img
-              src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
-              alt="" />
-          </a>
-          <div class="course-box__info">
-            <h2 class="course-box__name">
-              <a href="course.html" class="underline-animated-text">${course.title}</a>
-            </h2>
-            <div
-              class="course-box__price">
-              <button class="course-box__shopping-cart-icon">
-                <svg>
-                  <use xlink:href="#shopping-cart"></use>
-                </svg>
-              </button>
+const allCourses = [
+  {
+    _id: "65369297c65fadb18417f319",
+    title: "آموزش جامع NFT",
+    des: "دوره جامع برای یادگیری اصولی NFT",
+    price: 245000,
+    discountPercentage: 0,
+    students: 12567,
+    teacher: "مرضیه مقدس",
+    time: 14,
+    rate: 4,
+    createdAt: "2023-10-23T15:34:47.424Z",
+    updatedAt: "2023-10-23T15:34:47.424Z",
+    __v: 0,
+  },
+  {
+    _id: "653692a1c65fadb18417f31b",
+    title: "دارت و فلاتر",
+    des: "دوره جامع برای یادگیری اصولی دارت و فلاتر",
+    price: 870000,
+    discountPercentage: 50,
+    students: 32741,
+    teacher: "سید متین حسینی",
+    time: 30,
+    rate: 4.5,
+    createdAt: "2023-10-23T15:34:57.982Z",
+    updatedAt: "2023-10-23T15:34:57.982Z",
+    __v: 0,
+  },
+  {
+    _id: "653692acc65fadb18417f31d",
+    title: "دیتابیس oracle",
+    des: "دوره جامع برای یادگیری اصولی oracle",
+    price: 658000,
+    discountPercentage: 60,
+    students: 5824,
+    teacher: "علی رضایی",
+    time: 20,
+    rate: 3,
+    createdAt: "2023-10-23T15:35:08.480Z",
+    updatedAt: "2023-10-23T15:35:08.480Z",
+    __v: 0,
+  },
+  {
+    _id: "653692b6c65fadb18417f31f",
+    title: "تست نویسی",
+    des: "دوره جامع برای یادگیری اصولی تست نویسی",
+    price: 2360000,
+    discountPercentage: 40,
+    students: 20000,
+    teacher: "مرتضی رضایی",
+    time: 36,
+    rate: 4.5,
+    createdAt: "2023-10-23T15:35:18.349Z",
+    updatedAt: "2023-10-23T15:35:18.349Z",
+    __v: 0,
+  },
+  {
+    _id: "653692bec65fadb18417f321",
+    title: "آموزش جامع مدل سازی پیشرفته یادگیری عمیق(deep learning) با پایتون",
+    des: "دوره جامع برای یادگیری اصولی جاوااسکریپت",
+    price: 2500000,
+    discountPercentage: 0,
+    students: 32657,
+    teacher: "رضا موسوی",
+    time: 80,
+    rate: 5,
+    createdAt: "2023-10-23T15:35:26.936Z",
+    updatedAt: "2023-10-23T15:35:26.936Z",
+    __v: 0,
+  },
+  {
+    _id: "653692c6c65fadb18417f323",
+    title: "دوره مانیتورینگ در SQL Server",
+    des: "دوره جامع برای یادگیری اصولی جاوااسکریپت",
+    price: 600000,
+    discountPercentage: 60,
+    students: 30222,
+    teacher: "سید متین حسینی",
+    time: 30,
+    rate: 4.5,
+    createdAt: "2023-10-23T15:35:34.572Z",
+    updatedAt: "2023-10-23T15:35:34.572Z",
+    __v: 0,
+  },
+  {
+    _id: "653692d0c65fadb18417f325",
+    title: "آموزش جامع یادگیری ماشین و زیرشاخه ها در پایتون (با رویکرد مالی)",
+    des: "دوره جامع برای یادگیری اصولی جاوااسکریپت",
+    price: 3600000,
+    discountPercentage: 70,
+    students: 30578,
+    teacher: "مهیار حجت پناه",
+    time: 40,
+    rate: 4,
+    createdAt: "2023-10-23T15:35:44.387Z",
+    updatedAt: "2023-10-23T15:35:44.387Z",
+    __v: 0,
+  },
+  {
+    _id: "653692d7c65fadb18417f327",
+    title: "دوره حامع بازی سازی platformer دو بعدی در یونیتی",
+    des: "دوره جامع برای یادگیری اصولی جاوااسکریپت",
+    price: 147000,
+    discountPercentage: 0,
+    students: 15877,
+    teacher: "طاها براری",
+    time: 4,
+    rate: 5,
+    createdAt: "2023-10-23T15:35:51.032Z",
+    updatedAt: "2023-10-23T15:35:51.032Z",
+    __v: 0,
+  },
+  {
+    _id: "653692ddc65fadb18417f329",
+    title: "آموزش ساخت یک پروژه با Angular و ASP.NET Core API از صفر تا صد",
+    des: "دوره جامع برای یادگیری اصولی جاوااسکریپت",
+    price: 600000,
+    discountPercentage: 15,
+    students: 25472,
+    teacher: "علی مرادوند",
+    time: 20,
+    rate: 4,
+    createdAt: "2023-10-23T15:35:57.437Z",
+    updatedAt: "2023-10-23T15:35:57.437Z",
+    __v: 0,
+  },
+  {
+    _id: "653692e5c65fadb18417f32b",
+    title: "دوره آموزشی چالش 5 روزه طراحی سایت بدون کد نویسی (قالب استادیار)",
+    des: "دوره جامع برای یادگیری اصولی جاوااسکریپت",
+    price: 294000,
+    discountPercentage: 45,
+    students: 2581,
+    teacher: "سارا بیانی",
+    time: 5,
+    rate: 4.5,
+    createdAt: "2023-10-23T15:36:05.243Z",
+    updatedAt: "2023-10-23T15:36:05.243Z",
+    __v: 0,
+  },
+];
+allCourses.forEach((course) => {
+  newestCoursesContainer.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="course-box">
+        <a href="course.html" class="course-box__image">
+          <img
+            src="assets/images/f4aa8891-d9a5-48f6-9166-8f40fa5e5f0f_cover.webp"
+            alt="" />
+        </a>
+        <div class="course-box__info">
+          <h2 class="course-box__name">
+            <a href="course.html" class="underline-animated-text">${
+              course.title
+            }</a>
+          </h2>
+          <div
+            class="course-box__price">
+            <button class="course-box__shopping-cart-icon">
+              <svg>
+                <use xlink:href="#shopping-cart"></use>
+              </svg>
+            </button>
+          
+            <div class="d-flex align-items-center">
+              <span class="course-box__old-price">220,000 تومان</span>
+              <span class="course-box__current-price">${course.price.toLocaleString()} تومان</span>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center my-3">
+            <div class="course-box__teacher d-flex align-items-center">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <h3 class="course-box__teacher-name">${course.teacher}</h3>
+            </div>
             
-              <div class="d-flex align-items-center">
-                <span class="course-box__old-price">220,000 تومان</span>
-                <span class="course-box__current-price">${course.price.toLocaleString()} تومان</span>
-              </div>
+            <div class="course-box__students">
+              <i class="fa-solid fa-people-group"></i>
+              <span>${course.students.toLocaleString()}</span>
             </div>
-            <div
-              class="d-flex justify-content-between align-items-center my-3">
-              <div class="course-box__teacher d-flex align-items-center">
-                <i class="fa-solid fa-chalkboard-user"></i>
-                <h3 class="course-box__teacher-name">${course.teacher}</h3>
-              </div>
-              
-              <div class="course-box__students">
-                <i class="fa-solid fa-people-group"></i>
-                <span>${course.students.toLocaleString()}</span>
-              </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <svg>
+                <use xlink:href="#clock"></use>
+                <span class="course-box__time">20:50:34</span>
+              </svg>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <svg>
-                  <use xlink:href="#clock"></use>
-                  <span class="course-box__time">20:50:34</span>
-                </svg>
-              </div>
-              <div class="course-box__ratings">
-                <span>${course.rate}</span>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="course-box__discount-time">
-                <span class="course-box__discount-seconds">55</span>
-                <span>:</span>
-                <span class="course-box__discount-minutes">14</span>
-                <span>:</span>
-                <span class="course-box__discount-hours">17</span>
-                <span>:</span>
-                <span class="course-box__discount-days">3</span>
-              </div>
+            <div class="course-box__ratings">
+              <span>${course.rate}</span>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="course-box__discount-time">
+              <span class="course-box__discount-seconds">55</span>
+              <span>:</span>
+              <span class="course-box__discount-minutes">14</span>
+              <span>:</span>
+              <span class="course-box__discount-hours">17</span>
+              <span>:</span>
+              <span class="course-box__discount-days">3</span>
             </div>
           </div>
         </div>
       </div>
-    `
-    );
-  });
+    </div>
+  `
+  );
+});
+const getAllCourses = async () => {
+  const res = await fetch("http/v1/courses");
+  const courses = await res.json();
+
+  newestCoursesContainer.innerHTML = ``;
 };
 
-getAllCourses();
+// getAllCourses();
 
 //articles
 const articles = [
