@@ -1,6 +1,7 @@
 @import "./custom-input.css";
 /* nav starts */
 .nav {
+  direction: rtl !important;
   height: 6.5rem;
   display: flex;
   justify-content: space-between;
@@ -13,9 +14,15 @@
   color: var(--text-color);
   background-color: var(--app-bg);
   margin: 0 auto;
-  z-index: 9999;
+  z-index: 999999;
   transition: all var(--transition);
   box-shadow: var(--box-shadow);
+}
+
+.nav__logo{
+  width: 5rem;
+  height: 5rem;
+  margin-left: auto;
 }
 
 #close-sidebar-btn {
@@ -30,9 +37,7 @@
 }
 
 
-.nav__logo {
-  flex: 1;
-}
+
 
 .nav-menu {
   display: flex;
@@ -171,9 +176,6 @@
   .nav-menu {
     position: static;
     background: transparent;
-  }
-  .nav__logo {
-    flex: 0;
   }
 
   .nav-menu {

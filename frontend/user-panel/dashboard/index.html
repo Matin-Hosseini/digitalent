@@ -19,25 +19,38 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
+    <div class="mouse-follower"></div>
+    <div class="mouse-follower-2"></div>
+
     <header>
       <!--nav menu starts-->
       <nav class="nav">
         <i class="ri-menu-3-line menu-btn d-lg-none" id="menu-btn"></i>
-        <div class="nav__logo">logo</div>
+        <div class="nav__logo">
+          <a href="index.html">
+            <img
+              src="./../../assets/images/app-logo/app-favicon.png"
+              alt="logo" />
+          </a>
+        </div>
         <ul class="nav-menu" id="nav-menu">
           <div
             class="d-flex d-lg-none justify-content-between align-items-center px-3 mt-3 mb-5">
-            <div class="logl">logo</div>
+            <div class="nav__logo">
+              <a href="index.html">
+                <img src="assets/images/app-logo/app-favicon.png" alt="logo" />
+              </a>
+            </div>
             <i class="bx bx-x" id="close-sidebar-btn"></i>
           </div>
-          <li class="nav-menu__item nav-menu__item--active">
-            <a href="index.html" class="nav-menu__link">
+          <li class="nav-menu__item">
+            <a href="./../../index.html" class="nav-menu__link">
               <i class="bx bx-home-smile nav-menu__icon"></i>
               <span>خانه</span>
             </a>
           </li>
           <li class="nav-menu__item h-6">
-            <a href="course-category.html" class="nav-menu__link">
+            <a href="./../../not-completed.html" class="nav-menu__link">
               <i class="bx bx-category-alt nav-menu__icon"></i>
               <span>دسته بندی</span>
             </a>
@@ -72,7 +85,7 @@
             </ul>
           </li>
           <li class="nav-menu__item">
-            <a href="blog-category.html" class="nav-menu__link">
+            <a href="./../../not-completed.html" class="nav-menu__link">
               <i class="bx bx-book-reader nav-menu__icon"></i>
               <span>بلاگ</span>
             </a>
@@ -84,7 +97,7 @@
             </a>
           </li>
           <li class="nav-menu__item">
-            <a href="contact-us.html" class="nav-menu__link">
+            <a href="./../../contact-us.html" class="nav-menu__link">
               <i class="bx bx-phone-call nav-menu__icon"></i>
               <span>تماس با ما</span>
             </a>
@@ -149,7 +162,7 @@
     <main>
       <div class="container my-5">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 order-1 order-lg-0">
             <div class="account-side-bar">
               <div class="profile"></div>
 
@@ -168,15 +181,15 @@
                 </li>
                 <li class="menu-item">
                   <i class="ri-database-2-line menu-icon"></i>
-                  <a href="#">همه دوره های من</a>
+                  <a href="./../all-courses/">همه دوره های من</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-money-dollar-circle-line menu-icon"></i>
-                  <a href="#">دوره های خریداری شده من</a>
+                  <a href="./../buyed-courses/">دوره های خریداری شده من</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-medal-2-line menu-icon"></i>
-                  <a href="#">دوره های رایگان من</a>
+                  <a href="./../free-courses/">دوره های رایگان من</a>
                 </li>
                 <li class="menu-item">
                   <i class="ri-coupon-2-line menu-icon"></i>
@@ -189,7 +202,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-9">
+          <div class="col-lg-9 mb-5 mb-lg-0">
             <div class="">
               <section class="boxes">
                 <div class="box">
@@ -370,6 +383,6 @@
     <!--JS Links-->
     <script src="./../../vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
     <script src="./../../js/shared.js" type="module"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

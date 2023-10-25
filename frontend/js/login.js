@@ -19,8 +19,8 @@ loginForm.addEventListener("submit", (e) => {
   login(userInfo);
 });
 
-// getMe().then((user) => {
-//   if (user) {
-//     location.href = "index.html";
-//   }
-// });
+getMe().then((user) => {
+  if (user) {
+    location.href = "user-panel/dashboard";
+  }
+});

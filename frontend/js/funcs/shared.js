@@ -77,7 +77,7 @@ const showUserNameInNavbar = () => {
       loginBtn.innerHTML = `
         <span class="d-none d-md-block">${user.name}</span>`;
 
-      loginBtn.setAttribute("href", "login.html");
+      loginBtn.setAttribute("href", "user-panel/dashboard");
     });
   } else {
     loginBtn.innerHTML = `

@@ -21,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  transition: var(--transition);
 }
 .contact__icon {
   width: 3rem;

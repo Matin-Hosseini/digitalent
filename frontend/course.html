@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,12 @@
       rel="shortcut icon"
       href="assets/images/app-logo/app-favicon.png"
       type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
     <link rel="stylesheet" href="vendor/Bootstrap/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="vendor/Swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/course.css" />
@@ -84,6 +90,143 @@
       <div class="mouse-follower"></div>
       <div class="mouse-follower-2"></div>
 
+      <header>
+        <!--nav menu starts-->
+        <nav class="nav">
+          <i class="ri-menu-3-line menu-btn d-lg-none" id="menu-btn"></i>
+          <div class="nav__logo">
+            <a href="index.html">
+              <img src="assets/images/app-logo/app-favicon.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
+            <div
+              class="d-flex d-lg-none justify-content-between align-items-center px-3 mt-3 mb-5">
+              <div class="nav__logo">
+                <a href="index.html">
+                  <img
+                    src="assets/images/app-logo/app-favicon.png"
+                    alt="logo" />
+                </a>
+              </div>
+              <i class="bx bx-x" id="close-sidebar-btn"></i>
+            </div>
+            <li class="nav-menu__item">
+              <a href="index.html" class="nav-menu__link">
+                <i class="bx bx-home-smile nav-menu__icon"></i>
+                <span>خانه</span>
+              </a>
+            </li>
+            <li class="nav-menu__item h-6">
+              <a href="not-completed.html" class="nav-menu__link">
+                <i class="bx bx-category-alt nav-menu__icon"></i>
+                <span>دسته بندی</span>
+              </a>
+            </li>
+            <li class="nav-menu__item d-none">
+              <svg>
+                <use xlink:href="#code"></use>
+              </svg>
+              <a href="#" class="nav-menu__link">برنامه نویسی</a>
+              <svg class="nav-menu__arrow-down d-none d-lg-block">
+                <use xlink:href="#arrow-down"></use>
+              </svg>
+              <ul class="nav-sub-menu">
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">فرانت اند</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">بک اند</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">امنیت</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">اندروید</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">ios</a>
+                </li>
+                <li class="nav-sub-menu__item">
+                  <a href="#" class="nav-sub-menu__link">هوش مصنوعی</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-menu__item">
+              <a href="not-completed.html" class="nav-menu__link">
+                <i class="bx bx-book-reader nav-menu__icon"></i>
+                <span>بلاگ</span>
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">
+                <i class="bx bx-briefcase nav-menu__icon"></i>
+                <span>همکاری با دیجی تلنت</span>
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="contact-us.html" class="nav-menu__link">
+                <i class="bx bx-phone-call nav-menu__icon"></i>
+                <span>تماس با ما</span>
+              </a>
+            </li>
+          </ul>
+          <!--nav menu ends-->
+
+          <!--nav options starts-->
+          <div
+            class="nav__options d-flex justify-content-center align-items-center">
+            <div class="search-modal">
+              <button
+                class="d-flex"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="bx bx-search-alt nav__icon"></i>
+              </button>
+              <div
+                class="search-modal modal fade"
+                id="searchModal"
+                tabindex="0"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <form action="">
+                        <div class="custom-input position-relative m-0">
+                          <input
+                            type="text"
+                            class="custom-input__input"
+                            id="login-name-input"
+                            required />
+                          <label class="custom-input__label"
+                            >چی دلت میخواد؟</label
+                          >
+                          <i
+                            class="bx bx-search-alt search-modal__search-icon"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__shopping-cart d-flex">
+              <i class="bx bx-cart-alt nav__icon"></i>
+            </div>
+            <button class="nav__dark-mode-btn d-flex" id="dark-mode-btn">
+              <i class="bx bx-moon nav__icon"></i>
+            </button>
+            <a href="login.html" class="login-signup-btn">
+              <i class="bx bx-log-in nav__icon"></i>
+              <span class="d-none d-md-block">ورود | ثبت نام</span>
+            </a>
+          </div>
+          <!--nav options ends-->
+        </nav>
+      </header>
+
       <main>
         <section class="course-info">
           <div class="container">
@@ -93,8 +236,7 @@
                   آموزش حرفه ای متلب برای تازه کار ها
                 </h1>
                 <h2 class="course-info__description">
-                  متلب یه برنامه ی نمیدونم چحوبهی که باعق میشه بتونی خیلی از طرح
-                  های کسشری که میبینی رو پیاده سازی کنی
+                  متلب یه برامخ برای اینه که بتونی هر طرح پیچیده و چرت و پرتی که به ذهنت رسید رو طراحی کنی
                 </h2>
 
                 <div class="course-info__content">

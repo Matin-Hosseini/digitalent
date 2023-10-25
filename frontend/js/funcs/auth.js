@@ -11,7 +11,7 @@ const register = (newUserInfo) => {
     .then((res) => {
       if (res.status === 201) {
         showSwal("ثبت نام با موفقیت انجام شد.", "success", "بزن بریم", () => {
-          location.href = "index.html";
+          location.href = "user-panel/dashboard";
         });
         return res.json();
       } else if (res.status === 422) {

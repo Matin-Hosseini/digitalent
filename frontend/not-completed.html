@@ -11,29 +11,36 @@
       href="assets/images/app-logo/app-favicon.png"
       type="image/x-icon" />
     <link rel="stylesheet" href="vendor/Bootstrap/bootstrap-5.2.3.min.css" />
-    <link rel="stylesheet" href="vendor/BoxIcons/boxicons.min.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet" />
     <link rel="stylesheet" href="css/404.css" />
   </head>
   <body>
     <div class="mouse-follower"></div>
     <div class="mouse-follower-2"></div>
-    
+
     <header>
+      <!--nav menu starts-->
       <nav class="nav">
-        <div class="hamburger-menu" id="hamburger-menu-btn">
-          <span class="hamburger-menu__line"></span>
+        <i class="ri-menu-3-line menu-btn d-lg-none" id="menu-btn"></i>
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="assets/images/app-logo/app-favicon.png" alt="logo" />
+          </a>
         </div>
-        <div class="nav__logo">logo</div>
         <ul class="nav-menu" id="nav-menu">
           <div
-            class="d-flex d-lg-none justify-content-between align-items-center px-3 mb-3">
-            <div class="logl">logo</div>
-            <svg id="close-sidebar-btn">
-              <use xlink:href="#close"></use>
-            </svg>
+            class="d-flex d-lg-none justify-content-between align-items-center px-3 mt-3 mb-5">
+            <div class="nav__logo">
+              <a href="index.html">
+                <img src="assets/images/app-logo/app-favicon.png" alt="logo" />
+              </a>
+            </div>
+            <i class="bx bx-x" id="close-sidebar-btn"></i>
           </div>
           <li class="nav-menu__item nav-menu__item--active">
             <a href="index.html" class="nav-menu__link">
@@ -42,7 +49,7 @@
             </a>
           </li>
           <li class="nav-menu__item h-6">
-            <a href="course-category.html" class="nav-menu__link">
+            <a href="not-completed.html" class="nav-menu__link">
               <i class="bx bx-category-alt nav-menu__icon"></i>
               <span>دسته بندی</span>
             </a>
@@ -77,7 +84,7 @@
             </ul>
           </li>
           <li class="nav-menu__item">
-            <a href="blog-category.html" class="nav-menu__link">
+            <a href="not-completed.html" class="nav-menu__link">
               <i class="bx bx-book-reader nav-menu__icon"></i>
               <span>بلاگ</span>
             </a>
@@ -291,6 +298,7 @@
     </footer>
 
     <!--JAVASCRIPT Links-->
+    <script src="vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
     <script src="js/shared.js" type="module"></script>
   </body>
 </html>
