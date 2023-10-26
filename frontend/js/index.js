@@ -3,18 +3,9 @@ import { funFactsCountUp } from "./funcs/utils.js";
 
 const D = document;
 
-const heroImgWrapper = D.querySelector(".hero__image-wrapper");
 const newestCoursesContainer = D.querySelector("#newest-courses__container");
 const articleBoxContainer = D.querySelector("#article-box__container");
 const homeCategorySwiper = D.querySelector("#home__category-swiper-wrapper");
-
-// hero image starts
-
-heroImgWrapper.style.cssText = `margin-left: -${heroImgWrapper.offsetLeft}px; max-width: 80rem;
-`;
-console.log(heroImgWrapper.parentElement);
-
-// hero image ends
 
 //courses
 const newestCourses = [

@@ -36,6 +36,9 @@
   /*fonts*/
   --title-font: "Persian Titraj";
   --text-font: "Vasir";
+
+  /* measurements */
+  --header-height: 6.5rem;
 }
 
 :root.dark {

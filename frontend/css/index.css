@@ -1,6 +1,7 @@
 @import "./fonts.css";
 @import "./reset.css";
 @import "./modules/primary-styles.css";
+@import "./modules/split-container.css";
 @import "./modules/header.css";
 @import "./modules/course-box.css";
 @import "./modules/article-box.css";
@@ -17,11 +18,10 @@
 }
 .hero {
   background-color: #f3f3f3;
-  min-height: 100dvh;
+  min-height: calc(100dvh - var(--header-height));
   transition: var(--transition);
-  padding: 10rem 0;
-  display: flex;
-  align-items: center;
+  padding: 5rem 0;
+  align-self: center;
   position: relative;
 }
 .hero__title {
