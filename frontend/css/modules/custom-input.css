@@ -58,8 +58,6 @@
   border-radius: 2rem;
   width: 100%;
   padding: 2rem;
-
-  height: 30rem;
 }
 .custom-text-area:focus ~ .custom-text-area__label,
 .custom-text-area:valid ~ .custom-text-area__label {

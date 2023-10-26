@@ -305,17 +305,22 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <form action="" class="contact-map__form" novalidate>
+        <form
+          action=""
+          class="contact-map__form"
+          id="contact-us-form"
+          novalidate>
           <div>
             <div class="custom-input">
               <input
                 type="text"
                 placeholder=""
                 class="custom-input__input"
-                id="login-name-input"
+                name="name"
                 required />
               <label class="custom-input__label">نام و نام خانوادگی</label>
             </div>
+            <span class="error-message name-error"></span>
           </div>
           <div></div>
           <div class="custom-input">
@@ -323,20 +328,22 @@
               type="text"
               placeholder=""
               class="custom-input__input"
-              id="login-name-input"
+              name="email"
               required />
             <label class="custom-input__label">ایمیل</label>
           </div>
+          <span class="error-message email-error"></span>
           <div class="custom-text-area-wrapper">
             <textarea
-              name=""
               class="custom-text-area"
-              id=""
+              rows="7"
+              name="message"
               required></textarea>
             <label for="" class="custom-text-area__label"
               >پیام خود را وارد کنید</label
             >
           </div>
+          <span class="error-message textarea-error"></span>
           <button class="contact-form__submit-btn">ارسال پیام</button>
         </form>
       </section>
@@ -459,6 +466,7 @@
     <!--JAVASCRIPT Links-->
     <script src="vendor/FontAwesome/font-awesome.min.js"></script>
     <script src="vendor/Bootstrap/bootstrap-5.2.3.bundle.min.js"></script>
+    <script src="js/contact-us.js" type="module"></script>
     <script src="js/shared.js" type="module"></script>
   </body>
 </html>
