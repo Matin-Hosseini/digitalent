@@ -9,17 +9,21 @@
   --text-color: #52525b;
 
   --green: #0d9488;
+  --green-bg: #0d948933;
   --light-yellow: #fed7aa93;
   /* --yellow: #fed7aa; */
 
   --yellow: #fcc741;
+  --yellow-bg: #fcc74125;
   --yellow-stars: #facc15;
   --light-gray: #d1d5db;
   --gray: #9ca3af;
   --bg-gray: #eef0f5;
   --red: #f87171;
+  --red-bg: #f871711e;
   --dark-green: #35a29f;
   --blue: #19a7ce;
+  --blue-bg: #19a7ce2d;
   --orange: #ff6951;
   --purple: #8696fe;
   --bg-purple: #8696fe57;
@@ -230,6 +234,15 @@ img {
   color: var(--gray);
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* error message */
+.error-message {
+  color: var(--red);
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1.7rem;
+  height: 1.8rem;
 }
 
 /* underline animation effect on text*/
