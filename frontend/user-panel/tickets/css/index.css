@@ -1,0 +1,102 @@
+@import "./../../../css/modules/primary-styles.css";
+@import "./../../../css/modules/header.css";
+@import "./../../../css/modules/footer.css";
+@import "./../../../css/modules/course-box.css";
+@import "./../../modules/css/side-menu.css";
+
+/* no tickets section starts */
+.no-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem ;
+}
+.no-tickets i {
+  font-size: 6rem;
+  color: var(--red);
+}
+/* no tickets section ends */
+
+/* ticekts section starts */
+.tickets {
+  margin-bottom: 3rem;
+}
+.ticket {
+  background-color: var(--section-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+.ticket__title {
+  color: var(--gray);
+
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ticket__section,
+.ticket__priority {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px dashed var(--purple);
+  transition: color var(--transition);
+}
+
+.ticket__section[data-section="finance"] {
+}
+
+.ticket__priority[data-priority="very-important"] {
+  border-color: var(--red);
+  background-color: var(--red-bg);
+}
+.ticket__priority[data-priority="important"] {
+  border-color: var(--yellow);
+  background-color: var(--yellow-bg);
+}
+.ticket__priority[data-priority="normal"] {
+  border-color: var(--green);
+  background-color: var(--green-bg);
+}
+
+.ticket__status {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--green);
+  transition: color var(--transition);
+}
+.ticket__status[data-status="in-progress"] {
+  border-color: var(--yellow);
+  background-color: var(--yellow-bg);
+}
+.ticket__status[data-status="answered"] {
+  border-color: var(--green);
+  background-color: var(--green-bg);
+}
+.ticket__status[data-status="sent"] {
+  border-color: var(--blue);
+  background-color: var(--blue-bg);
+}
+
+@media (min-width: 992px) {
+  .ticket {
+    flex-direction: row;
+  }
+  .ticket__title {
+    max-width: 32rem;
+  }
+}
+/* ticekts section ends */
+
+.add-ticket-btn{
+    background-color: var(--blue);
+}

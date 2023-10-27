@@ -1,0 +1,39 @@
+@import "./../../../css/modules/primary-styles.css";
+@import "./../../../css/modules/header.css";
+@import "./../../../css/modules/footer.css";
+@import "./../../../css/modules/course-box.css";
+@import "./../../modules/css/side-menu.css";
+
+/* form starts */
+.add-ticket-form input,
+.add-ticket-form textarea,
+.add-ticket-form__select {
+  border: 0;
+  outline: 0;
+  background-color: var(--section-bg);
+  padding: 1rem;
+  color: var(--gray);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.add-ticket-form__select {
+  cursor: pointer;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+
+  /* background-image: url("data:image/svg+xml;utf8,<svg fill='var(--red)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 1%;
+  background-position-y: 50%; */
+}
+
+.add-ticket-form__submit-btn {
+  background-color: var(--green);
+}
+
+/* form ends */
